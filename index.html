@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Fundare – Boutique RGM Consulting</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0a1628;--navy2:#112040;--navy3:#0d1e38;
+  --gold:#c9a84c;--gold2:#e8c870;--gold3:rgba(201,168,76,0.12);
+  --light:#f4f2ee;--white:#fff;--gray:#8a8f99;--text:#1e2536;
+  --green:#22c55e;--red:#ef4444;--blue:#3b9eff;
+  --db:#0d1b2e;--db2:#091526;--dbline:rgba(255,255,255,0.07);
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);overflow-x:hidden}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;width:100%;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:18px 60px;background:rgba(10,22,40,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.15)}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--white);text-decoration:none;letter-spacing:.02em}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{color:rgba(255,255,255,.65);text-decoration:none;font-size:.82rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{background:var(--gold);color:var(--navy);padding:9px 22px;border-radius:2px;font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:all .2s}
+.nav-cta:hover{background:var(--gold2);transform:translateY(-1px)}
+
+/* ── HERO ── */
+.hero{min-height:100vh;background:var(--navy);display:flex;flex-direction:column;justify-content:center;padding:130px 60px 70px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-200px;right:-200px;width:700px;height:700px;background:radial-gradient(circle,rgba(201,168,76,.1) 0%,transparent 70%);border-radius:50%;pointer-events:none}
+.hero::after{content:'';position:absolute;bottom:-100px;left:20%;width:400px;height:400px;background:radial-gradient(circle,rgba(59,158,255,.05) 0%,transparent 70%);border-radius:50%;pointer-events:none}
+.hero-inner{max-width:1180px;margin:0 auto;width:100%;position:relative;z-index:2}
+
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.73rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+.hero-eyebrow::before{content:'';width:28px;height:1px;background:var(--gold)}
+.hero-headline{font-family:'Playfair Display',serif;font-size:clamp(3rem,5.5vw,5.2rem);font-weight:900;line-height:1.05;color:var(--white);margin-bottom:32px}
+.hero-headline em{color:var(--gold);font-style:normal}
+.hero-sub{font-size:1rem;font-weight:300;line-height:1.75;color:rgba(255,255,255,.55);margin-bottom:0}
+.hero-actions{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-bottom:0}
+.btn-primary{background:var(--gold);color:var(--navy);padding:14px 32px;border-radius:2px;font-weight:700;font-size:.86rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:all .2s;display:inline-block;white-space:nowrap}
+.btn-primary:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,168,76,.28)}
+.btn-ghost{color:rgba(255,255,255,.65);font-size:.86rem;font-weight:500;text-decoration:none;display:flex;align-items:center;gap:7px;transition:color .2s;white-space:nowrap}
+.btn-ghost:hover{color:var(--gold)}
+.hero-bottom-row{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;margin-top:44px;padding-top:44px;border-top:1px solid rgba(255,255,255,.06)}
+.hero-stats{display:flex;gap:0;border:1px solid rgba(201,168,76,.15)}
+.hero-stat{padding:16px 24px;border-right:1px solid rgba(201,168,76,.12);flex:1;text-align:center}
+.hero-stat:last-child{border-right:none}
+.hero-stat-num{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:700;color:var(--gold);line-height:1}
+.hero-stat-lbl{font-size:.67rem;color:rgba(255,255,255,.4);margin-top:5px;line-height:1.35}
+
+/* ── AUDIENCE PICKER ── */
+.audience{background:var(--light);padding:80px 60px}
+.audience-inner{max-width:1180px;margin:0 auto}
+.audience-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:48px}
+.audience-card{padding:52px 48px;cursor:pointer;position:relative;overflow:hidden;transition:transform .25s;text-decoration:none;display:block}
+.audience-card.retailers{background:var(--navy)}
+.audience-card.brands{background:var(--navy2)}
+.audience-card::before{content:'';position:absolute;bottom:0;left:0;width:0;height:3px;background:var(--gold);transition:width .4s}
+.audience-card:hover::before{width:100%}
+.audience-card:hover{transform:translateY(-4px)}
+.aud-label{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.aud-title{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--white);line-height:1.2;margin-bottom:14px}
+.aud-sub{font-size:.9rem;line-height:1.7;color:rgba(255,255,255,.5);margin-bottom:28px;max-width:420px}
+.aud-products{display:flex;flex-wrap:wrap;gap:7px}
+.aud-tag{font-size:.68rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border:1px solid rgba(201,168,76,.25);color:rgba(201,168,76,.8);border-radius:2px}
+.aud-arrow{position:absolute;bottom:48px;right:48px;font-size:1.4rem;color:rgba(201,168,76,.4);transition:all .3s}
+.audience-card:hover .aud-arrow{color:var(--gold);transform:translateX(6px)}
+
+/* ── SECTION GENERIC ── */
+section{padding:90px 60px}
+.container{max-width:1180px;margin:0 auto}
+.section-label{font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.section-label::before{content:'';width:26px;height:1px;background:var(--gold)}
+h2{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,3.2vw,2.8rem);font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:16px}
+.h2-white{color:var(--white)}
+.section-intro{font-size:1rem;line-height:1.75;color:#4a5568;max-width:560px}
+.section-intro-white{color:rgba(255,255,255,.55);max-width:560px;font-size:1rem;line-height:1.75}
+
+/* ── MARQUEE ── */
+.marquee-wrap{background:var(--gold);padding:12px 0;overflow:hidden}
+.marquee-track{display:flex;gap:52px;white-space:nowrap;animation:marquee 32s linear infinite}
+.marquee-item{font-size:.73rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);flex-shrink:0;display:flex;align-items:center;gap:18px}
+.marquee-item::after{content:'◆';font-size:.44rem}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ── PRODUCT TABS ── */
+.products-section{background:var(--white)}
+.product-tabs{display:flex;gap:0;border-bottom:1px solid #e8e4dd;margin-bottom:56px}
+.ptab{padding:14px 28px;font-size:.82rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gray);cursor:pointer;border-bottom:2px solid transparent;transition:all .2s;background:none;border:none;border-bottom:2px solid transparent}
+.ptab.active{color:var(--navy);border-bottom-color:var(--gold)}
+.ptab:hover:not(.active){color:var(--text)}
+.product-panel{display:none}
+.product-panel.active{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+
+/* ── DASHBOARD MOCKUPS ── */
+.db-shell{background:var(--db);border:1px solid rgba(201,168,76,.18);border-radius:5px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.5)}
+.db-chrome{background:#060f1c;padding:8px 14px;display:flex;align-items:center;gap:6px;border-bottom:1px solid var(--dbline)}
+.db-dot{width:9px;height:9px;border-radius:50%}
+.db-chrome-title{font-size:.65rem;font-weight:600;color:rgba(201,168,76,.7);letter-spacing:.1em;text-transform:uppercase;margin-left:8px}
+.db-live{margin-left:auto;font-size:.58rem;font-weight:700;color:var(--green);background:rgba(34,197,94,.12);padding:2px 7px;border-radius:10px}
+.db-body{padding:14px}
+
+/* PNL Track dashboard */
+.pnl-layout{display:flex;height:320px}
+.pnl-sidebar{width:100px;background:var(--db2);border-right:1px solid var(--dbline);padding:10px 6px;display:flex;flex-direction:column;gap:3px}
+.pnl-nav{font-size:.6rem;font-weight:600;color:rgba(255,255,255,.4);padding:6px 8px;border-radius:2px;cursor:pointer;border-left:2px solid transparent}
+.pnl-nav.act{color:var(--white);background:rgba(255,255,255,.05);border-left-color:var(--gold)}
+.pnl-divider{height:1px;background:var(--dbline);margin:6px 4px}
+.pnl-filter-t{font-size:.52rem;color:rgba(255,255,255,.25);text-transform:uppercase;letter-spacing:.08em;padding:4px 6px}
+.pnl-filter-s{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);border-radius:2px;padding:4px 6px;margin:2px 4px;display:flex;justify-content:space-between}
+.pnl-filter-s span{font-size:.58rem;color:rgba(255,255,255,.45)}
+.pnl-main{flex:1;display:flex;flex-direction:column;overflow:hidden}
+.pnl-top{display:flex;border-bottom:1px solid var(--dbline);flex:0 0 auto}
+.pnl-dates{width:140px;flex-shrink:0;border-right:1px solid var(--dbline);padding:8px}
+.ytd-badge{background:var(--gold);color:var(--navy);font-size:.5rem;font-weight:800;padding:1px 4px;border-radius:1px;margin-right:4px}
+.date-title{font-size:.58rem;font-weight:700;color:rgba(255,255,255,.6);letter-spacing:.08em;text-transform:uppercase}
+.month-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:6px}
+.mb{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:2px;padding:3px 2px;text-align:center;font-size:.56rem;color:rgba(255,255,255,.4)}
+.mb.s{background:rgba(201,168,76,.15);border-color:rgba(201,168,76,.3);color:var(--gold);font-weight:700}
+.pnl-tbl-wrap{flex:1;padding:6px 10px;overflow:hidden}
+.pnl-tbl{width:100%;border-collapse:collapse;font-size:.62rem}
+.pnl-tbl th{color:rgba(255,255,255,.35);font-weight:600;padding:2px 6px;text-align:right;border-bottom:1px solid var(--dbline);font-size:.58rem}
+.pnl-tbl th:first-child{text-align:left}
+.pnl-tbl td{padding:3px 6px;text-align:right;color:rgba(255,255,255,.65);border-bottom:1px solid rgba(255,255,255,.025)}
+.pnl-tbl td:first-child{text-align:left;color:rgba(255,255,255,.45);font-weight:500}
+.pnl-tbl td.b{color:var(--white);font-weight:700}
+.pnl-tbl td.g{color:var(--green);font-weight:600}
+.pnl-tbl td.r{color:var(--red);font-weight:600}
+.pnl-tbl td.gold{color:var(--gold);font-weight:700}
+.pnl-tbl td.hl{background:rgba(201,168,76,.07)}
+.pnl-bars{width:180px;flex-shrink:0;border-left:1px solid var(--dbline);padding:8px}
+.bars-title{font-size:.56rem;font-weight:700;color:rgba(255,255,255,.7);letter-spacing:.08em;text-transform:uppercase;text-align:center;background:rgba(255,255,255,.04);border:1px solid var(--dbline);padding:4px;margin-bottom:7px}
+.br{display:flex;align-items:center;gap:4px;margin-bottom:4px}
+.br-cat{font-size:.55rem;color:rgba(255,255,255,.4);width:72px;text-align:right;flex-shrink:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.br-track{flex:1;height:10px;background:rgba(255,255,255,.04);border-radius:1px;display:flex;align-items:center}
+.br-fill{height:100%;border-radius:1px}
+.br-v{font-size:.55rem;font-weight:700;margin-left:3px;white-space:nowrap}
+.g2{background:#4caf7d}.r2{background:#e05252}
+.gv{color:#4caf7d}.rv{color:#e05252}
+.pnl-bottom{display:flex;flex:1;overflow:hidden;border-top:1px solid var(--dbline)}
+.pnl-qtable{flex:1;padding:6px 10px;overflow:hidden}
+.pnl-qtable table{width:100%;border-collapse:collapse;font-size:.57rem}
+.pnl-qtable th{color:rgba(255,255,255,.3);font-weight:600;padding:2px 4px;text-align:right;border-bottom:1px solid var(--dbline);white-space:nowrap;font-size:.55rem}
+.pnl-qtable th:first-child{text-align:left}
+.pnl-qtable td{padding:2px 4px;text-align:right;color:rgba(255,255,255,.6);border-bottom:1px solid rgba(255,255,255,.02);white-space:nowrap}
+.pnl-qtable td:first-child{text-align:left;color:rgba(255,255,255,.4)}
+.pnl-qtable td.gq{color:#4caf7d}.pnl-qtable td.rq{color:#e05252}.pnl-qtable td.au{color:var(--gold);font-weight:700}
+.pnl-chart{width:200px;flex-shrink:0;padding:8px;border-left:1px solid var(--dbline)}
+.chart-tabs{display:flex;margin-bottom:6px}
+.ctab{flex:1;text-align:center;font-size:.55rem;font-weight:600;padding:4px;border:1px solid var(--dbline);color:rgba(255,255,255,.35);cursor:pointer}
+.ctab.a{background:rgba(201,168,76,.12);border-color:rgba(201,168,76,.25);color:var(--gold)}
+
+/* Promo Post Mortem dashboard */
+.promo-db{display:flex;flex-direction:column;gap:0}
+.promo-topbar{display:flex;gap:8px;padding:8px 10px;background:rgba(255,255,255,.02);border-bottom:1px solid var(--dbline);align-items:center}
+.promo-kpi{flex:1;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:3px;padding:8px 10px;text-align:center}
+.promo-kpi-lbl{font-size:.58rem;font-weight:700;color:rgba(255,255,255,.45);letter-spacing:.06em;text-transform:uppercase}
+.promo-kpi-val{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:var(--white);line-height:1.2;margin-top:2px}
+.promo-kpi-delta{font-size:.62rem;font-weight:600;margin-top:2px}
+.promo-table-wrap{padding:8px 10px;overflow:hidden;border-bottom:1px solid var(--dbline)}
+.promo-tbl{width:100%;border-collapse:collapse;font-size:.6rem}
+.promo-tbl th{color:rgba(255,255,255,.3);font-weight:600;padding:2px 5px;text-align:right;border-bottom:1px solid var(--dbline);font-size:.56rem;white-space:nowrap}
+.promo-tbl th:first-child{text-align:left}
+.promo-tbl td{padding:3px 5px;text-align:right;color:rgba(255,255,255,.6);border-bottom:1px solid rgba(255,255,255,.02);white-space:nowrap}
+.promo-tbl td:first-child{text-align:left;color:rgba(255,255,255,.45)}
+.promo-tbl td.g{color:#4caf7d;font-weight:600}.promo-tbl td.r{color:#e05252;font-weight:600}.promo-tbl td.b2{color:var(--white);font-weight:700}
+.promo-bottom{display:flex;gap:0;padding:8px 10px}
+.scatter-area{flex:1;position:relative}
+.scatter-title{font-size:.58rem;color:rgba(255,255,255,.4);margin-bottom:6px;text-align:center}
+.quadrant-legend{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:8px}
+.qleg{display:flex;align-items:center;gap:5px;font-size:.56rem;color:rgba(255,255,255,.4)}
+.qleg-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.waterfall-area{width:180px;flex-shrink:0;border-left:1px solid var(--dbline);padding-left:10px}
+.wf-tabs{display:flex;gap:0;margin-bottom:6px}
+.wf-tab{flex:1;font-size:.56rem;font-weight:600;text-align:center;padding:3px;border:1px solid var(--dbline);color:rgba(255,255,255,.35)}
+.wf-tab.a{background:rgba(201,168,76,.12);border-color:rgba(201,168,76,.25);color:var(--gold)}
+
+/* Pricing dashboard */
+.pricing-db{display:flex;flex-direction:column}
+.pricing-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;padding:8px 10px;border-bottom:1px solid var(--dbline)}
+.px-kpi{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:3px;padding:8px}
+.px-kpi-lbl{font-size:.56rem;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.06em}
+.px-kpi-val{font-size:1rem;font-weight:700;color:var(--white);margin-top:3px}
+.px-kpi-sub{font-size:.58rem;font-weight:600;margin-top:2px}
+.pricing-main{display:flex;padding:8px 10px;gap:10px;flex:1}
+.scatter-pricing{flex:1;position:relative}
+.pricing-list{width:220px;flex-shrink:0;border-left:1px solid var(--dbline);padding-left:10px;overflow:hidden}
+.pl-title{font-size:.58rem;font-weight:700;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
+.pl-row{display:flex;justify-content:space-between;align-items:center;padding:3px 0;border-bottom:1px solid rgba(255,255,255,.03)}
+.pl-name{font-size:.56rem;color:rgba(255,255,255,.45);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:120px}
+.pl-mar{font-size:.58rem;font-weight:600;color:rgba(255,255,255,.65);width:36px;text-align:right}
+.pl-elas{font-size:.58rem;font-weight:600;color:var(--gold);width:28px;text-align:right}
+
+/* Product info (left side of product panel) */
+.prod-info{padding-top:8px}
+.prod-eyebrow{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.prod-eyebrow::before{content:'';width:22px;height:1px;background:var(--gold)}
+.prod-title{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:16px}
+.prod-desc{font-size:.95rem;line-height:1.75;color:#4a5568;margin-bottom:28px}
+.prod-features{display:flex;flex-direction:column;gap:14px}
+.pf{display:flex;gap:12px;align-items:flex-start}
+.pf-icon{width:36px;height:36px;background:var(--navy);border:1px solid rgba(201,168,76,.2);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0}
+.pf-title{font-size:.88rem;font-weight:600;color:var(--navy);margin-bottom:3px}
+.pf-text{font-size:.82rem;line-height:1.6;color:#4a5568}
+.prod-cta{display:inline-flex;align-items:center;gap:8px;color:var(--gold);font-size:.82rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;margin-top:24px;transition:gap .2s}
+.prod-cta:hover{gap:14px}
+
+/* ── RESULTS ── */
+.results-dark{background:var(--navy);padding:72px 60px}
+.results-grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
+.res-block{padding:36px 24px;border-right:1px solid rgba(255,255,255,.06);text-align:center}
+.res-block:last-child{border-right:none}
+.res-num{font-family:'Playfair Display',serif;font-size:2.9rem;font-weight:700;color:var(--gold)}
+.res-desc{font-size:.8rem;color:rgba(255,255,255,.42);margin-top:7px;line-height:1.5}
+
+/* ── METHODOLOGY ── */
+.method{background:var(--light)}
+.method-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:48px}
+.meth-card{background:var(--white);padding:32px 24px;border-bottom:2px solid transparent;transition:all .25s}
+.meth-card:hover{border-bottom-color:var(--gold);transform:translateY(-3px)}
+.meth-num{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:700;color:rgba(201,168,76,.15);line-height:1;margin-bottom:16px}
+.meth-title{font-size:.94rem;font-weight:700;color:var(--navy);margin-bottom:8px}
+.meth-text{font-size:.83rem;line-height:1.65;color:#4a5568}
+.meth-time{display:inline-block;margin-top:12px;font-size:.67rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);background:rgba(201,168,76,.1);padding:3px 9px;border-radius:20px}
+
+/* ── CASE STUDY ── */
+.casestudy{background:var(--white)}
+.cs-card{background:var(--navy);padding:52px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-top:44px}
+.cs-tag{font-size:.67rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);background:rgba(201,168,76,.1);padding:4px 11px;border-radius:20px;display:inline-block;margin-bottom:16px}
+.cs-card h3{font-family:'Playfair Display',serif;font-size:1.45rem;font-weight:700;color:var(--white);line-height:1.3;margin-bottom:14px}
+.cs-card p{font-size:.87rem;line-height:1.75;color:rgba(255,255,255,.5)}
+.cs-metrics{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.cs-met{background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.1);padding:24px 20px}
+.cs-met-num{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;color:var(--gold);line-height:1}
+.cs-met-lbl{font-size:.74rem;color:rgba(255,255,255,.4);margin-top:7px;line-height:1.4}
+
+/* ── CLIENTS ── */
+.clients{background:var(--light)}
+.clients-logos{display:flex;gap:0;flex-wrap:wrap;margin-top:40px}
+.client-logo{flex:1;min-width:160px;padding:28px 32px;background:var(--white);display:flex;align-items:center;justify-content:center;border:1px solid #e8e4dd;font-size:.8rem;font-weight:700;color:rgba(0,0,0,.35);letter-spacing:.1em;text-transform:uppercase;transition:all .2s}
+.client-logo:hover{color:var(--navy);border-color:var(--gold)}
+
+/* ── CTA ── */
+.cta-banner{background:var(--navy);padding:96px 60px;text-align:center;position:relative;overflow:hidden}
+.cta-banner::before{content:'';position:absolute;top:-280px;left:50%;transform:translateX(-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(201,168,76,.09) 0%,transparent 65%);border-radius:50%;pointer-events:none}
+.cta-banner h2{color:var(--white);max-width:640px;margin:0 auto 12px;position:relative;z-index:2}
+.cta-banner p{color:rgba(255,255,255,.5);font-size:.98rem;max-width:480px;margin:0 auto 36px;line-height:1.75;position:relative;z-index:2}
+.cta-note{font-size:.72rem;color:rgba(255,255,255,.25);margin-top:12px;position:relative;z-index:2}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative;z-index:2}
+.btn-outline{border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.7);padding:14px 32px;border-radius:2px;font-weight:600;font-size:.86rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:all .2s}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+
+/* ── FOOTER ── */
+footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:52px;border-top:1px solid rgba(201,168,76,.1)}
+.footer-logo{font-family:'Playfair Display',serif;font-size:1.55rem;font-weight:700;color:var(--white);display:block;margin-bottom:12px}
+.footer-logo span{color:var(--gold)}
+.footer-tagline{font-size:.79rem;color:rgba(255,255,255,.3);line-height:1.7;max-width:230px}
+.footer-contact{margin-top:20px;display:flex;flex-direction:column;gap:7px}
+.footer-contact a{font-size:.79rem;color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s}
+.footer-contact a:hover{color:var(--gold)}
+.footer-col h4{font-size:.67rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.footer-col ul a{font-size:.79rem;color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s}
+.footer-col ul a:hover{color:var(--white)}
+.footer-bottom{background:#060e1c;padding:16px 60px;border-top:1px solid rgba(255,255,255,.04);display:flex;justify-content:space-between;align-items:center}
+.footer-bottom p{font-size:.71rem;color:rgba(255,255,255,.2)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:960px){
+  nav{padding:15px 20px}.nav-links{display:none}
+  .hero{padding:100px 20px 56px}
+  section{padding:60px 20px}
+  .audience-grid{grid-template-columns:1fr}
+  .product-panel.active{grid-template-columns:1fr}
+  .results-grid,.method-grid{grid-template-columns:1fr 1fr}
+  .cs-card{grid-template-columns:1fr;padding:32px}
+  footer{grid-template-columns:1fr 1fr;padding:36px 20px}
+  .footer-bottom{padding:14px 20px;flex-direction:column;gap:6px}
+  .results-dark{padding:56px 20px}
+  .cta-banner{padding:64px 20px}
+  .clients-logos{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Fundare<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#products">Products</a></li>
+    <li><a href="#methodology">Methodology</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+  <a href="#cta" class="nav-cta">Let's Talk Strategy</a>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Boutique Revenue Growth Management</div>
+    <h1 class="hero-headline">
+      No one understands retail<br>margins <em>like we do.</em>
+    </h1>
+    <div class="hero-bottom-row">
+      <div>
+        <p class="hero-sub">Fundare is a boutique RGM consultancy specializing in pricing strategy, promotion analytics, and margin intelligence for US grocery retailers and FMCG brands. We bring enterprise-grade methodology — without the enterprise price tag.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:28px">
+        <div class="hero-actions">
+          <a href="#cta" class="btn-primary">Let's Talk Strategy</a>
+          <a href="#audience" class="btn-ghost">Explore solutions →</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><div class="hero-stat-num">25+</div><div class="hero-stat-lbl">Years of RGM</div></div>
+          <div class="hero-stat"><div class="hero-stat-num">50+</div><div class="hero-stat-lbl">Clients advised</div></div>
+          <div class="hero-stat"><div class="hero-stat-num">90d</div><div class="hero-stat-lbl">To results</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item">Pricing Strategy</span>
+    <span class="marquee-item">Promo Post Mortem</span>
+    <span class="marquee-item">Margin Intelligence</span>
+    <span class="marquee-item">Store Clustering</span>
+    <span class="marquee-item">Price Elasticity</span>
+    <span class="marquee-item">Promo Optimization</span>
+    <span class="marquee-item">P&L by SKU</span>
+    <span class="marquee-item">Revenue Growth Management</span>
+    <span class="marquee-item">Pricing Strategy</span>
+    <span class="marquee-item">Promo Post Mortem</span>
+    <span class="marquee-item">Margin Intelligence</span>
+    <span class="marquee-item">Store Clustering</span>
+    <span class="marquee-item">Price Elasticity</span>
+    <span class="marquee-item">Promo Optimization</span>
+    <span class="marquee-item">P&L by SKU</span>
+    <span class="marquee-item">Revenue Growth Management</span>
+  </div>
+</div>
+
+<!-- ═══ AUDIENCE PICKER ═══ -->
+<div class="audience" id="audience">
+  <div class="audience-inner">
+    <div class="section-label">Who We Serve</div>
+    <h2>Two worlds. One mission:<br>profitable growth.</h2>
+    <div class="audience-grid">
+      <a href="#retailers" class="audience-card retailers">
+        <div class="aud-label">For Retailers</div>
+        <div class="aud-title">Grocery Chains &<br>Supermarkets</div>
+        <div class="aud-sub">See every margin point across every category, supplier, and SKU. Price smarter. Negotiate stronger. Promote more profitably.</div>
+        <div class="aud-products">
+          <span class="aud-tag">PNL Track</span>
+          <span class="aud-tag">Pricing Strategy</span>
+          <span class="aud-tag">Promo Post Mortem</span>
+          <span class="aud-tag">Store Clustering</span>
+          <span class="aud-tag">Price Simulation</span>
+        </div>
+        <span class="aud-arrow">→</span>
+      </a>
+      <a href="#brands" class="audience-card brands">
+        <div class="aud-label">For FMCG Brands</div>
+        <div class="aud-title">CPG & FMCG<br>Manufacturers</div>
+        <div class="aud-sub">Optimize every promotion, maximize price realization, and build the RGM capabilities your commercial team needs to win at shelf.</div>
+        <div class="aud-products">
+          <span class="aud-tag">Promo Optimization</span>
+          <span class="aud-tag">Price Elasticity</span>
+          <span class="aud-tag">Trade Terms</span>
+          <span class="aud-tag">RGM Certification</span>
+          <span class="aud-tag">Post Mortem</span>
+        </div>
+        <span class="aud-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ PRODUCTS ═══ -->
+<section class="products-section" id="products">
+  <div class="container">
+    <div class="section-label">Our Products</div>
+    <h2>Dashboards built for<br>every RGM decision.</h2>
+    <p class="section-intro" style="margin-bottom:40px">Every tool we build is purpose-built for how retailers and FMCG brands actually operate — not generic BI, not off-the-shelf software. Real data. Real decisions.</p>
+
+    <div class="product-tabs">
+      <button class="ptab active" onclick="showTab('pnl',this)">PNL Track</button>
+      <button class="ptab" onclick="showTab('promo',this)">Promo Post Mortem</button>
+      <button class="ptab" onclick="showTab('pricing',this)">Pricing Strategy</button>
+    </div>
+
+    <!-- PNL TRACK -->
+    <div class="product-panel active" id="tab-pnl" id="retailers">
+      <div class="prod-info">
+        <div class="prod-eyebrow">For Retailers</div>
+        <div class="prod-title">Fundare PNL Track</div>
+        <div class="prod-desc">Real-time P&L visibility across every category, brand, supplier, and SKU. Track margin performance vs. last year, identify leakage, and walk into every supplier negotiation with the data advantage.</div>
+        <div class="prod-features">
+          <div class="pf"><div class="pf-icon"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><rect x="3" y="3" width="18" height="18" rx="1" stroke="#c9a84c" stroke-width="1.5"/><line x1="3" y1="9" x2="21" y2="9" stroke="#c9a84c" stroke-width="1"/><line x1="9" y1="9" x2="9" y2="21" stroke="#c9a84c" stroke-width="1"/></svg></div><div><div class="pf-title">Full P&L by Category, Brand & SKU</div><div class="pf-text">Net revenue, net cost, supplier support, and margin % — at every level of your business, filterable by branch, period, or product.</div></div></div>
+          <div class="pf"><div class="pf-icon"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><rect x="3" y="4" width="18" height="16" rx="1" stroke="#c9a84c" stroke-width="1.5"/><line x1="3" y1="9" x2="21" y2="9" stroke="#c9a84c" stroke-width="1"/><line x1="7" y1="2" x2="7" y2="6" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/><line x1="17" y1="2" x2="17" y2="6" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/><polyline points="7,14 10,17 17,12" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="pf-title">Period vs. Last Year — Built In</div><div class="pf-text">YTD, quarterly, monthly vs. LY comparisons. Spot trends before they become expensive problems.</div></div></div>
+          <div class="pf"><div class="pf-icon"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="#c9a84c" stroke-width="1.5"/><path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/><path d="M16 3.13a4 4 0 0 1 0 7.75" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/></svg></div><div><div class="pf-title">Supplier Negotiation Intelligence</div><div class="pf-text">Know which suppliers are driving profitability and which are eroding it. Enter negotiations with the data, not a gut feeling.</div></div></div>
+        </div>
+        <a href="#cta" class="prod-cta">Let's Talk Strategy →</a>
+      </div>
+      <div>
+        <!-- PNL DASHBOARD MOCKUP -->
+        <div class="db-shell">
+          <div class="db-chrome">
+            <div class="db-dot" style="background:#ef4444"></div>
+            <div class="db-dot" style="background:#f59e0b;margin-left:5px"></div>
+            <div class="db-dot" style="background:#22c55e;margin-left:5px"></div>
+            <span class="db-chrome-title">Fundare PNL Track</span>
+            <span class="db-live">● LIVE</span>
+          </div>
+          <div class="pnl-layout">
+            <!-- sidebar -->
+            <div class="pnl-sidebar">
+              <div class="pnl-nav act">📊 P&L</div>
+              <div class="pnl-nav">📈 Trend</div>
+              <div class="pnl-nav">✅ Comp.</div>
+              <div class="pnl-divider"></div>
+              <div class="pnl-filter-t">Filters</div>
+              <div class="pnl-filter-t" style="margin-top:4px">Branch</div>
+              <div class="pnl-filter-s"><span>All</span><span>▼</span></div>
+              <div class="pnl-filter-t">Category</div>
+              <div class="pnl-filter-s"><span>All</span><span>▼</span></div>
+              <div class="pnl-filter-t">Supplier</div>
+              <div class="pnl-filter-s"><span>All</span><span>▼</span></div>
+              <div class="pnl-filter-t">Brand</div>
+              <div class="pnl-filter-s"><span>All</span><span>▼</span></div>
+              <div class="pnl-filter-t">SKU</div>
+              <div class="pnl-filter-s"><span>All</span><span>▼</span></div>
+            </div>
+            <!-- main -->
+            <div class="pnl-main">
+              <div class="pnl-top">
+                <!-- date panel -->
+                <div class="pnl-dates">
+                  <div style="margin-bottom:6px"><span class="ytd-badge">YTD</span><span class="date-title">Date Filter</span></div>
+                  <div class="month-grid">
+                    <div class="mb s">Jan</div><div class="mb s">Feb</div>
+                    <div class="mb">Mar</div><div class="mb">Apr</div>
+                    <div class="mb">May</div><div class="mb">Jun</div>
+                    <div class="mb">Jul</div><div class="mb">Aug</div>
+                    <div class="mb">Sep</div><div class="mb">Oct</div>
+                    <div class="mb">Nov</div><div class="mb">Dec</div>
+                  </div>
+                </div>
+                <!-- P&L table -->
+                <div class="pnl-tbl-wrap">
+                  <table class="pnl-tbl">
+                    <thead><tr><th>Metric</th><th>2024</th><th>2025</th><th>vs LY</th></tr></thead>
+                    <tbody>
+                      <tr><td>Units</td><td>1,078K</td><td>1,153K</td><td class="g">+7.0%</td></tr>
+                      <tr><td>Price/Unit</td><td>$304</td><td>$283</td><td class="r">-7.0%</td></tr>
+                      <tr><td class="b">Net Revenue</td><td class="b">291,775K</td><td class="b">289,955K</td><td class="r b">-0.6%</td></tr>
+                      <tr><td>Net Cost</td><td>259,796K</td><td>259,165K</td><td class="r">-0.2%</td></tr>
+                      <tr><td>Sup. Support</td><td>7,579K</td><td>9,481K</td><td class="g">+25.1%</td></tr>
+                      <tr><td>% Support</td><td>1.5%</td><td>2.6%</td><td class="g">+1.0pps</td></tr>
+                      <tr><td class="b hl">Profit</td><td class="b hl">43,615K</td><td class="b hl">46,358K</td><td class="g b hl">+6.3%</td></tr>
+                      <tr><td class="b hl">Margin %</td><td class="b hl">14.9%</td><td class="gold hl">16.0%</td><td class="g b hl">+1.0pps</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- bar chart -->
+                <div class="pnl-bars">
+                  <div class="bars-title">Margin Δ vs LY</div>
+                  <div class="br"><span class="br-cat">Cooking Oils</span><div class="br-track"><div class="br-fill r2" style="width:9%"></div><span class="br-v rv">-0.62</span></div></div>
+                  <div class="br"><span class="br-cat">Toilet Paper</span><div class="br-track"><div class="br-fill g2" style="width:24%"></div><span class="br-v gv">+1.73</span></div></div>
+                  <div class="br"><span class="br-cat">Napkins</span><div class="br-track"><div class="br-fill g2" style="width:16%"></div><span class="br-v gv">+1.14</span></div></div>
+                  <div class="br"><span class="br-cat">Feminine Care</span><div class="br-track"><div class="br-fill g2" style="width:50%"></div><span class="br-v gv">+3.56</span></div></div>
+                  <div class="br"><span class="br-cat">Baby Diapers</span><div class="br-track"><div class="br-fill g2" style="width:94%"></div><span class="br-v gv">+6.76</span></div></div>
+                  <div class="br"><span class="br-cat">Paper Towels</span><div class="br-track"><div class="br-fill g2" style="width:96%"></div><span class="br-v gv">+6.79</span></div></div>
+                </div>
+              </div>
+              <!-- quarterly table -->
+              <div class="pnl-bottom">
+                <div class="pnl-qtable">
+                  <table>
+                    <thead>
+                      <tr><th style="text-align:left">Metric</th><th colspan="4" style="text-align:center;color:rgba(255,255,255,.5)">2024</th><th colspan="4" style="text-align:center;color:rgba(255,255,255,.5)">2025</th></tr>
+                      <tr><th style="text-align:left"></th><th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th><th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Net Rev</td><td>$98.9M</td><td>$83.6M</td><td>$80.1M</td><td>$89.8M</td><td>$89.3M</td><td>$83.0M</td><td>$85.2M</td><td>$32.2M</td></tr>
+                      <tr><td class="rq">Net Cost</td><td class="rq">$87.9M</td><td class="rq">$74.6M</td><td class="rq">$71.2M</td><td class="rq">$80.3M</td><td class="rq">$79.6M</td><td class="rq">$74.1M</td><td class="rq">$76.7M</td><td class="rq">$28.6M</td></tr>
+                      <tr><td>Profit</td><td>$14.6M</td><td>$12.4M</td><td>$12.2M</td><td>$13.7M</td><td>$14.4M</td><td>$13.1M</td><td>$13.6M</td><td>$5.1M</td></tr>
+                      <tr><td class="au">Margin%</td><td class="au">14.8%</td><td class="au">14.9%</td><td class="au">15.3%</td><td class="au">15.3%</td><td class="au">16.2%</td><td class="au">15.9%</td><td class="au">16.0%</td><td class="au">15.8%</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- mini combo chart -->
+                <div class="pnl-chart">
+                  <div class="chart-tabs">
+                    <div class="ctab">Units</div>
+                    <div class="ctab">Sales</div>
+                    <div class="ctab a">Profit</div>
+                  </div>
+                  <svg viewBox="0 0 188 110" width="100%" height="100%">
+                    <line x1="10" y1="100" x2="180" y2="100" stroke="rgba(255,255,255,.07)" stroke-width="1"/>
+                    <line x1="10" y1="70" x2="180" y2="70" stroke="rgba(255,255,255,.04)" stroke-width="1" stroke-dasharray="3,2"/>
+                    <line x1="10" y1="40" x2="180" y2="40" stroke="rgba(255,255,255,.04)" stroke-width="1" stroke-dasharray="3,2"/>
+                    <line x1="97" y1="8" x2="97" y2="105" stroke="rgba(201,168,76,.2)" stroke-width="1" stroke-dasharray="3,2"/>
+                    <text x="50" y="108" fill="rgba(255,255,255,.2)" font-size="6" text-anchor="middle">2024</text>
+                    <text x="142" y="108" fill="rgba(255,255,255,.2)" font-size="6" text-anchor="middle">2025</text>
+                    <rect x="14" y="22" width="16" height="78" fill="rgba(100,160,220,.55)" rx="1"/>
+                    <rect x="38" y="38" width="16" height="62" fill="rgba(100,160,220,.4)" rx="1"/>
+                    <rect x="59" y="40" width="16" height="60" fill="rgba(100,160,220,.4)" rx="1"/>
+                    <rect x="80" y="30" width="16" height="70" fill="rgba(100,160,220,.4)" rx="1"/>
+                    <rect x="103" y="24" width="16" height="76" fill="rgba(100,160,220,.55)" rx="1"/>
+                    <rect x="124" y="33" width="16" height="67" fill="rgba(100,160,220,.4)" rx="1"/>
+                    <rect x="145" y="27" width="16" height="73" fill="rgba(100,160,220,.4)" rx="1"/>
+                    <rect x="163" y="72" width="12" height="28" fill="rgba(100,160,220,.3)" rx="1"/>
+                    <polyline points="22,55 46,64 67,65 88,59 111,52 132,57 153,54 169,61" fill="none" stroke="#3b9eff" stroke-width="1.5" stroke-linejoin="round"/>
+                    <circle cx="22" cy="55" r="2" fill="#3b9eff"/>
+                    <circle cx="111" cy="52" r="2.5" fill="#3b9eff" stroke="#fff" stroke-width=".8"/>
+                    <circle cx="153" cy="54" r="2.5" fill="#3b9eff" stroke="#fff" stroke-width=".8"/>
+                    <text x="22" y="50" fill="#3b9eff" font-size="5.5" text-anchor="middle">14.8%</text>
+                    <text x="111" y="47" fill="#3b9eff" font-size="5.5" text-anchor="middle" font-weight="700">16.2%</text>
+                    <text x="153" y="49" fill="#3b9eff" font-size="5.5" text-anchor="middle">16.0%</text>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROMO POST MORTEM -->
+    <div class="product-panel" id="tab-promo">
+      <div class="prod-info">
+        <div class="prod-eyebrow">For Retailers & FMCG Brands</div>
+        <div class="prod-title">Promo Post Mortem</div>
+        <div class="prod-desc">50% of supplier-proposed promotions destroy value. Our post mortem dashboards show you exactly which promos drove incremental profit — and which caused cannibalization and overstock.</div>
+        <div class="prod-features">
+          <div class="pf"><div class="pf-icon"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><circle cx="12" cy="12" r="9" stroke="#c9a84c" stroke-width="1.5"/><polyline points="8,12 11,15 16,9" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="pf-title">Promotion ROI by Family & SKU</div><div class="pf-text">Incremental volume, sales, and profit — broken down by promo type, category, and promotion period. Know which promos pay for themselves.</div></div></div>
+          <div class="pf"><div class="pf-icon"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><circle cx="12" cy="12" r="9" stroke="#c9a84c" stroke-width="1.5"/><line x1="12" y1="8" x2="12" y2="12" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="16" r="1" fill="#c9a84c"/></svg></div><div><div class="pf-title">Cannibalization & Overstock Detection</div><div class="pf-text">The scatter quadrant shows you which promotions created incremental value vs. which cannibalized baseline sales or left you with excess inventory.</div></div></div>
+          <div class="pf"><div class="pf-icon"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><line x1="8" y1="6" x2="21" y2="6" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="12" x2="21" y2="12" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="18" x2="21" y2="18" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/><line x1="3" y1="6" x2="3.01" y2="6" stroke="#c9a84c" stroke-width="2" stroke-linecap="round"/><line x1="3" y1="12" x2="3.01" y2="12" stroke="#c9a84c" stroke-width="2" stroke-linecap="round"/><line x1="3" y1="18" x2="3.01" y2="18" stroke="#c9a84c" stroke-width="2" stroke-linecap="round"/></svg></div><div><div class="pf-title">Top & Bottom Promotion Ranking</div><div class="pf-text">Instantly identify your best and worst-performing promotions by profit impact, volume, and ROI — filterable by any business lens.</div></div></div>
+        </div>
+        <a href="#cta" class="prod-cta">Let's Talk Strategy →</a>
+      </div>
+      <div>
+        <!-- PROMO DASHBOARD MOCKUP -->
+        <div class="db-shell">
+          <div class="db-chrome">
+            <div class="db-dot" style="background:#ef4444"></div>
+            <div class="db-dot" style="background:#f59e0b;margin-left:5px"></div>
+            <div class="db-dot" style="background:#22c55e;margin-left:5px"></div>
+            <span class="db-chrome-title">Promo Post Mortem</span>
+            <span class="db-live">● LIVE</span>
+          </div>
+          <div class="db-body" style="padding:0">
+            <!-- KPI bar -->
+            <div class="promo-topbar" style="gap:6px">
+              <div style="font-size:.6rem;color:rgba(255,255,255,.4);white-space:nowrap">Jan–Oct 2025</div>
+              <div class="promo-kpi"><div class="promo-kpi-lbl"># Promos</div><div class="promo-kpi-val">1,289</div></div>
+              <div class="promo-kpi"><div class="promo-kpi-lbl">Vol N Inc %</div><div class="promo-kpi-val" style="color:var(--green)">28.1%</div></div>
+              <div class="promo-kpi"><div class="promo-kpi-lbl">Sbt N Inc %</div><div class="promo-kpi-val" style="color:var(--green)">6.6%</div></div>
+              <div class="promo-kpi"><div class="promo-kpi-lbl">Profit Inc %</div><div class="promo-kpi-val" style="color:var(--green)">7.5%</div></div>
+            </div>
+            <!-- table -->
+            <div class="promo-table-wrap">
+              <table class="promo-tbl">
+                <thead><tr><th style="text-align:left">Family</th><th>Units</th><th>Vol Δ%</th><th>Sbt Net</th><th>Sbt Δ%</th><th>Support</th><th>Profit</th><th>Prof Δ%</th><th>#Promo</th></tr></thead>
+                <tbody>
+                  <tr><td>Snacks & Cookies</td><td>130,687</td><td class="g">▲44.8%</td><td>19,984K</td><td class="g">▲16.9%</td><td>3,296K</td><td>4,814K</td><td class="g">▲12.5%</td><td>241</td></tr>
+                  <tr><td>Toilet Paper</td><td>86,483</td><td class="g">▲29.7%</td><td>28,568K</td><td class="g">▲15.7%</td><td>2,133K</td><td>4,239K</td><td class="g">▲12.5%</td><td>159</td></tr>
+                  <tr><td>Feminine Care</td><td>36,628</td><td class="g">▲32.5%</td><td>8,054K</td><td class="g">▲10.2%</td><td>1,371K</td><td>1,653K</td><td class="g">▲35.7%</td><td>248</td></tr>
+                  <tr><td>Paper Towels</td><td>15,970</td><td class="g">▲29.7%</td><td>4,749K</td><td class="g">▲14.6%</td><td>773K</td><td>1,165K</td><td class="g">▲47.7%</td><td>152</td></tr>
+                  <tr><td>Baby Diapers</td><td>13,707</td><td class="g">▲28.2%</td><td>5,716K</td><td class="g">▲9.6%</td><td>1,325K</td><td>1,371K</td><td class="g">▲73.0%</td><td>292</td></tr>
+                  <tr class="b2"><td class="b2">Total</td><td class="b2">298,571</td><td class="g b2">▲36.6%</td><td class="b2">73,517K</td><td class="g b2">▲15.7%</td><td class="b2">9,660K</td><td class="b2">14,435K</td><td class="g b2">▲24.5%</td><td class="b2">1,289</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- scatter + waterfall -->
+            <div class="promo-bottom">
+              <div class="scatter-area">
+                <div class="scatter-title">Promotion Quadrant — Profit Inc. vs Revenue Inc.</div>
+                <svg viewBox="0 0 260 130" width="100%" height="130">
+                  <line x1="30" y1="10" x2="30" y2="120" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+                  <line x1="30" y1="120" x2="255" y2="120" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+                  <line x1="30" y1="65" x2="255" y2="65" stroke="rgba(255,255,255,.06)" stroke-width="1" stroke-dasharray="3,2"/>
+                  <line x1="142" y1="10" x2="142" y2="120" stroke="rgba(255,255,255,.06)" stroke-width="1" stroke-dasharray="3,2"/>
+                  <text x="25" y="65" fill="rgba(255,255,255,.3)" font-size="6" text-anchor="middle">0%</text>
+                  <text x="142" y="128" fill="rgba(255,255,255,.3)" font-size="6" text-anchor="middle">0%</text>
+                  <text x="8" y="14" fill="rgba(255,255,255,.3)" font-size="5.5" text-anchor="middle">Prof</text>
+                  <text x="252" y="125" fill="rgba(255,255,255,.3)" font-size="5.5">Rev</text>
+                  <!-- green dots Q1 (top right) -->
+                  <circle cx="170" cy="30" r="5" fill="rgba(76,175,125,.5)" stroke="#4caf7d" stroke-width=".8"/>
+                  <circle cx="195" cy="45" r="3.5" fill="rgba(76,175,125,.5)" stroke="#4caf7d" stroke-width=".8"/>
+                  <circle cx="185" cy="20" r="7" fill="rgba(76,175,125,.4)" stroke="#4caf7d" stroke-width=".8"/>
+                  <circle cx="220" cy="35" r="4" fill="rgba(76,175,125,.5)" stroke="#4caf7d" stroke-width=".8"/>
+                  <circle cx="210" cy="55" r="6" fill="rgba(76,175,125,.4)" stroke="#4caf7d" stroke-width=".8"/>
+                  <circle cx="240" cy="25" r="3" fill="rgba(76,175,125,.5)" stroke="#4caf7d" stroke-width=".8"/>
+                  <circle cx="160" cy="50" r="4.5" fill="rgba(76,175,125,.4)" stroke="#4caf7d" stroke-width=".8"/>
+                  <circle cx="175" cy="15" r="3.5" fill="rgba(76,175,125,.5)" stroke="#4caf7d" stroke-width=".8"/>
+                  <circle cx="200" cy="22" r="5.5" fill="rgba(76,175,125,.4)" stroke="#4caf7d" stroke-width=".8"/>
+                  <!-- yellow dots -->
+                  <circle cx="155" cy="80" r="4" fill="rgba(251,191,36,.4)" stroke="#fbbf24" stroke-width=".8"/>
+                  <circle cx="175" cy="70" r="3" fill="rgba(251,191,36,.4)" stroke="#fbbf24" stroke-width=".8"/>
+                  <circle cx="90" cy="40" r="4.5" fill="rgba(251,191,36,.4)" stroke="#fbbf24" stroke-width=".8"/>
+                  <circle cx="115" cy="55" r="3.5" fill="rgba(251,191,36,.4)" stroke="#fbbf24" stroke-width=".8"/>
+                  <!-- red dots Q3/Q4 -->
+                  <circle cx="60" cy="80" r="5" fill="rgba(239,68,68,.4)" stroke="#ef4444" stroke-width=".8"/>
+                  <circle cx="80" cy="90" r="3.5" fill="rgba(239,68,68,.4)" stroke="#ef4444" stroke-width=".8"/>
+                  <circle cx="50" cy="95" r="6" fill="rgba(239,68,68,.35)" stroke="#ef4444" stroke-width=".8"/>
+                  <circle cx="100" cy="85" r="4" fill="rgba(239,68,68,.4)" stroke="#ef4444" stroke-width=".8"/>
+                  <circle cx="70" cy="105" r="3" fill="rgba(239,68,68,.4)" stroke="#ef4444" stroke-width=".8"/>
+                  <circle cx="40" cy="75" r="7" fill="rgba(239,68,68,.35)" stroke="#ef4444" stroke-width=".8"/>
+                </svg>
+                <div class="quadrant-legend">
+                  <div class="qleg"><div class="qleg-dot" style="background:#4caf7d"></div>Win: +Profit +Revenue</div>
+                  <div class="qleg"><div class="qleg-dot" style="background:#fbbf24"></div>Partial: Mixed result</div>
+                  <div class="qleg"><div class="qleg-dot" style="background:#ef4444"></div>Lose: Cannibalization</div>
+                  <div class="qleg"><div class="qleg-dot" style="background:rgba(255,255,255,.2)"></div>Neutral: Baseline only</div>
+                </div>
+              </div>
+              <!-- waterfall -->
+              <div class="waterfall-area">
+                <div class="wf-tabs"><div class="wf-tab">Sales</div><div class="wf-tab a">Profit</div><div class="wf-tab">Vol</div></div>
+                <svg viewBox="0 0 175 130" width="100%" height="130">
+                  <text x="88" y="8" fill="rgba(255,255,255,.4)" font-size="6" text-anchor="middle">Profit Waterfall ($K)</text>
+                  <line x1="5" y1="100" x2="170" y2="100" stroke="rgba(255,255,255,.07)" stroke-width="1"/>
+                  <!-- Baseline bar -->
+                  <rect x="10" y="28" width="26" height="72" fill="#4caf7d" rx="1"/>
+                  <text x="23" y="24" fill="rgba(255,255,255,.7)" font-size="6" text-anchor="middle" font-weight="700">$13.6M</text>
+                  <text x="23" y="112" fill="rgba(255,255,255,.3)" font-size="5.5" text-anchor="middle">Baseline</text>
+                  <!-- Promo bar -->
+                  <rect x="48" y="42" width="26" height="20" fill="#4caf7d" rx="1"/>
+                  <text x="61" y="38" fill="rgba(255,255,255,.7)" font-size="6" text-anchor="middle">+$0.9M</text>
+                  <text x="61" y="112" fill="rgba(255,255,255,.3)" font-size="5.5" text-anchor="middle">Promo</text>
+                  <!-- Cannib bar -->
+                  <rect x="86" y="62" width="26" height="6" fill="#e05252" rx="1"/>
+                  <text x="99" y="58" fill="rgba(255,255,255,.5)" font-size="6" text-anchor="middle">-$0.2M</text>
+                  <text x="99" y="112" fill="rgba(255,255,255,.3)" font-size="5.5" text-anchor="middle">Cannib.</text>
+                  <!-- Overstock -->
+                  <rect x="124" y="68" width="26" height="3" fill="#e05252" rx="1"/>
+                  <text x="137" y="64" fill="rgba(255,255,255,.5)" font-size="6" text-anchor="middle">0.0M</text>
+                  <text x="137" y="112" fill="rgba(255,255,255,.3)" font-size="5.5" text-anchor="middle">Overstock</text>
+                  <!-- Total -->
+                  <rect x="5" y="100" width="165" height="1" stroke="none" fill="rgba(255,255,255,.05)"/>
+                  <!-- connecting lines -->
+                  <line x1="36" y1="28" x2="48" y2="28" stroke="rgba(255,255,255,.15)" stroke-width=".7" stroke-dasharray="2,1"/>
+                  <line x1="74" y1="42" x2="86" y2="42" stroke="rgba(255,255,255,.15)" stroke-width=".7" stroke-dasharray="2,1"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRICING STRATEGY -->
+    <div class="product-panel" id="tab-pricing" id="brands">
+      <div class="prod-info">
+        <div class="prod-eyebrow">For Retailers & FMCG Brands</div>
+        <div class="prod-title">Pricing Strategy & Simulation</div>
+        <div class="prod-desc">Understand price elasticity at the SKU level. Simulate price changes before you execute them. Identify which products can absorb a price increase — and which will cost you volume. Maximize margin or market share, your choice.</div>
+        <div class="prod-features">
+          <div class="pf"><div class="pf-icon"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><polyline points="23,6 13.5,15.5 8.5,10.5 1,18" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><polyline points="17,6 23,6 23,12" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="pf-title">Price Elasticity by SKU</div><div class="pf-text">Know exactly how sensitive each product is to price changes. Identify inelastic SKUs where you can capture margin without losing volume.</div></div></div>
+          <div class="pf"><div class="pf-icon"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><rect x="2" y="3" width="20" height="14" rx="1" stroke="#c9a84c" stroke-width="1.5"/><line x1="8" y1="21" x2="16" y2="21" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/><line x1="12" y1="17" x2="12" y2="21" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/><polyline points="6,13 9,9 13,11 18,6" stroke="#c9a84c" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity=".7"/></svg></div><div><div class="pf-title">Price Change Simulation</div><div class="pf-text">Model the revenue, volume, and profit impact of any pricing scenario before committing. Full P&L impact shown in real time.</div></div></div>
+          <div class="pf"><div class="pf-icon"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="#c9a84c" stroke-width="1.5" stroke-linejoin="round"/><polyline points="9,22 9,12 15,12 15,22" stroke="#c9a84c" stroke-width="1.5" stroke-linejoin="round"/></svg></div><div><div class="pf-title">Store Clustering & Zone Pricing</div><div class="pf-text">Segment stores by consumer price sensitivity and competitive positioning. Execute zone pricing strategies that maximize margin by location.</div></div></div>
+        </div>
+        <a href="#cta" class="prod-cta">Let's Talk Strategy →</a>
+      </div>
+      <div>
+        <!-- PRICING DASHBOARD MOCKUP -->
+        <div class="db-shell">
+          <div class="db-chrome">
+            <div class="db-dot" style="background:#ef4444"></div>
+            <div class="db-dot" style="background:#f59e0b;margin-left:5px"></div>
+            <div class="db-dot" style="background:#22c55e;margin-left:5px"></div>
+            <span class="db-chrome-title">Pricing Strategy & Simulation</span>
+            <span class="db-live">● LIVE</span>
+          </div>
+          <div class="db-body" style="padding:0">
+            <!-- KPIs -->
+            <div class="pricing-kpis">
+              <div class="px-kpi"><div class="px-kpi-lbl">Price Change</div><div class="px-kpi-val">+3.2%</div><div class="px-kpi-sub" style="color:var(--gold)">Jan 2025</div></div>
+              <div class="px-kpi"><div class="px-kpi-lbl">Avg Elasticity</div><div class="px-kpi-val">1.7</div><div class="px-kpi-sub" style="color:var(--red)">Elastic</div></div>
+              <div class="px-kpi"><div class="px-kpi-lbl">Vol Impact</div><div class="px-kpi-val" style="color:var(--red)">-5.4%</div><div class="px-kpi-sub" style="color:var(--red)">-4.5M units</div></div>
+              <div class="px-kpi"><div class="px-kpi-lbl">Profit Impact</div><div class="px-kpi-val" style="color:var(--red)">-1.0%</div><div class="px-kpi-sub" style="color:var(--red)">-$5.5M</div></div>
+            </div>
+            <!-- scatter + list -->
+            <div class="pricing-main">
+              <div class="scatter-pricing">
+                <div style="font-size:.6rem;color:rgba(255,255,255,.4);margin-bottom:6px">Margin % vs Price Elasticity — Sep & Oct 2025</div>
+                <svg viewBox="0 0 260 160" width="100%" height="160">
+                  <line x1="20" y1="10" x2="20" y2="150" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+                  <line x1="20" y1="150" x2="255" y2="150" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+                  <line x1="20" y1="110" x2="255" y2="110" stroke="rgba(255,255,255,.04)" stroke-width="1" stroke-dasharray="3,2"/>
+                  <line x1="20" y1="75" x2="255" y2="75" stroke="rgba(255,255,255,.04)" stroke-width="1" stroke-dasharray="3,2"/>
+                  <line x1="20" y1="40" x2="255" y2="40" stroke="rgba(255,255,255,.04)" stroke-width="1" stroke-dasharray="3,2"/>
+                  <line x1="95" y1="10" x2="95" y2="150" stroke="rgba(255,255,255,.04)" stroke-width="1" stroke-dasharray="3,2"/>
+                  <line x1="170" y1="10" x2="170" y2="150" stroke="rgba(255,255,255,.04)" stroke-width="1" stroke-dasharray="3,2"/>
+                  <!-- axis labels -->
+                  <text x="15" y="152" fill="rgba(255,255,255,.2)" font-size="5.5">0</text>
+                  <text x="93" y="152" fill="rgba(255,255,255,.2)" font-size="5.5">1.0</text>
+                  <text x="168" y="152" fill="rgba(255,255,255,.2)" font-size="5.5">2.0</text>
+                  <text x="15" y="112" fill="rgba(255,255,255,.2)" font-size="5.5">10%</text>
+                  <text x="15" y="78" fill="rgba(255,255,255,.2)" font-size="5.5">20%</text>
+                  <text x="250" y="156" fill="rgba(255,255,255,.25)" font-size="5.5">Elas.</text>
+                  <text x="3" y="14" fill="rgba(255,255,255,.25)" font-size="5.5">Mar%</text>
+                  <!-- green dots (high margin, low elasticity = opportunity) -->
+                  <circle cx="55" cy="35" r="7" fill="rgba(201,168,76,.35)" stroke="var(--gold)" stroke-width=".8"/>
+                  <circle cx="40" cy="50" r="5" fill="rgba(201,168,76,.3)" stroke="var(--gold)" stroke-width=".8"/>
+                  <circle cx="70" cy="42" r="4" fill="rgba(201,168,76,.3)" stroke="var(--gold)" stroke-width=".8"/>
+                  <circle cx="60" cy="60" r="6" fill="rgba(201,168,76,.25)" stroke="var(--gold)" stroke-width=".8"/>
+                  <!-- green (moderate) -->
+                  <circle cx="100" cy="55" r="5" fill="rgba(76,175,125,.35)" stroke="#4caf7d" stroke-width=".8"/>
+                  <circle cx="120" cy="45" r="4" fill="rgba(76,175,125,.35)" stroke="#4caf7d" stroke-width=".8"/>
+                  <circle cx="115" cy="70" r="6" fill="rgba(76,175,125,.3)" stroke="#4caf7d" stroke-width=".8"/>
+                  <circle cx="85" cy="80" r="5.5" fill="rgba(76,175,125,.3)" stroke="#4caf7d" stroke-width=".8"/>
+                  <circle cx="130" cy="85" r="4" fill="rgba(76,175,125,.3)" stroke="#4caf7d" stroke-width=".8"/>
+                  <circle cx="145" cy="65" r="5" fill="rgba(76,175,125,.3)" stroke="#4caf7d" stroke-width=".8"/>
+                  <!-- yellow (higher elas) -->
+                  <circle cx="175" cy="60" r="4.5" fill="rgba(251,191,36,.3)" stroke="#fbbf24" stroke-width=".8"/>
+                  <circle cx="190" cy="75" r="6" fill="rgba(251,191,36,.3)" stroke="#fbbf24" stroke-width=".8"/>
+                  <circle cx="210" cy="50" r="4" fill="rgba(251,191,36,.3)" stroke="#fbbf24" stroke-width=".8"/>
+                  <circle cx="225" cy="85" r="5" fill="rgba(251,191,36,.25)" stroke="#fbbf24" stroke-width=".8"/>
+                  <circle cx="200" cy="95" r="7" fill="rgba(251,191,36,.25)" stroke="#fbbf24" stroke-width=".8"/>
+                  <!-- labels for key circles -->
+                  <text x="55" y="29" fill="rgba(201,168,76,.9)" font-size="5" text-anchor="middle" font-weight="700">Opportunity</text>
+                  <text x="200" y="104" fill="rgba(251,191,36,.7)" font-size="5" text-anchor="middle">High Risk</text>
+                </svg>
+                <div style="display:flex;gap:12px;margin-top:4px">
+                  <div class="qleg"><div class="qleg-dot" style="background:var(--gold)"></div>Price Up Opportunity</div>
+                  <div class="qleg"><div class="qleg-dot" style="background:#4caf7d"></div>Stable</div>
+                  <div class="qleg"><div class="qleg-dot" style="background:#fbbf24"></div>High Elasticity</div>
+                </div>
+              </div>
+              <!-- SKU list -->
+              <div class="pricing-list">
+                <div class="pl-title">SKU Ranking — Margin & Elasticity</div>
+                <div style="display:flex;justify-content:space-between;padding:2px 0;border-bottom:1px solid rgba(255,255,255,.06)">
+                  <span style="font-size:.55rem;color:rgba(255,255,255,.25)">Product</span>
+                  <span style="font-size:.55rem;color:rgba(255,255,255,.25)">Mar%</span>
+                  <span style="font-size:.55rem;color:rgba(255,255,255,.25)">Elas.</span>
+                </div>
+                <div class="pl-row"><span class="pl-name">Cooking Oil 800ml</span><span class="pl-mar">5.1%</span><span class="pl-elas">0.74</span></div>
+                <div class="pl-row"><span class="pl-name">Soy Oil 750ml</span><span class="pl-mar">6.4%</span><span class="pl-elas">1.09</span></div>
+                <div class="pl-row"><span class="pl-name">Shortening 500gr</span><span class="pl-mar">7.7%</span><span class="pl-elas">0.55</span></div>
+                <div class="pl-row"><span class="pl-name">Tissue Indiv 400S</span><span class="pl-mar">12.2%</span><span class="pl-elas">2.71</span></div>
+                <div class="pl-row"><span class="pl-name">Facial Tissue XL</span><span class="pl-mar">12.5%</span><span class="pl-elas">2.84</span></div>
+                <div class="pl-row"><span class="pl-name">Facial Tissue 600H</span><span class="pl-mar">12.6%</span><span class="pl-elas">2.37</span></div>
+                <div class="pl-row"><span class="pl-name">Vegetable Oil 400ml</span><span class="pl-mar">12.8%</span><span class="pl-elas">0.44</span></div>
+                <div class="pl-row"><span class="pl-name">Feminine Pad 10S</span><span class="pl-mar">17.1%</span><span class="pl-elas">1.52</span></div>
+                <div class="pl-row"><span class="pl-name">Fem Anat 10S</span><span class="pl-mar">17.7%</span><span class="pl-elas">1.43</span></div>
+                <div class="pl-row"><span class="pl-name">Baby Diaper Jumbo</span><span class="pl-mar" style="color:var(--green)">19.1%</span><span class="pl-elas" style="color:var(--green)">0.85</span></div>
+                <div class="pl-row"><span class="pl-name">Towel 180 sheets</span><span class="pl-mar" style="color:var(--green)">18.1%</span><span class="pl-elas" style="color:var(--green)">1.07</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ RESULTS ═══ -->
+<div class="results-dark" id="results">
+  <div class="results-grid">
+    <div class="res-block"><div class="res-num">3–8%</div><div class="res-desc">Margin improvement from advanced pricing strategies without loss of market share</div></div>
+    <div class="res-block"><div class="res-num">30%</div><div class="res-desc">Reduction in unprofitable promotions with our promo optimization framework</div></div>
+    <div class="res-block"><div class="res-num">35%</div><div class="res-desc">Increase in promotional ROI for clients who deploy our post mortem analytics</div></div>
+    <div class="res-block"><div class="res-num">90d</div><div class="res-desc">Average time from deployment to first measurable P&L improvement</div></div>
+  </div>
+</div>
+
+<!-- ═══ RGM 360 ═══ -->
+<section class="method" id="methodology" style="background:var(--navy);padding:90px 60px">
+  <div class="container">
+    <div class="section-label" style="color:var(--gold)">Our Methodology</div>
+    <h2 style="color:var(--white)">RGM 360° — We help companies<br>build and accelerate their<br><em style="color:var(--gold);font-style:normal">Revenue Growth Management capability.</em></h2>
+    <p style="font-size:1rem;line-height:1.75;color:rgba(255,255,255,.52);max-width:600px;margin-top:0;margin-bottom:56px">Most companies do RGM reactively — they price, promote, and negotiate based on habit, not data. We help you move from reactive to transformational by building the four pillars that make RGM stick: Technology, Processes, Talent, and KPIs.</p>
+
+    <!-- 4 ENABLERS -->
+    <div style="font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(201,168,76,.6);margin-bottom:16px">The 4 Enablers</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-bottom:48px">
+      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.12);padding:28px 24px">
+        <div style="width:40px;height:40px;margin-bottom:16px">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="8" width="32" height="20" rx="2" stroke="#c9a84c" stroke-width="1.5"/>
+            <line x1="4" y1="22" x2="36" y2="22" stroke="#c9a84c" stroke-width="1.5"/>
+            <line x1="14" y1="32" x2="26" y2="32" stroke="#c9a84c" stroke-width="1.5"/>
+            <line x1="20" y1="28" x2="20" y2="32" stroke="#c9a84c" stroke-width="1.5"/>
+            <circle cx="12" cy="15" r="1.5" fill="#c9a84c" opacity=".5"/>
+            <line x1="16" y1="13" x2="28" y2="13" stroke="#c9a84c" stroke-width="1" opacity=".4"/>
+            <line x1="16" y1="17" x2="24" y2="17" stroke="#c9a84c" stroke-width="1" opacity=".4"/>
+          </svg>
+        </div>
+        <div style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--white);margin-bottom:8px">Technology</div>
+        <div style="font-size:.83rem;line-height:1.65;color:rgba(255,255,255,.45)">Analytics and dashboards tailored to your available data — from foundational reports to AI-powered optimization. No overbuilt software. Built for your business.</div>
+      </div>
+      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.12);padding:28px 24px">
+        <div style="width:40px;height:40px;margin-bottom:16px">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="4" stroke="#c9a84c" stroke-width="1.5"/>
+            <circle cx="20" cy="20" r="8.5" stroke="#c9a84c" stroke-width="1" stroke-dasharray="2.5 2" opacity=".5"/>
+            <line x1="20" y1="4" x2="20" y2="9" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="20" y1="31" x2="20" y2="36" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="4" y1="20" x2="9" y2="20" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="31" y1="20" x2="36" y2="20" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="8.1" y1="8.1" x2="11.6" y2="11.6" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" opacity=".5"/>
+            <line x1="28.4" y1="28.4" x2="31.9" y2="31.9" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" opacity=".5"/>
+            <line x1="31.9" y1="8.1" x2="28.4" y2="11.6" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" opacity=".5"/>
+            <line x1="11.6" y1="28.4" x2="8.1" y2="31.9" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" opacity=".5"/>
+          </svg>
+        </div>
+        <div style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--white);margin-bottom:8px">Processes</div>
+        <div style="font-size:.83rem;line-height:1.65;color:rgba(255,255,255,.45)">We integrate RGM into your commercial calendar — pricing reviews, promo planning, supplier negotiations, and S&OP — so decisions are always data-driven.</div>
+      </div>
+      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.12);padding:28px 24px">
+        <div style="width:40px;height:40px;margin-bottom:16px">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="12" r="5" stroke="#c9a84c" stroke-width="1.5"/>
+            <path d="M8 34c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M26 18l2 2 5-5" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--white);margin-bottom:8px">Talent</div>
+        <div style="font-size:.83rem;line-height:1.65;color:rgba(255,255,255,.45)">We certify your team in RGM — from fundamentals to advanced analytics — across all levels and functions. The goal is capability, not dependency on consultants.</div>
+      </div>
+      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.12);padding:28px 24px">
+        <div style="width:40px;height:40px;margin-bottom:16px">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="28" width="6" height="8" rx="1" fill="#c9a84c" opacity=".35"/>
+            <rect x="13" y="20" width="6" height="16" rx="1" fill="#c9a84c" opacity=".5"/>
+            <rect x="22" y="13" width="6" height="23" rx="1" fill="#c9a84c" opacity=".7"/>
+            <rect x="31" y="6" width="6" height="30" rx="1" fill="#c9a84c"/>
+            <polyline points="7,26 16,18 25,11 34,5" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity=".6"/>
+            <circle cx="34" cy="5" r="2" fill="#c9a84c"/>
+          </svg>
+        </div>
+        <div style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--white);margin-bottom:8px">KPIs & Tracking</div>
+        <div style="font-size:.83rem;line-height:1.65;color:rgba(255,255,255,.45)">We define the right RGM KPIs for your stage of maturity and build the tracking cadence — so results are visible, measurable, and accountable across the organization.</div>
+      </div>
+    </div>
+
+    <!-- 5 PILLARS -->
+    <div style="font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(201,168,76,.6);margin-bottom:16px">The 5 RGM Pillars</div>
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:2px;margin-bottom:56px">
+      <div style="background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.18);padding:24px 20px;border-top:3px solid var(--gold)">
+        <div style="font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px">Pricing</div>
+        <div style="font-size:.83rem;line-height:1.6;color:rgba(255,255,255,.55)">Capture the full value of your portfolio. Optimize every price action for revenue, margin, or volume — by SKU, channel, and store cluster.</div>
+      </div>
+      <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);padding:24px 20px">
+        <div style="font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px">Pack Price Architecture</div>
+        <div style="font-size:.83rem;line-height:1.6;color:rgba(255,255,255,.55)">Right format, right pack, right price — for every consumption occasion and shopper segment.</div>
+      </div>
+      <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);padding:24px 20px">
+        <div style="font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px">Mix Management</div>
+        <div style="font-size:.83rem;line-height:1.6;color:rgba(255,255,255,.55)">Drive the brand, pack, and channel mix that maximizes profitability and sustainable growth across your entire portfolio.</div>
+      </div>
+      <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);padding:24px 20px">
+        <div style="font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px">Promo Optimization</div>
+        <div style="font-size:.83rem;line-height:1.6;color:rgba(255,255,255,.55)">Optimal frequency, depth, and promo mechanics. Cut unprofitable promotions by 20–30% and increase promotional ROI by up to 35%.</div>
+      </div>
+      <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);padding:24px 20px">
+        <div style="font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px">Trade Terms</div>
+        <div style="font-size:.83rem;line-height:1.6;color:rgba(255,255,255,.55)">Defensible pay-for-performance terms that align supplier investment with the commercial results that actually matter.</div>
+      </div>
+    </div>
+
+    <!-- MATURITY STAIRCASE -->
+    <div style="font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(201,168,76,.6);margin-bottom:24px">RGM Maturity Journey</div>
+
+    <div style="position:relative;overflow:hidden">
+      <!-- Staircase SVG background arrow -->
+      <div style="display:flex;align-items:flex-end;gap:3px;position:relative;min-height:320px">
+
+        <!-- Step 1: Reactive — shortest, dimmest -->
+        <div style="flex:1;display:flex;flex-direction:column;justify-content:flex-end">
+          <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-bottom:3px solid rgba(255,255,255,.15);padding:20px 18px;height:140px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;transition:all .3s">
+            <div style="position:absolute;top:14px;right:14px;font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.2)">Stage 1</div>
+            <div style="display:flex;gap:3px;margin-bottom:10px">
+              <div style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.2)"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.08)"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.08)"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.08)"></div>
+            </div>
+            <div style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:rgba(255,255,255,.4);margin-bottom:6px">Reactive</div>
+            <div style="font-size:.78rem;line-height:1.55;color:rgba(255,255,255,.28)">No formal RGM. Decisions based on habit. Working in silos with limited data visibility.</div>
+          </div>
+          <div style="text-align:center;padding:10px 0;font-size:.65rem;font-weight:600;color:rgba(255,255,255,.2);letter-spacing:.06em;text-transform:uppercase">Where most start</div>
+        </div>
+
+        <!-- Step 2: Foundational — taller, slightly brighter -->
+        <div style="flex:1;display:flex;flex-direction:column;justify-content:flex-end">
+          <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-bottom:3px solid rgba(255,255,255,.25);padding:20px 18px;height:195px;display:flex;flex-direction:column;justify-content:flex-end;position:relative">
+            <div style="position:absolute;top:14px;right:14px;font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.25)">Stage 2</div>
+            <div style="display:flex;gap:3px;margin-bottom:10px">
+              <div style="width:8px;height:8px;border-radius:50%;background:rgba(201,168,76,.5)"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:rgba(201,168,76,.5)"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.1)"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.1)"></div>
+            </div>
+            <div style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:rgba(255,255,255,.6);margin-bottom:6px">Foundational</div>
+            <div style="font-size:.78rem;line-height:1.55;color:rgba(255,255,255,.38)">First analytics deployed. KPI visibility established. Early wins shared across the commercial team.</div>
+          </div>
+          <div style="text-align:center;padding:10px 0;font-size:.65rem;font-weight:600;color:rgba(255,255,255,.25);letter-spacing:.06em;text-transform:uppercase">First wins visible</div>
+        </div>
+
+        <!-- Step 3: Strategic — even taller, gold border -->
+        <div style="flex:1;display:flex;flex-direction:column;justify-content:flex-end">
+          <div style="background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.2);border-bottom:3px solid rgba(201,168,76,.5);padding:20px 18px;height:250px;display:flex;flex-direction:column;justify-content:flex-end;position:relative">
+            <div style="position:absolute;top:14px;right:14px;font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)">Stage 3</div>
+            <div style="display:flex;gap:3px;margin-bottom:10px">
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--gold)"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--gold)"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--gold)"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.1)"></div>
+            </div>
+            <div style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--white);margin-bottom:6px">Strategic</div>
+            <div style="font-size:.78rem;line-height:1.55;color:rgba(255,255,255,.52)">RGM embedded in commercial planning. Simulation & optimization in use. Actions aligned with revenue and margin objectives.</div>
+          </div>
+          <div style="text-align:center;padding:10px 0;font-size:.65rem;font-weight:600;color:var(--gold);letter-spacing:.06em;text-transform:uppercase">Data drives decisions</div>
+        </div>
+
+        <!-- Step 4: Transformational — tallest, brightest, glowing -->
+        <div style="flex:1;display:flex;flex-direction:column;justify-content:flex-end">
+          <div style="background:rgba(201,168,76,.11);border:1px solid rgba(201,168,76,.35);border-bottom:3px solid var(--gold);padding:20px 18px;height:310px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;box-shadow:0 0 40px rgba(201,168,76,.08)">
+            <div style="position:absolute;top:14px;right:14px;font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)">Stage 4</div>
+            <!-- glow star top right -->
+            <div style="position:absolute;top:18px;left:18px;font-size:1.1rem">✦</div>
+            <div style="display:flex;gap:3px;margin-bottom:10px">
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 6px rgba(201,168,76,.6)"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 6px rgba(201,168,76,.6)"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 6px rgba(201,168,76,.6)"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 6px rgba(201,168,76,.6)"></div>
+            </div>
+            <div style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--gold);margin-bottom:6px">Transformational</div>
+            <div style="font-size:.78rem;line-height:1.55;color:rgba(255,255,255,.6)">Systematic value creation across all departments. RGM is part of the culture. Continuous optimization at scale — self-sustaining.</div>
+            <div style="margin-top:12px;font-size:.72rem;font-weight:700;color:var(--gold);letter-spacing:.04em">↑ Maximum competitive advantage</div>
+          </div>
+          <div style="text-align:center;padding:10px 0;font-size:.65rem;font-weight:700;color:var(--gold);letter-spacing:.06em;text-transform:uppercase">RGM as competitive moat</div>
+        </div>
+
+        <!-- Ascending arrow overlay -->
+        <div style="position:absolute;bottom:40px;left:0;right:0;pointer-events:none">
+          <svg viewBox="0 0 800 20" width="100%" height="20" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="arrowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:rgba(255,255,255,.06)"/>
+                <stop offset="100%" style="stop-color:rgba(201,168,76,.4)"/>
+              </linearGradient>
+            </defs>
+            <path d="M0,18 Q200,16 400,12 Q600,8 780,4 L800,10 L780,0 L780,4" fill="none" stroke="url(#arrowGrad)" stroke-width="1.5"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:20px;display:flex;align-items:center;gap:10px">
+      <div style="width:28px;height:1px;background:var(--gold);opacity:.4"></div>
+      <div style="font-size:.82rem;color:rgba(255,255,255,.35);font-style:italic">We meet you where you are — and accelerate your journey from there.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CASE STUDY ═══ -->
+<section class="casestudy">
+  <div class="container">
+    <div class="section-label">Case Study</div>
+    <h2>Real results. Real numbers.</h2>
+    <div class="cs-card">
+      <div>
+        <span class="cs-tag">Grocery Chain · United States</span>
+        <h3>How a regional grocery chain recovered $2.1M in margin leakage — and cut unprofitable promos by 30%.</h3>
+        <p>This retailer had growing revenue but shrinking margins. After deploying Fundare PNL Track and Promo Post Mortem, they discovered 3 categories were responsible for 80% of their margin erosion. The pricing simulation tool identified 17 SKUs with pricing upside of 3–5% with low elasticity risk. Within 6 months: margins up, unprofitable promotions cut, and supplier negotiations renegotiated with full data backing.</p>
+      </div>
+      <div class="cs-metrics">
+        <div class="cs-met"><div class="cs-met-num">$2.1M</div><div class="cs-met-lbl">Margin leakage identified and recovered</div></div>
+        <div class="cs-met"><div class="cs-met-num">+1.1pp</div><div class="cs-met-lbl">Overall margin improvement in 6 months</div></div>
+        <div class="cs-met"><div class="cs-met-num">-30%</div><div class="cs-met-lbl">Reduction in unprofitable promotions</div></div>
+        <div class="cs-met"><div class="cs-met-num">3×</div><div class="cs-met-lbl">Stronger supplier negotiation outcomes</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ═══ CTA ═══ -->
+<section class="cta-banner" id="cta">
+  <div class="section-label" style="justify-content:center;margin-bottom:14px">Get Started</div>
+  <h2>Find out exactly where your revenue growth is hiding.</h2>
+  <p>In 30 minutes, our RGM experts will map your biggest margin and pricing opportunities — for retailers and FMCG brands. No pitch. No obligation. Just insight.</p>
+  <div class="cta-btns" style="position:relative;z-index:2;gap:20px">
+    <div style="text-align:center">
+      <a href="/cdn-cgi/l/email-protection#026a676e6e6d4264776c666370672c616d6f" class="btn-primary" style="display:block;margin-bottom:10px">I'm a Retailer → Let's Talk</a>
+      <div style="font-size:.7rem;color:rgba(255,255,255,.3);letter-spacing:.05em">PNL Track · Pricing · Promo Analytics</div>
+    </div>
+    <div style="display:flex;align-items:center;font-size:.8rem;color:rgba(255,255,255,.2);font-style:italic;padding:0 4px">or</div>
+    <div style="text-align:center">
+      <a href="/cdn-cgi/l/email-protection#d4bcb1b8b8bb94b2a1bab0b5a6b1fab7bbb9" class="btn-outline" style="display:block;margin-bottom:10px">I'm a CPG Brand → Let's Talk</a>
+      <div style="font-size:.7rem;color:rgba(255,255,255,.3);letter-spacing:.05em">Promo Optimization · Pricing · Trade Terms</div>
+    </div>
+  </div>
+  <p class="cta-note">30-minute strategy conversation · No commitment</p>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div>
+    <span class="footer-logo">Fundare<span>.</span></span>
+    <p class="footer-tagline">Boutique Revenue Growth Management consulting for US grocery retailers and FMCG brands.</p>
+    <div class="footer-contact">
+      <a href="/cdn-cgi/l/email-protection#83ebe6efefecc3e5f6ede7e2f1e6ade0ecee"><span class="__cf_email__" data-cfemail="e8808d848487a88e9d868c899a8dc68b8785">[email&#160;protected]</span></a>
+      <a href="tel:+17377078682">+1 737 707 8682</a>
+      <a href="https://maps.google.com/?q=7600+Chevy+Chase+Drive+Suite+118+Austin+TX+78752" target="_blank">7600 Chevy Chase Dr, Suite 118, Austin TX 78752</a>
+      <a href="#">Serving Retailers &amp; FMCG Brands Across the US</a>
+    </div>
+  </div>
+  <div class="footer-col">
+    <h4>Products</h4>
+    <ul>
+      <li><a href="#">Fundare PNL Track</a></li>
+      <li><a href="#">Promo Post Mortem</a></li>
+      <li><a href="#">Pricing Strategy</a></li>
+      <li><a href="#">Store Clustering</a></li>
+      <li><a href="#">RGM Certification</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>Solutions</h4>
+    <ul>
+      <li><a href="#">For Retailers</a></li>
+      <li><a href="#">For FMCG Brands</a></li>
+      <li><a href="#">Case Studies</a></li>
+      <li><a href="#">Insights</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>Company</h4>
+    <ul>
+      <li><a href="#">About Fundare</a></li>
+      <li><a href="#">Our Team</a><
