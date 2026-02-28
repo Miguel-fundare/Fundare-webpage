@@ -284,75 +284,76 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
   .clients-logos{flex-direction:column}
 }
 
-/* MOBILE */
+/* ═══ MOBILE ═══ */
 @media(max-width:640px){
-  /* Nav */
   nav{padding:14px 18px}
   .nav-links{display:none}
-  .nav-cta{padding:10px 18px;font-size:.78rem}
+  .nav-cta{padding:10px 16px;font-size:.76rem}
 
-  /* Hero */
   .hero{padding:80px 18px 48px}
-  .hero-headline{font-size:clamp(2.4rem,11vw,3.2rem);line-height:1.06;margin-bottom:24px}
-  .hero-sub{font-size:.95rem;line-height:1.7;margin-bottom:0;max-width:100%}
-  .hero-bottom-row{grid-template-columns:1fr;gap:28px;margin-top:32px;padding-top:32px}
-  .hero-actions{flex-direction:column;align-items:flex-start;gap:12px}
+  .hero-headline{font-size:clamp(2.2rem,10vw,3rem);line-height:1.06;margin-bottom:24px}
+  .hero-sub{font-size:.93rem;line-height:1.7;margin-bottom:0;max-width:100%}
+  .hero-bottom-row{grid-template-columns:1fr;gap:24px;margin-top:28px;padding-top:28px}
+  .hero-actions{flex-direction:column;align-items:stretch;gap:10px}
   .btn-primary{width:100%;text-align:center;padding:14px 20px}
   .hero-stats{width:100%}
-  .hero-stat{padding:16px 12px}
-  .hero-stat-num{font-size:1.6rem}
+  .hero-stat{padding:14px 10px}
+  .hero-stat-num{font-size:1.5rem}
 
-  /* Ticker */
-  .ticker{padding:12px 0;font-size:.68rem}
+  .ticker{padding:11px 0;font-size:.66rem}
 
-  /* Sections */
-  section{padding:48px 18px}
-  .section-eyebrow{font-size:.62rem}
+  section{padding:44px 18px}
+  .section-eyebrow,.section-label{font-size:.6rem}
+  section h2{font-size:1.7rem}
 
-  /* Audience */
-  .audience-grid{grid-template-columns:1fr;gap:14px}
-  .audience-card{padding:28px 22px}
+  .audience-grid{grid-template-columns:1fr;gap:12px}
+  .audience-card{padding:26px 20px}
 
-  /* Products */
-  .prod-tabs{gap:0;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:4px}
-  .prod-tab{font-size:.68rem;padding:10px 14px;white-space:nowrap}
-  .product-panel.active{grid-template-columns:1fr;gap:28px}
-  .pf{gap:12px}
-  .pf-icon svg{width:16px;height:16px}
-  .pnl-mock{border-radius:8px;overflow:hidden}
+  .prod-tabs{gap:0;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:2px;scrollbar-width:none}
+  .prod-tabs::-webkit-scrollbar{display:none}
+  .prod-tab{font-size:.66rem;padding:10px 14px;white-space:nowrap}
+  .product-panel.active{grid-template-columns:1fr;gap:24px}
+  .pf{gap:10px}
+  .pnl-mock{border-radius:6px;overflow:hidden;font-size:.55rem}
 
-  /* Results */
-  .results-dark{padding:48px 18px}
-  .results-grid{grid-template-columns:1fr 1fr;gap:16px}
-  .result-num{font-size:2rem}
+  .results-dark{padding:44px 18px}
+  .results-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .result-num{font-size:1.8rem}
 
-  /* Methodology */
-  .method-grid{grid-template-columns:1fr 1fr;gap:12px}
-  .method-card{padding:20px 16px}
-  .pillar-grid{grid-template-columns:1fr;gap:0}
-  .pillar-col{padding:20px 18px}
+  /* Enablers — 2x2 grid on mobile */
+  .method-grid{grid-template-columns:1fr 1fr;gap:10px}
+  .method-card{padding:18px 14px}
+  .method-card svg{width:32px;height:32px}
 
-  /* Maturity staircase — stack vertically on mobile */
-  .staircase{display:flex;flex-direction:column;gap:12px;align-items:stretch;height:auto !important;overflow:visible}
-  .stair{width:100% !important;height:auto !important;min-height:90px;position:relative !important;padding:18px 18px 14px}
-  .stair-label{position:relative;bottom:auto;left:auto;margin-top:8px;font-size:.6rem}
+  /* Pillars — hide desktop grid, show mobile carousel */
+  .pillars-desktop{display:none !important}
+  .pillars-mobile{display:block !important}
 
-  /* Case study */
-  .cs-card{grid-template-columns:1fr;padding:24px 18px;gap:28px}
-  .cs-stats{grid-template-columns:1fr 1fr;gap:12px}
-  .cs-stat{padding:16px 12px}
-  .cs-stat-num{font-size:1.6rem}
+  /* Staircase — hide desktop, show mobile carousel */
+  .staircase-desktop{display:none !important}
+  .staircase-mobile{display:block !important}
 
-  /* CTA banner */
-  .cta-banner{padding:52px 18px;text-align:center}
-  .cta-banner h2{font-size:1.8rem}
-  .cta-dual{flex-direction:column;gap:12px;align-items:center}
-  .cta-btn-primary,.cta-btn-outline{width:100%;max-width:320px;text-align:center;padding:16px 20px}
+  /* Carousel shared styles */
+  .mob-carousel{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;scroll-snap-type:x mandatory;display:flex;gap:10px;padding-bottom:12px}
+  .mob-carousel::-webkit-scrollbar{display:none}
+  .mob-carousel-item{flex:0 0 80vw;max-width:280px;scroll-snap-align:start}
+  .mob-carousel-dots{display:flex;gap:6px;justify-content:center;margin-top:14px}
+  .mob-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.2);transition:background .2s}
+  .mob-dot.active{background:var(--gold)}
 
-  /* Footer */
-  footer{grid-template-columns:1fr;gap:32px;padding:40px 18px}
+  .cs-card{grid-template-columns:1fr;padding:22px 18px;gap:24px}
+  .cs-stats{grid-template-columns:1fr 1fr;gap:10px}
+  .cs-stat{padding:14px 10px}
+  .cs-stat-num{font-size:1.5rem}
+
+  .cta-banner{padding:48px 18px;text-align:center}
+  .cta-banner h2{font-size:1.65rem}
+  .cta-dual{flex-direction:column;gap:10px;align-items:center}
+  .cta-btn-primary,.cta-btn-outline{width:100%;max-width:300px;text-align:center;padding:15px 18px;font-size:.8rem}
+
+  footer{grid-template-columns:1fr;gap:28px;padding:36px 18px}
   .footer-col h4{margin-top:0}
-  .footer-bottom{padding:14px 18px;flex-direction:column;gap:6px;text-align:center}
+  .footer-bottom{padding:12px 18px;flex-direction:column;gap:5px;text-align:center}
 }
 </style>
 </head>
@@ -919,7 +920,9 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
 
     <!-- 5 PILLARS -->
     <div style="font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(201,168,76,.6);margin-bottom:16px">The 5 RGM Pillars</div>
-    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:2px;margin-bottom:56px">
+
+    <!-- Desktop version -->
+    <div class="pillars-desktop" style="display:grid;grid-template-columns:repeat(5,1fr);gap:2px;margin-bottom:56px">
       <div style="background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.18);padding:24px 20px;border-top:3px solid var(--gold)">
         <div style="font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px">Pricing</div>
         <div style="font-size:.83rem;line-height:1.6;color:rgba(255,255,255,.55)">Capture the full value of your portfolio. Optimize every price action for revenue, margin, or volume — by SKU, channel, and store cluster.</div>
@@ -942,11 +945,52 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
       </div>
     </div>
 
+    <!-- Mobile carousel version -->
+    <div class="pillars-mobile" style="display:none;margin-bottom:40px">
+      <div class="mob-carousel" id="pillars-carousel">
+        <div class="mob-carousel-item">
+          <div style="background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.18);padding:24px 20px;border-top:3px solid var(--gold);height:100%">
+            <div style="font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:10px">Pricing</div>
+            <div style="font-size:.88rem;line-height:1.65;color:rgba(255,255,255,.6)">Capture the full value of your portfolio. Optimize every price action for revenue, margin, or volume — by SKU, channel, and store cluster.</div>
+          </div>
+        </div>
+        <div class="mob-carousel-item">
+          <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);padding:24px 20px;height:100%">
+            <div style="font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:10px">Pack Price Architecture</div>
+            <div style="font-size:.88rem;line-height:1.65;color:rgba(255,255,255,.6)">Right format, right pack, right price — for every consumption occasion and shopper segment.</div>
+          </div>
+        </div>
+        <div class="mob-carousel-item">
+          <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);padding:24px 20px;height:100%">
+            <div style="font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:10px">Mix Management</div>
+            <div style="font-size:.88rem;line-height:1.65;color:rgba(255,255,255,.6)">Drive the brand, pack, and channel mix that maximizes profitability and sustainable growth across your entire portfolio.</div>
+          </div>
+        </div>
+        <div class="mob-carousel-item">
+          <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);padding:24px 20px;height:100%">
+            <div style="font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:10px">Promo Optimization</div>
+            <div style="font-size:.88rem;line-height:1.65;color:rgba(255,255,255,.6)">Cut unprofitable promotions by 20–30% and increase promotional ROI by up to 35% with optimal frequency and depth.</div>
+          </div>
+        </div>
+        <div class="mob-carousel-item">
+          <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);padding:24px 20px;height:100%">
+            <div style="font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:10px">Trade Terms</div>
+            <div style="font-size:.88rem;line-height:1.65;color:rgba(255,255,255,.6)">Defensible pay-for-performance terms that align supplier investment with results that actually matter.</div>
+          </div>
+        </div>
+      </div>
+      <div class="mob-carousel-dots" id="pillars-dots">
+        <div class="mob-dot active"></div><div class="mob-dot"></div><div class="mob-dot"></div><div class="mob-dot"></div><div class="mob-dot"></div>
+      </div>
+      <div style="text-align:center;margin-top:8px;font-size:.65rem;color:rgba(255,255,255,.25);letter-spacing:.05em">← swipe →</div>
+    </div>
+
     <!-- MATURITY STAIRCASE -->
     <div style="font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(201,168,76,.6);margin-bottom:24px">RGM Maturity Journey</div>
 
+    <!-- Desktop staircase -->
+    <div class="staircase-desktop">
     <div style="position:relative;overflow:hidden">
-      <!-- Staircase SVG background arrow -->
       <div style="display:flex;align-items:flex-end;gap:3px;position:relative;min-height:320px">
 
         <!-- Step 1: Reactive — shortest, dimmest -->
@@ -1029,8 +1073,73 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
           </svg>
         </div>
       </div>
+    </div><!-- end staircase-desktop -->
+
+    <!-- Mobile staircase carousel -->
+    <div class="staircase-mobile" style="display:none">
+      <div class="mob-carousel" id="stair-carousel">
+        <div class="mob-carousel-item">
+          <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-bottom:3px solid rgba(255,255,255,.2);padding:24px 20px;border-radius:2px">
+            <div style="font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:12px">Stage 1</div>
+            <div style="display:flex;gap:4px;margin-bottom:14px">
+              <div style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.25)"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.08)"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.08)"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.08)"></div>
+            </div>
+            <div style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:rgba(255,255,255,.4);margin-bottom:8px">Reactive</div>
+            <div style="font-size:.85rem;line-height:1.6;color:rgba(255,255,255,.3)">No formal RGM. Decisions based on habit. Working in silos with limited data visibility.</div>
+            <div style="margin-top:14px;font-size:.62rem;font-weight:600;color:rgba(255,255,255,.2);text-transform:uppercase;letter-spacing:.08em">Where most start</div>
+          </div>
+        </div>
+        <div class="mob-carousel-item">
+          <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-bottom:3px solid rgba(255,255,255,.3);padding:24px 20px;border-radius:2px">
+            <div style="font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:12px">Stage 2</div>
+            <div style="display:flex;gap:4px;margin-bottom:14px">
+              <div style="width:8px;height:8px;border-radius:50%;background:rgba(201,168,76,.6)"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:rgba(201,168,76,.6)"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.1)"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.1)"></div>
+            </div>
+            <div style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:rgba(255,255,255,.65);margin-bottom:8px">Foundational</div>
+            <div style="font-size:.85rem;line-height:1.6;color:rgba(255,255,255,.45)">First analytics deployed. KPI visibility established. Early wins shared across the commercial team.</div>
+            <div style="margin-top:14px;font-size:.62rem;font-weight:600;color:rgba(255,255,255,.3);text-transform:uppercase;letter-spacing:.08em">First wins visible</div>
+          </div>
+        </div>
+        <div class="mob-carousel-item">
+          <div style="background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.2);border-bottom:3px solid rgba(201,168,76,.5);padding:24px 20px;border-radius:2px">
+            <div style="font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:12px">Stage 3</div>
+            <div style="display:flex;gap:4px;margin-bottom:14px">
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--gold)"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--gold)"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--gold)"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.1)"></div>
+            </div>
+            <div style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--white);margin-bottom:8px">Strategic</div>
+            <div style="font-size:.85rem;line-height:1.6;color:rgba(255,255,255,.55)">RGM embedded in commercial planning. Simulation & optimization in use. Actions aligned with revenue and margin objectives.</div>
+            <div style="margin-top:14px;font-size:.62rem;font-weight:600;color:var(--gold);text-transform:uppercase;letter-spacing:.08em">Data drives decisions</div>
+          </div>
+        </div>
+        <div class="mob-carousel-item">
+          <div style="background:rgba(201,168,76,.11);border:1px solid rgba(201,168,76,.35);border-bottom:3px solid var(--gold);padding:24px 20px;border-radius:2px;box-shadow:0 0 30px rgba(201,168,76,.08)">
+            <div style="font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:12px">Stage 4 ✦</div>
+            <div style="display:flex;gap:4px;margin-bottom:14px">
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 5px rgba(201,168,76,.6)"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 5px rgba(201,168,76,.6)"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 5px rgba(201,168,76,.6)"></div>
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 5px rgba(201,168,76,.6)"></div>
+            </div>
+            <div style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--gold);margin-bottom:8px">Transformational</div>
+            <div style="font-size:.85rem;line-height:1.6;color:rgba(255,255,255,.65)">Systematic value creation. RGM is culture. Continuous optimization — self-sustaining.</div>
+            <div style="margin-top:14px;font-size:.62rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.08em">↑ RGM as competitive moat</div>
+          </div>
+        </div>
+      </div>
+      <div class="mob-carousel-dots" id="stair-dots">
+        <div class="mob-dot active"></div><div class="mob-dot"></div><div class="mob-dot"></div><div class="mob-dot"></div>
+      </div>
+      <div style="text-align:center;margin-top:8px;font-size:.65rem;color:rgba(255,255,255,.25);letter-spacing:.05em">← swipe →</div>
     </div>
-    <div style="margin-top:20px;display:flex;align-items:center;gap:10px">
       <div style="width:28px;height:1px;background:var(--gold);opacity:.4"></div>
       <div style="font-size:.82rem;color:rgba(255,255,255,.35);font-style:italic">We meet you where you are — and accelerate your journey from there.</div>
     </div>
@@ -1085,7 +1194,7 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
     <span class="footer-logo">Fundare<span>.</span></span>
     <p class="footer-tagline">Boutique Revenue Growth Management consulting for US grocery retailers and FMCG brands.</p>
     <div class="footer-contact">
-      <span id="footer-email"></span><script>document.getElementById("footer-email").innerHTML=["hello","fundare.com"].join("@")</script>
+      <a id="footer-email" href="#" style="color:var(--gold);font-weight:500"></a><script>var e=document.getElementById('footer-email');e.innerHTML=['hello','fundare.com'].join('@');e.href='mail'+'to:'+['hello','fundare.com'].join('@');</script>
       <a href="tel:+17377078682">+1 737 707 8682</a>
       <a href="https://maps.google.com/?q=7600+Chevy+Chase+Drive+Suite+118+Austin+TX+78752" target="_blank">7600 Chevy Chase Dr, Suite 118, Austin TX 78752</a>
       <a href="#">Serving Retailers &amp; FMCG Brands Across the US</a>
@@ -1114,4 +1223,50 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
     <h4>Company</h4>
     <ul>
       <li><a href="#">About Fundare</a></li>
-      <li><a href="#">Our Team</a><
+      <li><a href="#">Our Team</a></li>
+</li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+</div>
+<div class="footer-bottom">
+  <div>© 2025 Fundare. All rights reserved.</div>
+  <div>Austin, TX · Serving Retailers &amp; FMCG Brands Across the US</div>
+</div>
+</footer>
+
+<script>
+// Tab switching
+document.querySelectorAll('.prod-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.prod-tab').forEach(t => t.classList.remove('act'));
+    document.querySelectorAll('.product-panel').forEach(p => p.classList.remove('active'));
+    tab.classList.add('act');
+    document.getElementById(tab.dataset.tab).classList.add('active');
+  });
+});
+
+// Carousel dot sync
+function initCarousel(carouselId, dotsId) {
+  const carousel = document.getElementById(carouselId);
+  const dots = document.getElementById(dotsId);
+  if (!carousel || !dots) return;
+  const dotEls = dots.querySelectorAll('.mob-dot');
+  carousel.addEventListener('scroll', () => {
+    const items = carousel.querySelectorAll('.mob-carousel-item');
+    if (!items.length) return;
+    const itemW = items[0].offsetWidth + 10;
+    const idx = Math.round(carousel.scrollLeft / itemW);
+    dotEls.forEach((d, i) => d.classList.toggle('active', i === idx));
+  }, {passive: true});
+}
+document.addEventListener('DOMContentLoaded', () => {
+  initCarousel('pillars-carousel', 'pillars-dots');
+  initCarousel('stair-carousel', 'stair-dots');
+});
+
+// Footer email
+document.getElementById('footer-email').innerHTML = ['hello','fundare.com'].join('@');
+</script>
+</body>
+</html>
