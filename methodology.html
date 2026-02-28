@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Methodology · Fundare</title>
+<meta name="description" content="Fundare's RGM 360° methodology: 4 enablers, 5 pillars, and a 90-day path to first results for retailers and FMCG brands."/>
+<meta property="og:title" content="Methodology · Fundare"/>
+<meta property="og:description" content="Fundare's RGM 360° methodology: 4 enablers, 5 pillars, and a 90-day path to first results for retailers and FMCG brands."/>
+<meta property="og:image" content="https://miguel-fundare.github.io/Fundare-webpage/og-image.png"/>
+<meta property="og:type" content="website"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230a1628'/%3E%3Ctext x='7' y='23' font-family='Georgia,serif' font-size='20' font-weight='700' fill='%23fff'%3EF%3C/text%3E%3Ccircle cx='25' cy='25' r='4' fill='%23c9a84c'/%3E%3C/svg%3E"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0a1628;--navy2:#112040;
+  --gold:#c9a84c;--gold2:#e8c870;
+  --light:#f4f2ee;--white:#fff;--gray:#8a8f99;--text:#1e2536;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);overflow-x:hidden}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 60px;background:rgba(10,22,40,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:var(--white);text-decoration:none}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{font-size:.78rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.6);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{padding:10px 22px;background:var(--gold);color:var(--navy);font-size:.76rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:all .2s}
+.nav-cta:hover{background:var(--gold2)}
+
+section{padding:90px 60px}
+.container{max-width:1180px;margin:0 auto}
+h1,h2,h3{font-family:'Playfair Display',serif}
+h2{font-size:2.8rem;line-height:1.15;color:var(--navy);margin-bottom:20px}
+.section-label{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.section-label::before{content:'';display:block;width:32px;height:1px;background:var(--gold)}
+
+footer{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:48px;padding:56px 60px;background:#070f1c;color:rgba(255,255,255,.5);font-size:.82rem}
+.footer-logo{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--white);display:block;margin-bottom:12px}
+.footer-logo span{color:var(--gold)}
+.footer-tagline{font-size:.82rem;line-height:1.7;color:rgba(255,255,255,.4);margin-bottom:16px}
+.footer-contact{display:flex;flex-direction:column;gap:5px;font-size:.8rem}
+.footer-contact a{color:rgba(255,255,255,.5);text-decoration:none}
+.footer-contact a:hover{color:var(--gold)}
+.footer-col h4{font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.footer-col ul a{color:rgba(255,255,255,.45);text-decoration:none;font-size:.82rem;transition:color .2s}
+.footer-col ul a:hover{color:var(--white)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding:16px 60px;background:#040b14;font-size:.72rem;color:rgba(255,255,255,.25)}
+
+@media(max-width:768px){
+  nav{padding:14px 18px}
+  .nav-links{display:none}
+  .nav-cta{padding:10px 16px;font-size:.74rem}
+  section{padding:70px 18px}
+  h2{font-size:1.9rem}
+  footer{grid-template-columns:1fr;gap:28px;padding:36px 18px}
+  .footer-bottom{padding:12px 18px;flex-direction:column;gap:5px;text-align:center}
+}
+
+
+.meth-hero{background:var(--navy);padding:160px 60px 90px;color:white}
+.meth-hero h1{font-size:clamp(2.4rem,5vw,4rem);color:white;margin-bottom:20px;max-width:700px}
+.audience-split{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:48px}
+.aud-panel{padding:56px 48px;background:var(--navy2)}
+.aud-panel.light{background:var(--light)}
+.aud-tag{font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.aud-title{font-family:"Playfair Display",serif;font-size:1.8rem;color:white;margin-bottom:14px}
+.aud-panel.light .aud-title{color:var(--navy)}
+.aud-desc{font-size:.9rem;line-height:1.75;color:rgba(255,255,255,.55);margin-bottom:24px}
+.aud-panel.light .aud-desc{color:#4a5568}
+.aud-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.aud-chip{font-size:.65rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;border:1px solid rgba(201,168,76,.3);color:rgba(201,168,76,.8);padding:5px 10px}
+.pillar-row{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;margin-top:40px}
+.pillar{padding:28px 20px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07)}
+.pillar:first-child{background:rgba(201,168,76,.08);border-color:rgba(201,168,76,.2);border-top:3px solid var(--gold)}
+.pillar-name{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.pillar-desc{font-size:.78rem;line-height:1.6;color:rgba(255,255,255,.5)}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;margin-top:40px}
+.step{padding:40px 32px;position:relative}
+.step-num{font-family:"Playfair Display",serif;font-size:3rem;font-weight:700;color:var(--gold);opacity:.25;position:absolute;top:28px;right:28px}
+.step-title{font-family:"Playfair Display",serif;font-size:1.1rem;color:var(--navy);margin-bottom:10px}
+.step-desc{font-size:.83rem;line-height:1.7;color:#4a5568}
+@media(max-width:768px){
+  .meth-hero{padding:120px 18px 60px}
+  .audience-split{grid-template-columns:1fr}
+  .pillar-row{grid-template-columns:1fr 1fr;gap:8px}
+  .process-steps{grid-template-columns:1fr}
+}
+
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">Fundare<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="products.html">Products</a></li>
+    <li><a href="methodology.html">Methodology</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Let's Talk Strategy</a>
+</nav>
+
+<div class="meth-hero">
+  <div class="container">
+    <div class="section-label" style="color:rgba(201,168,76,.7);margin-bottom:20px">Our Methodology</div>
+    <h1>RGM 360° — From reactive to transformational.</h1>
+    <p style="font-size:1.05rem;line-height:1.8;color:rgba(255,255,255,.55);max-width:580px;margin-top:16px">Most companies do RGM reactively — they price, promote, and negotiate based on habit, not data. We help you build the four pillars that make RGM stick.</p>
+  </div>
+</div>
+
+<!-- WHO WE SERVE -->
+<div class="audience-split" id="retailers">
+  <div class="aud-panel">
+    <div class="aud-tag">For Retailers</div>
+    <h3 class="aud-title">Grocery Chains & Supermarkets</h3>
+    <p class="aud-desc">See every margin point across every category, supplier, and SKU. Price smarter. Negotiate stronger. Promote more profitably.</p>
+    <div class="aud-tags">
+      <span class="aud-chip">PNL Track</span>
+      <span class="aud-chip">Pricing Strategy</span>
+      <span class="aud-chip">Promo Post Mortem</span>
+      <span class="aud-chip">Store Clustering</span>
+    </div>
+    <a href="contact.html" style="display:inline-block;background:#c9a84c;color:#0a1628;font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:12px 24px;text-decoration:none">I'm a Retailer →</a>
+  </div>
+  <div class="aud-panel light" id="fmcg">
+    <div class="aud-tag">For FMCG Brands</div>
+    <h3 class="aud-title">CPG & FMCG Manufacturers</h3>
+    <p class="aud-desc">Optimize every promotion, maximize price realization, and build the RGM capabilities your commercial team needs to grow sustainably.</p>
+    <div class="aud-tags">
+      <span class="aud-chip" style="color:rgba(201,168,76,.8)">Promo Optimization</span>
+      <span class="aud-chip" style="color:rgba(201,168,76,.8)">Pricing</span>
+      <span class="aud-chip" style="color:rgba(201,168,76,.8)">Trade Terms</span>
+      <span class="aud-chip" style="color:rgba(201,168,76,.8)">RGM Certification</span>
+    </div>
+    <a href="contact.html" style="display:inline-block;border:1px solid var(--navy);color:var(--navy);font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:12px 24px;text-decoration:none">I'm a CPG Brand →</a>
+  </div>
+</div>
+
+<!-- THE 4 ENABLERS -->
+<section style="background:var(--navy)">
+  <div class="container">
+    <div class="section-label" style="color:rgba(201,168,76,.7)">The 4 Enablers</div>
+    <h2 style="color:white">The infrastructure that makes RGM stick.</h2>
+    <p style="font-size:.95rem;line-height:1.8;color:rgba(255,255,255,.5);max-width:580px;margin-top:0">Building RGM capability requires four interlocking enablers. Miss one, and the whole system underperforms.</p>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:3px;margin-top:40px">
+      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.15);padding:32px 24px">
+        <div style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:white;margin-bottom:10px">Technology</div>
+        <div style="font-size:.82rem;line-height:1.65;color:rgba(255,255,255,.45)">Analytics and dashboards tailored to your data — from foundational reports to AI-powered optimization. Built for your business.</div>
+      </div>
+      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.15);padding:32px 24px">
+        <div style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:white;margin-bottom:10px">Processes</div>
+        <div style="font-size:.82rem;line-height:1.65;color:rgba(255,255,255,.45)">RGM integrated into your commercial calendar — pricing reviews, promo planning, supplier negotiations, and S&OP.</div>
+      </div>
+      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.15);padding:32px 24px">
+        <div style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:white;margin-bottom:10px">Talent</div>
+        <div style="font-size:.82rem;line-height:1.65;color:rgba(255,255,255,.45)">We certify your team in RGM — from fundamentals to advanced analytics. The goal is capability, not dependency on consultants.</div>
+      </div>
+      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.15);padding:32px 24px">
+        <div style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:white;margin-bottom:10px">KPIs & Tracking</div>
+        <div style="font-size:.82rem;line-height:1.65;color:rgba(255,255,255,.45)">The right RGM KPIs for your maturity stage and a tracking cadence — so results are visible, measurable, and accountable.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE 5 PILLARS -->
+<section>
+  <div class="container">
+    <div class="section-label">The 5 RGM Pillars</div>
+    <h2>The strategic levers of revenue growth.</h2>
+    <div class="pillar-row">
+      <div class="pillar">
+        <div class="pillar-name">Pricing</div>
+        <div class="pillar-desc" style="color:rgba(255,255,255,.55)">Capture the full value of your portfolio. Optimize every price action for revenue, margin, or volume — by SKU, channel, and store cluster.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-name">Pack Price Architecture</div>
+        <div class="pillar-desc" style="color:rgba(255,255,255,.55)">Right format, right pack, right price — for every consumption occasion and shopper segment.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-name">Mix Management</div>
+        <div class="pillar-desc" style="color:rgba(255,255,255,.55)">Drive the brand, pack, and channel mix that maximizes profitability and sustainable growth across your portfolio.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-name">Promo Optimization</div>
+        <div class="pillar-desc" style="color:rgba(255,255,255,.55)">Optimal frequency, depth, and promo mechanics. Cut unprofitable promotions and increase promotional ROI by up to 35%.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-name">Discounts & Trade Terms</div>
+        <div class="pillar-desc" style="color:rgba(255,255,255,.55)">Defensible pay-for-performance terms that align supplier investment with the commercial results that actually matter.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW WE WORK -->
+<section style="background:var(--light)">
+  <div class="container">
+    <div class="section-label">How We Work</div>
+    <h2>90 days to first results.</h2>
+    <div class="process-steps">
+      <div class="step" style="background:white">
+        <div class="step-num">01</div>
+        <div class="step-title">Discovery & Diagnosis</div>
+        <div class="step-desc">We map your current RGM maturity, identify your biggest margin opportunities, and define the highest-impact starting points. No generic frameworks — we start with your data.</div>
+      </div>
+      <div class="step" style="background:white">
+        <div class="step-num">02</div>
+        <div class="step-title">Tool Deployment</div>
+        <div class="step-desc">We build and deploy the analytics tools your team needs — PNL Track, Promo Post Mortem, Pricing Simulation — tailored to your data architecture and commercial processes.</div>
+      </div>
+      <div class="step" style="background:white">
+        <div class="step-num">03</div>
+        <div class="step-title">Quick Wins</div>
+        <div class="step-desc">Early insights surface fast: unprofitable promotions to cut, pricing opportunities to capture, supplier negotiations to strengthen. You see ROI before the engagement ends.</div>
+      </div>
+      <div class="step" style="background:white">
+        <div class="step-num">04</div>
+        <div class="step-title">Capability Building</div>
+        <div class="step-desc">We certify your team, embed RGM into your commercial calendar, and establish the KPI cadence that keeps results coming after we're gone.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:var(--navy);text-align:center">
+  <div class="container">
+    <h2 style="color:white;font-size:2.4rem;margin-bottom:16px">Where are you on the RGM maturity journey?</h2>
+    <p style="color:rgba(255,255,255,.5);max-width:500px;margin:0 auto 36px;line-height:1.8">We meet you where you are — and accelerate your journey from there.</p>
+    <a href="contact.html" style="display:inline-block;background:#c9a84c;color:#0a1628;font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:16px 36px;text-decoration:none">Start the Conversation →</a>
+  </div>
+</section>
+
+<footer>
+<div>
+  <span class="footer-logo">Fundare<span>.</span></span>
+  <p class="footer-tagline">Boutique Revenue Growth Management consulting for US grocery retailers and FMCG brands.</p>
+  <div class="footer-contact">
+    <a id="footer-email-f" href="#" style="color:var(--gold);font-weight:500"></a>
+    <a href="tel:+17377078682">+1 737 707 8682</a>
+    <span>7600 Chevy Chase Dr, Suite 118, Austin TX 78752</span>
+  </div>
+</div>
+<div class="footer-col">
+  <h4>Products</h4>
+  <ul>
+    <li><a href="products.html#pnl">Fundare PNL Track</a></li>
+    <li><a href="products.html#promo">Promo Post Mortem</a></li>
+    <li><a href="products.html#pricing">Pricing Strategy</a></li>
+    <li><a href="products.html#clustering">Store Clustering</a></li>
+  </ul>
+</div>
+<div class="footer-col">
+  <h4>Solutions</h4>
+  <ul>
+    <li><a href="methodology.html#retailers">For Retailers</a></li>
+    <li><a href="methodology.html#fmcg">For FMCG Brands</a></li>
+    <li><a href="about.html#results">Case Studies</a></li>
+  </ul>
+</div>
+<div class="footer-col">
+  <h4>Company</h4>
+  <ul>
+    <li><a href="about.html">About Fundare</a></li>
+    <li><a href="about.html#team">Our Team</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</div>
+</footer>
+<div class="footer-bottom">
+  <div>© 2025 Fundare. All rights reserved.</div>
+  <div>Austin, TX · Serving Retailers &amp; FMCG Brands Across the US</div>
+</div>
+<script>
+var fe=document.getElementById('footer-email-f');
+if(fe){fe.innerHTML=['hello','fundare.com'].join('@');fe.href='mail'+'to:'+['hello','fundare.com'].join('@');}
+</script>
+</body>
+</html>
