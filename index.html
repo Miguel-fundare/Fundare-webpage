@@ -3,7 +3,59 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Fundare – Boutique RGM Consulting</title>
+
+<!-- ═══ SEO ═══ -->
+<title>Fundare · Boutique Revenue Growth Management Consulting</title>
+<meta name="description" content="Fundare is a boutique RGM consultancy specializing in pricing strategy, promotion analytics, and margin intelligence for US grocery retailers and FMCG brands. Enterprise-grade methodology — without the enterprise price tag."/>
+<meta name="keywords" content="Revenue Growth Management, RGM consulting, pricing strategy, promotion analytics, grocery retail consulting, FMCG margin optimization, PNL track, promo post mortem"/>
+<meta name="author" content="Fundare"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://miguel-fundare.github.io/Fundare-webpage/"/>
+
+<!-- ═══ OPEN GRAPH / LINK PREVIEW ═══ -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://miguel-fundare.github.io/Fundare-webpage/"/>
+<meta property="og:title" content="Fundare · Boutique Revenue Growth Management"/>
+<meta property="og:description" content="We help US grocery retailers and FMCG brands find where revenue growth is hiding — through pricing strategy, promo analytics, and margin intelligence. No pitch. No obligation. Just insight."/>
+<meta property="og:image" content="https://miguel-fundare.github.io/Fundare-webpage/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:site_name" content="Fundare"/>
+<meta property="og:locale" content="en_US"/>
+
+<!-- ═══ TWITTER CARD ═══ -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Fundare · Boutique Revenue Growth Management"/>
+<meta name="twitter:description" content="We help US grocery retailers and FMCG brands find where revenue growth is hiding."/>
+<meta name="twitter:image" content="https://miguel-fundare.github.io/Fundare-webpage/og-image.png"/>
+
+<!-- ═══ FAVICON — inline SVG ═══ -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230a1628'/%3E%3Ctext x='7' y='23' font-family='Georgia,serif' font-size='20' font-weight='700' fill='%23fff'%3EF%3C/text%3E%3Ccircle cx='25' cy='25' r='4' fill='%23c9a84c'/%3E%3C/svg%3E"/>
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='40' fill='%230a1628'/%3E%3Ctext x='28' y='135' font-family='Georgia,serif' font-size='120' font-weight='700' fill='%23fff'%3EF%3C/text%3E%3Ccircle cx='148' cy='142' r='26' fill='%23c9a84c'/%3E%3C/svg%3E"/>
+
+<!-- ═══ STRUCTURED DATA / JSON-LD ═══ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Fundare",
+  "description": "Boutique Revenue Growth Management consulting for US grocery retailers and FMCG brands",
+  "url": "https://miguel-fundare.github.io/Fundare-webpage/",
+  "telephone": "+17377078682",
+  "email": "hello@fundare.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "7600 Chevy Chase Dr, Suite 118",
+    "addressLocality": "Austin",
+    "addressRegion": "TX",
+    "postalCode": "78752",
+    "addressCountry": "US"
+  },
+  "areaServed": "United States",
+  "serviceType": ["Revenue Growth Management", "Pricing Strategy", "Promotion Analytics", "Margin Intelligence"]
+}
+</script>
+
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -314,11 +366,15 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
   .product-tabs::-webkit-scrollbar{display:none}
   .ptab{font-size:.7rem;padding:12px 14px;white-space:nowrap;flex-shrink:0;letter-spacing:.04em}
   .products-section{overflow:hidden}
-  .product-panel.active{grid-template-columns:1fr;gap:24px}
-  .prod-info{width:100%;min-width:0;box-sizing:border-box}
-  .prod-desc,.pf-text,.pf-title,.prod-title{word-wrap:break-word;overflow-wrap:break-word;max-width:100%}
-  .pf{min-width:0;display:flex;gap:12px;align-items:flex-start}
-  .pf > div:last-child{min-width:0;flex:1}
+  .product-panel.active{grid-template-columns:1fr;gap:24px;width:100%;overflow:hidden}
+  .prod-info{width:100%;min-width:0;box-sizing:border-box;overflow:hidden}
+  .prod-features{width:100%;overflow:hidden}
+  .prod-desc{word-wrap:break-word;overflow-wrap:break-word;white-space:normal;width:100%}
+  .pf{min-width:0;display:flex;gap:12px;align-items:flex-start;width:100%;overflow:hidden}
+  .pf-icon{flex-shrink:0}
+  .pf > div:last-child{min-width:0;flex:1;overflow:hidden}
+  .pf-title{word-wrap:break-word;overflow-wrap:break-word;white-space:normal}
+  .pf-text{word-wrap:break-word;overflow-wrap:break-word;white-space:normal}
   .prod-title{font-size:1.6rem}
   .pf{gap:10px}
   .pnl-mock{border-radius:6px;overflow:hidden;font-size:.55rem}
@@ -369,12 +425,12 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
 <nav>
   <a href="#" class="nav-logo">Fundare<span>.</span></a>
   <ul class="nav-links">
-    <li><a href="#products">Products</a></li>
-    <li><a href="#methodology">Methodology</a></li>
-    <li><a href="#results">Results</a></li>
-    <li><a href="#about">About</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="methodology.html">Methodology</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
-  <a href="#cta" class="nav-cta">Let's Talk Strategy</a>
+  <a href="contact.html" class="nav-cta">Let's Talk Strategy</a>
 </nav>
 
 <!-- ═══ HERO ═══ -->
@@ -390,7 +446,7 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
       </div>
       <div style="display:flex;flex-direction:column;gap:28px">
         <div class="hero-actions">
-          <a href="#cta" class="btn-primary">Let's Talk Strategy</a>
+          <a href="contact.html" class="btn-primary">Let's Talk Strategy</a>
           <a href="#audience" class="btn-ghost">Explore solutions →</a>
         </div>
         <div class="hero-stats">
@@ -485,7 +541,7 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
           <div class="pf"><div class="pf-icon"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><rect x="3" y="4" width="18" height="16" rx="1" stroke="#c9a84c" stroke-width="1.5"/><line x1="3" y1="9" x2="21" y2="9" stroke="#c9a84c" stroke-width="1"/><line x1="7" y1="2" x2="7" y2="6" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/><line x1="17" y1="2" x2="17" y2="6" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/><polyline points="7,14 10,17 17,12" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="pf-title">Period vs. Last Year — Built In</div><div class="pf-text">YTD, quarterly, monthly vs. LY comparisons. Spot trends before they become expensive problems.</div></div></div>
           <div class="pf"><div class="pf-icon"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="#c9a84c" stroke-width="1.5"/><path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/><path d="M16 3.13a4 4 0 0 1 0 7.75" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/></svg></div><div><div class="pf-title">Supplier Negotiation Intelligence</div><div class="pf-text">Know which suppliers are driving profitability and which are eroding it. Enter negotiations with the data, not a gut feeling.</div></div></div>
         </div>
-        <a href="#cta" class="prod-cta">Let's Talk Strategy →</a>
+        <a href="contact.html" class="prod-cta">Let's Talk Strategy →</a>
       </div>
       <div>
         <!-- PNL DASHBOARD MOCKUP -->
@@ -623,7 +679,7 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
           <div class="pf"><div class="pf-icon"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><circle cx="12" cy="12" r="9" stroke="#c9a84c" stroke-width="1.5"/><line x1="12" y1="8" x2="12" y2="12" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="16" r="1" fill="#c9a84c"/></svg></div><div><div class="pf-title">Cannibalization & Overstock Detection</div><div class="pf-text">The scatter quadrant shows you which promotions created incremental value vs. which cannibalized baseline sales or left you with excess inventory.</div></div></div>
           <div class="pf"><div class="pf-icon"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><line x1="8" y1="6" x2="21" y2="6" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="12" x2="21" y2="12" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="18" x2="21" y2="18" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/><line x1="3" y1="6" x2="3.01" y2="6" stroke="#c9a84c" stroke-width="2" stroke-linecap="round"/><line x1="3" y1="12" x2="3.01" y2="12" stroke="#c9a84c" stroke-width="2" stroke-linecap="round"/><line x1="3" y1="18" x2="3.01" y2="18" stroke="#c9a84c" stroke-width="2" stroke-linecap="round"/></svg></div><div><div class="pf-title">Top & Bottom Promotion Ranking</div><div class="pf-text">Instantly identify your best and worst-performing promotions by profit impact, volume, and ROI — filterable by any business lens.</div></div></div>
         </div>
-        <a href="#cta" class="prod-cta">Let's Talk Strategy →</a>
+        <a href="contact.html" class="prod-cta">Let's Talk Strategy →</a>
       </div>
       <div>
         <!-- PROMO DASHBOARD MOCKUP -->
@@ -747,7 +803,7 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
           <div class="pf"><div class="pf-icon"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><rect x="2" y="3" width="20" height="14" rx="1" stroke="#c9a84c" stroke-width="1.5"/><line x1="8" y1="21" x2="16" y2="21" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/><line x1="12" y1="17" x2="12" y2="21" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/><polyline points="6,13 9,9 13,11 18,6" stroke="#c9a84c" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity=".7"/></svg></div><div><div class="pf-title">Price Change Simulation</div><div class="pf-text">Model the revenue, volume, and profit impact of any pricing scenario before committing. Full P&L impact shown in real time.</div></div></div>
           <div class="pf"><div class="pf-icon"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="#c9a84c" stroke-width="1.5" stroke-linejoin="round"/><polyline points="9,22 9,12 15,12 15,22" stroke="#c9a84c" stroke-width="1.5" stroke-linejoin="round"/></svg></div><div><div class="pf-title">Store Clustering & Zone Pricing</div><div class="pf-text">Segment stores by consumer price sensitivity and competitive positioning. Execute zone pricing strategies that maximize margin by location.</div></div></div>
         </div>
-        <a href="#cta" class="prod-cta">Let's Talk Strategy →</a>
+        <a href="contact.html" class="prod-cta">Let's Talk Strategy →</a>
       </div>
       <div>
         <!-- PRICING DASHBOARD MOCKUP -->
@@ -1034,8 +1090,8 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
 
     <!-- Desktop staircase -->
     <div class="staircase-desktop">
-    <div style="position:relative;overflow:hidden">
-      <div style="display:flex;align-items:flex-end;gap:3px;position:relative;min-height:320px">
+    <div>
+      <div style="display:flex;align-items:flex-end;gap:3px;min-height:320px">
 
         <!-- Step 1: Reactive — shortest, dimmest -->
         <div style="flex:1;display:flex;flex-direction:column;justify-content:flex-end">
@@ -1104,23 +1160,15 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
           <div style="text-align:center;padding:10px 0;font-size:.65rem;font-weight:700;color:var(--gold);letter-spacing:.06em;text-transform:uppercase">RGM as competitive moat</div>
         </div>
 
-        <!-- Ascending arrow overlay -->
-        <div style="position:absolute;bottom:40px;left:0;right:0;pointer-events:none;z-index:0">
-          <svg viewBox="0 0 800 20" width="100%" height="20" preserveAspectRatio="none">
-            <defs>
-              <linearGradient id="arrowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" style="stop-color:rgba(255,255,255,.04)"/>
-                <stop offset="100%" style="stop-color:rgba(201,168,76,.35)"/>
-              </linearGradient>
-            </defs>
-            <path d="M0,18 Q200,16 400,12 Q600,8 780,4 L800,10 L780,0 L780,4" fill="none" stroke="url(#arrowGrad)" stroke-width="1.5"/>
-          </svg>
-        </div>
       </div>
-      <!-- Clean progress arrow BELOW the cards, not overlapping -->
+      <!-- Clean progress arrow BELOW the cards -->
       <div style="margin-top:8px;display:flex;align-items:center;gap:0">
         <div style="flex:1;height:1px;background:linear-gradient(to right,rgba(255,255,255,.06),rgba(201,168,76,.5))"></div>
         <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M0 5h8M5 1l4 4-4 4" stroke="#c9a84c" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity=".7"/></svg>
+      </div>
+      <div style="margin-top:20px;display:flex;align-items:center;gap:10px">
+        <div style="width:28px;height:1px;background:var(--gold);opacity:.4"></div>
+        <div style="font-size:.82rem;color:rgba(255,255,255,.35);font-style:italic">We meet you where you are — and accelerate your journey from there.</div>
       </div>
     </div>
 
@@ -1252,29 +1300,29 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
   <div class="footer-col">
     <h4>Products</h4>
     <ul>
-      <li><a href="#">Fundare PNL Track</a></li>
-      <li><a href="#">Promo Post Mortem</a></li>
-      <li><a href="#">Pricing Strategy</a></li>
-      <li><a href="#">Store Clustering</a></li>
-      <li><a href="#">RGM Certification</a></li>
+      <li><a href="products.html#pnl">Fundare PNL Track</a></li>
+      <li><a href="products.html#promo">Promo Post Mortem</a></li>
+      <li><a href="products.html#pricing">Pricing Strategy</a></li>
+      <li><a href="products.html#clustering">Store Clustering</a></li>
+      <li><a href="methodology.html">RGM Certification</a></li>
     </ul>
   </div>
   <div class="footer-col">
     <h4>Solutions</h4>
     <ul>
-      <li><a href="#">For Retailers</a></li>
-      <li><a href="#">For FMCG Brands</a></li>
-      <li><a href="#">Case Studies</a></li>
-      <li><a href="#">Insights</a></li>
+      <li><a href="methodology.html#retailers">For Retailers</a></li>
+      <li><a href="methodology.html#fmcg">For FMCG Brands</a></li>
+      <li><a href="about.html#results">Case Studies</a></li>
+      <li><a href="about.html">Insights</a></li>
     </ul>
   </div>
   <div class="footer-col">
     <h4>Company</h4>
     <ul>
-      <li><a href="#">About Fundare</a></li>
-      <li><a href="#">Our Team</a></li>
+      <li><a href="about.html">About Fundare</a></li>
+      <li><a href="about.html#team">Our Team</a></li>
 </li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
 </div>
