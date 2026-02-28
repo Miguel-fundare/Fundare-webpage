@@ -309,10 +309,14 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
   .audience-grid{grid-template-columns:1fr;gap:12px}
   .audience-card{padding:26px 20px}
 
-  .prod-tabs{gap:0;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:2px;scrollbar-width:none}
-  .prod-tabs::-webkit-scrollbar{display:none}
-  .prod-tab{font-size:.66rem;padding:10px 14px;white-space:nowrap}
+  .product-tabs{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;flex-wrap:nowrap;padding-bottom:0}
+  .product-tabs::-webkit-scrollbar{display:none}
+  .ptab{font-size:.72rem;padding:12px 16px;white-space:nowrap;flex-shrink:0}
   .product-panel.active{grid-template-columns:1fr;gap:24px}
+  .prod-info{overflow:hidden;width:100%}
+  .prod-desc{word-wrap:break-word;overflow-wrap:break-word}
+  .pf-text{word-wrap:break-word;overflow-wrap:break-word}
+  .prod-title{font-size:1.6rem}
   .pf{gap:10px}
   .pnl-mock{border-radius:6px;overflow:hidden;font-size:.55rem}
 
@@ -320,10 +324,9 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
   .results-grid{grid-template-columns:1fr 1fr;gap:12px}
   .result-num{font-size:1.8rem}
 
-  /* Enablers — 2x2 grid on mobile */
-  .method-grid{grid-template-columns:1fr 1fr;gap:10px}
-  .method-card{padding:18px 14px}
-  .method-card svg{width:32px;height:32px}
+  /* Enablers — carousel on mobile */
+  .enablers-desktop{display:none !important}
+  .enablers-mobile{display:block !important}
 
   /* Pillars — hide desktop grid, show mobile carousel */
   .pillars-desktop{display:none !important}
@@ -857,7 +860,9 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
 
     <!-- 4 ENABLERS -->
     <div style="font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(201,168,76,.6);margin-bottom:16px">The 4 Enablers</div>
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-bottom:48px">
+
+    <!-- Desktop -->
+    <div class="enablers-desktop" style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-bottom:48px">
       <div style="background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.12);padding:28px 24px">
         <div style="width:40px;height:40px;margin-bottom:16px">
           <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -916,9 +921,45 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
         <div style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--white);margin-bottom:8px">KPIs & Tracking</div>
         <div style="font-size:.83rem;line-height:1.65;color:rgba(255,255,255,.45)">We define the right RGM KPIs for your stage of maturity and build the tracking cadence — so results are visible, measurable, and accountable across the organization.</div>
       </div>
-    </div>
+    </div><!-- end enablers-desktop -->
 
-    <!-- 5 PILLARS -->
+    <!-- Enablers mobile carousel -->
+    <div class="enablers-mobile" style="display:none;margin-bottom:40px">
+      <div class="mob-carousel" id="enablers-carousel">
+        <div class="mob-carousel-item">
+          <div style="background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.18);padding:24px 20px;border-radius:2px">
+            <div style="width:36px;height:36px;margin-bottom:14px"><svg viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="20" rx="2" stroke="#c9a84c" stroke-width="1.5"/><line x1="4" y1="22" x2="36" y2="22" stroke="#c9a84c" stroke-width="1.5"/><line x1="14" y1="32" x2="26" y2="32" stroke="#c9a84c" stroke-width="1.5"/><line x1="20" y1="28" x2="20" y2="32" stroke="#c9a84c" stroke-width="1.5"/><circle cx="12" cy="15" r="1.5" fill="#c9a84c" opacity=".5"/><line x1="16" y1="13" x2="28" y2="13" stroke="#c9a84c" stroke-width="1" opacity=".4"/><line x1="16" y1="17" x2="24" y2="17" stroke="#c9a84c" stroke-width="1" opacity=".4"/></svg></div>
+            <div style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--white);margin-bottom:8px">Technology</div>
+            <div style="font-size:.88rem;line-height:1.65;color:rgba(255,255,255,.5)">Analytics and dashboards tailored to your available data — from foundational reports to AI-powered optimization. Built for your business.</div>
+          </div>
+        </div>
+        <div class="mob-carousel-item">
+          <div style="background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.18);padding:24px 20px;border-radius:2px">
+            <div style="width:36px;height:36px;margin-bottom:14px"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="4" stroke="#c9a84c" stroke-width="1.5"/><circle cx="20" cy="20" r="8.5" stroke="#c9a84c" stroke-width="1" stroke-dasharray="2.5 2" opacity=".5"/><line x1="20" y1="4" x2="20" y2="9" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/><line x1="20" y1="31" x2="20" y2="36" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="20" x2="9" y2="20" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/><line x1="31" y1="20" x2="36" y2="20" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+            <div style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--white);margin-bottom:8px">Processes</div>
+            <div style="font-size:.88rem;line-height:1.65;color:rgba(255,255,255,.5)">We integrate RGM into your commercial calendar — pricing reviews, promo planning, supplier negotiations, and S&OP — so decisions are always data-driven.</div>
+          </div>
+        </div>
+        <div class="mob-carousel-item">
+          <div style="background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.18);padding:24px 20px;border-radius:2px">
+            <div style="width:36px;height:36px;margin-bottom:14px"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="12" r="5" stroke="#c9a84c" stroke-width="1.5"/><path d="M8 34c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/><path d="M26 18l2 2 5-5" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--white);margin-bottom:8px">Talent</div>
+            <div style="font-size:.88rem;line-height:1.65;color:rgba(255,255,255,.5)">We certify your team in RGM — from fundamentals to advanced analytics. The goal is capability, not dependency on consultants.</div>
+          </div>
+        </div>
+        <div class="mob-carousel-item">
+          <div style="background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.18);padding:24px 20px;border-radius:2px">
+            <div style="width:36px;height:36px;margin-bottom:14px"><svg viewBox="0 0 40 40" fill="none"><rect x="4" y="28" width="6" height="8" rx="1" fill="#c9a84c" opacity=".35"/><rect x="13" y="20" width="6" height="16" rx="1" fill="#c9a84c" opacity=".5"/><rect x="22" y="13" width="6" height="23" rx="1" fill="#c9a84c" opacity=".7"/><rect x="31" y="6" width="6" height="30" rx="1" fill="#c9a84c"/><polyline points="7,26 16,18 25,11 34,5" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity=".6"/><circle cx="34" cy="5" r="2" fill="#c9a84c"/></svg></div>
+            <div style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--white);margin-bottom:8px">KPIs & Tracking</div>
+            <div style="font-size:.88rem;line-height:1.65;color:rgba(255,255,255,.5)">We define the right RGM KPIs for your maturity stage and build the tracking cadence — so results are visible, measurable, and accountable.</div>
+          </div>
+        </div>
+      </div>
+      <div class="mob-carousel-dots" id="enablers-dots">
+        <div class="mob-dot active"></div><div class="mob-dot"></div><div class="mob-dot"></div><div class="mob-dot"></div>
+      </div>
+      <div style="text-align:center;margin-top:8px;font-size:.65rem;color:rgba(255,255,255,.25);letter-spacing:.05em">← swipe →</div>
+    </div>
     <div style="font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(201,168,76,.6);margin-bottom:16px">The 5 RGM Pillars</div>
 
     <!-- Desktop version -->
@@ -940,7 +981,7 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
         <div style="font-size:.83rem;line-height:1.6;color:rgba(255,255,255,.55)">Optimal frequency, depth, and promo mechanics. Cut unprofitable promotions by 20–30% and increase promotional ROI by up to 35%.</div>
       </div>
       <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);padding:24px 20px">
-        <div style="font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px">Trade Terms</div>
+        <div style="font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px">Discounts & Trade Terms</div>
         <div style="font-size:.83rem;line-height:1.6;color:rgba(255,255,255,.55)">Defensible pay-for-performance terms that align supplier investment with the commercial results that actually matter.</div>
       </div>
     </div>
@@ -974,7 +1015,7 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
         </div>
         <div class="mob-carousel-item">
           <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);padding:24px 20px;height:100%">
-            <div style="font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:10px">Trade Terms</div>
+            <div style="font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:10px">Discounts & Trade Terms</div>
             <div style="font-size:.88rem;line-height:1.65;color:rgba(255,255,255,.6)">Defensible pay-for-performance terms that align supplier investment with results that actually matter.</div>
           </div>
         </div>
@@ -1236,15 +1277,13 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
 </footer>
 
 <script>
-// Tab switching
-document.querySelectorAll('.prod-tab').forEach(tab => {
-  tab.addEventListener('click', () => {
-    document.querySelectorAll('.prod-tab').forEach(t => t.classList.remove('act'));
-    document.querySelectorAll('.product-panel').forEach(p => p.classList.remove('active'));
-    tab.classList.add('act');
-    document.getElementById(tab.dataset.tab).classList.add('active');
-  });
-});
+// Tab switching — works with both ptab/showTab system
+function showTab(id, el) {
+  document.querySelectorAll('.ptab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.product-panel').forEach(p => p.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('tab-' + id).classList.add('active');
+}
 
 // Carousel dot sync
 function initCarousel(carouselId, dotsId) {
@@ -1263,6 +1302,7 @@ function initCarousel(carouselId, dotsId) {
 document.addEventListener('DOMContentLoaded', () => {
   initCarousel('pillars-carousel', 'pillars-dots');
   initCarousel('stair-carousel', 'stair-dots');
+  initCarousel('enablers-carousel', 'enablers-dots');
 });
 
 // Footer email
