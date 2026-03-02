@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <!-- ═══ SEO ═══ -->
-<title>Fundare · Boutique Revenue Growth Management Consulting</title>
-<meta name="description" content="Fundare is a boutique RGM consultancy specializing in pricing strategy, promotion analytics, and margin intelligence for US grocery retailers and FMCG brands. Enterprise-grade methodology — without the enterprise price tag."/>
+<title>Fundare · Strategic Revenue Growth &amp; Pricing Excellence</title>
+<meta name="description" content="Fundare helps retailers, wholesalers, and CPG brands unlock profitable growth through pricing architecture, promotion governance, and revenue analytics. Schedule a Revenue Diagnostic today."/>
 <meta name="keywords" content="Revenue Growth Management, RGM consulting, pricing strategy, promotion analytics, grocery retail consulting, FMCG margin optimization, PNL track, promo post mortem"/>
 <meta name="author" content="Fundare"/>
 <meta name="robots" content="index, follow"/>
@@ -15,8 +15,8 @@
 <!-- ═══ OPEN GRAPH / LINK PREVIEW ═══ -->
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://miguel-fundare.github.io/Fundare-webpage/"/>
-<meta property="og:title" content="Fundare · Boutique Revenue Growth Management"/>
-<meta property="og:description" content="We help US grocery retailers and FMCG brands find where revenue growth is hiding — through pricing strategy, promo analytics, and margin intelligence. No pitch. No obligation. Just insight."/>
+<meta property="og:title" content="Fundare · Strategic Revenue Growth &amp; Pricing Excellence"/>
+<meta property="og:description" content="We unlock profitable growth through pricing architecture, promotion effectiveness, and revenue governance — for retailers, wholesalers, and CPG brands."/>
 <meta property="og:image" content="https://miguel-fundare.github.io/Fundare-webpage/og-image.png"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
@@ -25,8 +25,8 @@
 
 <!-- ═══ TWITTER CARD ═══ -->
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Fundare · Boutique Revenue Growth Management"/>
-<meta name="twitter:description" content="We help US grocery retailers and FMCG brands find where revenue growth is hiding."/>
+<meta name="twitter:title" content="Fundare · Strategic Revenue Growth &amp; Pricing Excellence"/>
+<meta name="twitter:description" content="Pricing architecture, promotion governance &amp; revenue analytics for retailers, wholesalers and CPG brands."/>
 <meta name="twitter:image" content="https://miguel-fundare.github.io/Fundare-webpage/og-image.png"/>
 
 <!-- ═══ FAVICON — inline SVG ═══ -->
@@ -339,6 +339,11 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
 
 /* ═══ MOBILE ═══ */
 @media(max-width:640px){
+  .cs-card > div[style*="grid-template-columns:1fr 1fr"] { display:block !important; }
+  .cs-card > div > div[style*="padding:36px 40px"] { padding:24px 18px !important; border-right:none !important; border-bottom:1px solid rgba(255,255,255,.06); }
+  .cs-metrics { grid-template-columns:1fr 1fr !important; }
+  [style*="grid-template-columns:repeat(4,1fr)"][style*="Phase 01"], div[style*="grid-template-columns:repeat(4,1fr)"][style*="gap:3px;margin-bottom:48px"] { grid-template-columns:1fr 1fr !important; }
+
   nav{padding:14px 18px}
   .nav-links{display:none}
   .nav-cta{padding:10px 16px;font-size:.76rem}
@@ -417,6 +422,20 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
   .footer-col h4{margin-top:0}
   .footer-bottom{padding:12px 18px;flex-direction:column;gap:5px;text-align:center}
 }
+
+/* ── HOVER EFFECTS — Pillars, Enablers, Staircase ── */
+.pillar-hover{transition:all .25s ease;cursor:default}
+.pillar-hover:hover{background:rgba(201,168,76,.16) !important;border-color:rgba(201,168,76,.45) !important;transform:translateY(-5px);box-shadow:0 16px 40px rgba(0,0,0,.3)}
+
+.enabler-hover{transition:all .25s ease;cursor:default}
+.enabler-hover:hover{background:rgba(201,168,76,.12) !important;border-color:rgba(201,168,76,.4) !important;transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.25)}
+
+.stair-hover{transition:all .3s ease;cursor:default}
+.stair-hover:hover > div:first-child{background:rgba(201,168,76,.14) !important;border-color:rgba(201,168,76,.45) !important;transform:translateY(-6px);box-shadow:0 20px 48px rgba(0,0,0,.4)}
+.stair-hover:hover .stair-title{color:var(--gold) !important}
+
+.method-card-hover{transition:all .25s ease;cursor:default}
+.method-card-hover:hover{background:rgba(255,255,255,.06) !important;border-color:rgba(201,168,76,.35) !important;transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.25)}
 </style>
 </head>
 <body>
@@ -430,23 +449,23 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
-  <a href="contact.html" class="nav-cta">Let's Talk Strategy</a>
+  <a href="contact.html" class="nav-cta">Book a Conversation</a>
 </nav>
 
 <!-- ═══ HERO ═══ -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-eyebrow">Boutique Revenue Growth Management</div>
+    <div class="hero-eyebrow">For Retailers, Wholesalers &amp; CPG Brands</div>
     <h1 class="hero-headline">
-      No one understands retail<br>margins <em>like we do.</em>
+      Strategic Revenue Growth<br>&amp; <em>Pricing Excellence</em>
     </h1>
     <div class="hero-bottom-row">
       <div>
-        <p class="hero-sub">Fundare is a boutique RGM consultancy specializing in pricing strategy, promotion analytics, and margin intelligence for US grocery retailers and FMCG brands. We bring enterprise-grade methodology — without the enterprise price tag.</p>
+        <p class="hero-sub">We unlock profitable growth through pricing architecture, promotion effectiveness, and revenue governance — for retailers, wholesalers, and CPG brands across the US.</p>
       </div>
       <div style="display:flex;flex-direction:column;gap:28px">
         <div class="hero-actions">
-          <a href="contact.html" class="btn-primary">Let's Talk Strategy</a>
+          <a href="contact.html" class="btn-primary">Schedule a Revenue Diagnostic</a>
           <a href="#audience" class="btn-ghost">Explore solutions →</a>
         </div>
         <div class="hero-stats">
@@ -462,22 +481,22 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
 <!-- MARQUEE -->
 <div class="marquee-wrap">
   <div class="marquee-track">
-    <span class="marquee-item">Pricing Strategy</span>
-    <span class="marquee-item">Promo Post Mortem</span>
+    <span class="marquee-item">Price Architecture</span>
+    <span class="marquee-item">Promotion Governance</span>
+    <span class="marquee-item">Revenue Analytics</span>
+    <span class="marquee-item">Net Revenue Management</span>
+    <span class="marquee-item">Trade ROI</span>
+    <span class="marquee-item">Price-Pack Strategy</span>
     <span class="marquee-item">Margin Intelligence</span>
-    <span class="marquee-item">Store Clustering</span>
-    <span class="marquee-item">Price Elasticity</span>
-    <span class="marquee-item">Promo Optimization</span>
-    <span class="marquee-item">P&L by SKU</span>
-    <span class="marquee-item">Revenue Growth Management</span>
-    <span class="marquee-item">Pricing Strategy</span>
-    <span class="marquee-item">Promo Post Mortem</span>
+    <span class="marquee-item">Commercial Excellence</span>
+    <span class="marquee-item">Price Architecture</span>
+    <span class="marquee-item">Promotion Governance</span>
+    <span class="marquee-item">Revenue Analytics</span>
+    <span class="marquee-item">Net Revenue Management</span>
+    <span class="marquee-item">Trade ROI</span>
+    <span class="marquee-item">Price-Pack Strategy</span>
     <span class="marquee-item">Margin Intelligence</span>
-    <span class="marquee-item">Store Clustering</span>
-    <span class="marquee-item">Price Elasticity</span>
-    <span class="marquee-item">Promo Optimization</span>
-    <span class="marquee-item">P&L by SKU</span>
-    <span class="marquee-item">Revenue Growth Management</span>
+    <span class="marquee-item">Commercial Excellence</span>
   </div>
 </div>
 
@@ -485,31 +504,29 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
 <div class="audience" id="audience">
   <div class="audience-inner">
     <div class="section-label">Who We Serve</div>
-    <h2>Two worlds. One mission:<br>profitable growth.</h2>
+    <h2>Two audiences.<br>One commercial mission.</h2>
     <div class="audience-grid">
       <a href="#retailers" class="audience-card retailers">
-        <div class="aud-label">For Retailers</div>
-        <div class="aud-title">Grocery Chains &<br>Supermarkets</div>
-        <div class="aud-sub">See every margin point across every category, supplier, and SKU. Price smarter. Negotiate stronger. Promote more profitably.</div>
+        <div class="aud-label">For Retailers &amp; Wholesalers</div>
+        <div class="aud-title">Grocery Chains,<br>Supermarkets &amp; Wholesalers</div>
+        <div class="aud-sub">Command your category margins with full P&L visibility, disciplined promotion governance, and data-driven pricing strategies that hold up in the market.</div>
         <div class="aud-products">
-          <span class="aud-tag">PNL Track</span>
-          <span class="aud-tag">Pricing Strategy</span>
-          <span class="aud-tag">Promo Post Mortem</span>
-          <span class="aud-tag">Store Clustering</span>
-          <span class="aud-tag">Price Simulation</span>
+          <span class="aud-tag">Competitive Price Positioning</span>
+          <span class="aud-tag">Promotion Governance</span>
+          <span class="aud-tag">Margin &amp; Mix Architecture</span>
+          <span class="aud-tag">Localized Pricing Strategy</span>
         </div>
         <span class="aud-arrow">→</span>
       </a>
       <a href="#brands" class="audience-card brands">
-        <div class="aud-label">For FMCG Brands</div>
-        <div class="aud-title">CPG & FMCG<br>Manufacturers</div>
-        <div class="aud-sub">Optimize every promotion, maximize price realization, and build the RGM capabilities your commercial team needs to win at shelf.</div>
+        <div class="aud-label">For Brands (CPG / FMCG)</div>
+        <div class="aud-title">CPG &amp; FMCG<br>Manufacturers</div>
+        <div class="aud-sub">Maximize price realization, make every trade dollar work harder, and build the commercial analytics capability your team needs to grow profitably.</div>
         <div class="aud-products">
-          <span class="aud-tag">Promo Optimization</span>
-          <span class="aud-tag">Price Elasticity</span>
-          <span class="aud-tag">Trade Terms</span>
-          <span class="aud-tag">RGM Certification</span>
-          <span class="aud-tag">Post Mortem</span>
+          <span class="aud-tag">Net Revenue Management (NRM)</span>
+          <span class="aud-tag">Trade &amp; Promotion ROI</span>
+          <span class="aud-tag">Post-Event Effectiveness</span>
+          <span class="aud-tag">Price-Pack Architecture</span>
         </div>
         <span class="aud-arrow">→</span>
       </a>
@@ -520,28 +537,30 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
 <!-- ═══ PRODUCTS ═══ -->
 <section class="products-section" id="products">
   <div class="container">
-    <div class="section-label">Our Products</div>
-    <h2>Dashboards built for<br>every RGM decision.</h2>
-    <p class="section-intro" style="margin-bottom:40px">Every tool we build is purpose-built for how retailers and FMCG brands actually operate — not generic BI, not off-the-shelf software. Real data. Real decisions.</p>
+    <div class="section-label">Our Revenue Growth Levers</div>
+    <h2>Strategic levers that<br>deliver measurable impact.</h2>
+    <p class="section-intro" style="margin-bottom:40px">Not just tools — strategic commercial levers purpose-built for how retailers, wholesalers, and CPG brands actually operate. Real data. Defensible decisions.</p>
 
     <div class="product-tabs">
-      <button class="ptab active" onclick="showTab('pnl',this)">PNL Track</button>
-      <button class="ptab" onclick="showTab('promo',this)">Promo Post Mortem</button>
-      <button class="ptab" onclick="showTab('pricing',this)">Pricing Strategy</button>
+      <button class="ptab active" onclick="showTab('pnl',this)">Revenue Analytics</button>
+      <button class="ptab" onclick="showTab('promo',this)">Promotion Governance</button>
+      <button class="ptab" onclick="showTab('pricing',this)">Price Architecture</button>
+      <button class="ptab" onclick="showTab('elasticity',this)">Elasticity Segmentation</button>
+      <button class="ptab" onclick="showTab('capability',this)">Capability Building</button>
     </div>
 
     <!-- PNL TRACK -->
     <div class="product-panel active" id="tab-pnl" id="retailers">
       <div class="prod-info">
-        <div class="prod-eyebrow">For Retailers</div>
-        <div class="prod-title">Fundare PNL Track</div>
-        <div class="prod-desc">Real-time P&L visibility across every category, brand, supplier, and SKU. Track margin performance vs. last year, identify leakage, and walk into every supplier negotiation with the data advantage.</div>
+        <div class="prod-eyebrow">Lever 01 · Powered by Fundare PNL Track</div>
+        <div class="prod-title">Revenue Analytics &amp; KPI Systems</div>
+        <div class="prod-desc">Full commercial P&L visibility by category, brand, supplier, and SKU — with period-vs-LY tracking built in. Surface margin leakage fast, align your team on the right KPIs, and walk into every supplier negotiation with an unbeatable data advantage.</div>
         <div class="prod-features">
           <div class="pf"><div class="pf-icon"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><rect x="3" y="3" width="18" height="18" rx="1" stroke="#c9a84c" stroke-width="1.5"/><line x1="3" y1="9" x2="21" y2="9" stroke="#c9a84c" stroke-width="1"/><line x1="9" y1="9" x2="9" y2="21" stroke="#c9a84c" stroke-width="1"/></svg></div><div><div class="pf-title">Full P&L by Category, Brand & SKU</div><div class="pf-text">Net revenue, net cost, supplier support, and margin % — at every level of your business, filterable by branch, period, or product.</div></div></div>
           <div class="pf"><div class="pf-icon"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><rect x="3" y="4" width="18" height="16" rx="1" stroke="#c9a84c" stroke-width="1.5"/><line x1="3" y1="9" x2="21" y2="9" stroke="#c9a84c" stroke-width="1"/><line x1="7" y1="2" x2="7" y2="6" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/><line x1="17" y1="2" x2="17" y2="6" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/><polyline points="7,14 10,17 17,12" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="pf-title">Period vs. Last Year — Built In</div><div class="pf-text">YTD, quarterly, monthly vs. LY comparisons. Spot trends before they become expensive problems.</div></div></div>
           <div class="pf"><div class="pf-icon"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="#c9a84c" stroke-width="1.5"/><path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/><path d="M16 3.13a4 4 0 0 1 0 7.75" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/></svg></div><div><div class="pf-title">Supplier Negotiation Intelligence</div><div class="pf-text">Know which suppliers are driving profitability and which are eroding it. Enter negotiations with the data, not a gut feeling.</div></div></div>
         </div>
-        <a href="contact.html" class="prod-cta">Let's Talk Strategy →</a>
+        <a href="contact.html" class="prod-cta">Book a Strategy Conversation →</a>
       </div>
       <div>
         <!-- PNL DASHBOARD MOCKUP -->
@@ -671,15 +690,15 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
     <!-- PROMO POST MORTEM -->
     <div class="product-panel" id="tab-promo">
       <div class="prod-info">
-        <div class="prod-eyebrow">For Retailers & FMCG Brands</div>
-        <div class="prod-title">Promo Post Mortem</div>
-        <div class="prod-desc">50% of supplier-proposed promotions destroy value. Our post mortem dashboards show you exactly which promos drove incremental profit — and which caused cannibalization and overstock.</div>
+        <div class="prod-eyebrow">Lever 02 · Powered by Promo Post Mortem</div>
+        <div class="prod-title">Promotion &amp; Trade Governance</div>
+        <div class="prod-desc">50% of supplier-proposed promotions destroy value — yet most companies can't prove it. Our post-event analytics show exactly which promos drove incremental profit, which cannibalized baseline sales, and which left you with overstock. Stop funding promotions that don't work.</div>
         <div class="prod-features">
           <div class="pf"><div class="pf-icon"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><circle cx="12" cy="12" r="9" stroke="#c9a84c" stroke-width="1.5"/><polyline points="8,12 11,15 16,9" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="pf-title">Promotion ROI by Family & SKU</div><div class="pf-text">Incremental volume, sales, and profit — broken down by promo type, category, and promotion period. Know which promos pay for themselves.</div></div></div>
           <div class="pf"><div class="pf-icon"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><circle cx="12" cy="12" r="9" stroke="#c9a84c" stroke-width="1.5"/><line x1="12" y1="8" x2="12" y2="12" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="16" r="1" fill="#c9a84c"/></svg></div><div><div class="pf-title">Cannibalization & Overstock Detection</div><div class="pf-text">The scatter quadrant shows you which promotions created incremental value vs. which cannibalized baseline sales or left you with excess inventory.</div></div></div>
           <div class="pf"><div class="pf-icon"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><line x1="8" y1="6" x2="21" y2="6" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="12" x2="21" y2="12" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="18" x2="21" y2="18" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/><line x1="3" y1="6" x2="3.01" y2="6" stroke="#c9a84c" stroke-width="2" stroke-linecap="round"/><line x1="3" y1="12" x2="3.01" y2="12" stroke="#c9a84c" stroke-width="2" stroke-linecap="round"/><line x1="3" y1="18" x2="3.01" y2="18" stroke="#c9a84c" stroke-width="2" stroke-linecap="round"/></svg></div><div><div class="pf-title">Top & Bottom Promotion Ranking</div><div class="pf-text">Instantly identify your best and worst-performing promotions by profit impact, volume, and ROI — filterable by any business lens.</div></div></div>
         </div>
-        <a href="contact.html" class="prod-cta">Let's Talk Strategy →</a>
+        <a href="contact.html" class="prod-cta">Book a Strategy Conversation →</a>
       </div>
       <div>
         <!-- PROMO DASHBOARD MOCKUP -->
@@ -795,15 +814,15 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
     <!-- PRICING STRATEGY -->
     <div class="product-panel" id="tab-pricing" id="brands">
       <div class="prod-info">
-        <div class="prod-eyebrow">For Retailers & FMCG Brands</div>
-        <div class="prod-title">Pricing Strategy & Simulation</div>
-        <div class="prod-desc">Understand price elasticity at the SKU level. Simulate price changes before you execute them. Identify which products can absorb a price increase — and which will cost you volume. Maximize margin or market share, your choice.</div>
+        <div class="prod-eyebrow">Lever 03 · Powered by Pricing Strategy &amp; Simulation</div>
+        <div class="prod-title">Strategic Price &amp; Pack Architecture</div>
+        <div class="prod-desc">Understand price elasticity at the SKU level and simulate every pricing decision before you execute it. Build a price-pack architecture that maximizes margin without sacrificing volume — segmented by store cluster, channel, and competitive position.</div>
         <div class="prod-features">
           <div class="pf"><div class="pf-icon"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><polyline points="23,6 13.5,15.5 8.5,10.5 1,18" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><polyline points="17,6 23,6 23,12" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="pf-title">Price Elasticity by SKU</div><div class="pf-text">Know exactly how sensitive each product is to price changes. Identify inelastic SKUs where you can capture margin without losing volume.</div></div></div>
           <div class="pf"><div class="pf-icon"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><rect x="2" y="3" width="20" height="14" rx="1" stroke="#c9a84c" stroke-width="1.5"/><line x1="8" y1="21" x2="16" y2="21" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/><line x1="12" y1="17" x2="12" y2="21" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/><polyline points="6,13 9,9 13,11 18,6" stroke="#c9a84c" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity=".7"/></svg></div><div><div class="pf-title">Price Change Simulation</div><div class="pf-text">Model the revenue, volume, and profit impact of any pricing scenario before committing. Full P&L impact shown in real time.</div></div></div>
           <div class="pf"><div class="pf-icon"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="#c9a84c" stroke-width="1.5" stroke-linejoin="round"/><polyline points="9,22 9,12 15,12 15,22" stroke="#c9a84c" stroke-width="1.5" stroke-linejoin="round"/></svg></div><div><div class="pf-title">Store Clustering & Zone Pricing</div><div class="pf-text">Segment stores by consumer price sensitivity and competitive positioning. Execute zone pricing strategies that maximize margin by location.</div></div></div>
         </div>
-        <a href="contact.html" class="prod-cta">Let's Talk Strategy →</a>
+        <a href="contact.html" class="prod-cta">Book a Strategy Conversation →</a>
       </div>
       <div>
         <!-- PRICING DASHBOARD MOCKUP -->
@@ -897,6 +916,137 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
       </div>
     </div>
 
+
+    <!-- ELASTICITY-DRIVEN SEGMENTATION -->
+    <div class="product-panel" id="tab-elasticity">
+      <div class="prod-info">
+        <div class="prod-eyebrow">Lever 04 · Elasticity Modeling &amp; Store Clustering</div>
+        <div class="prod-title">Elasticity-Driven Segmentation</div>
+        <div class="prod-desc">Not every customer, store, or SKU responds to pricing the same way. Our elasticity modeling segments your portfolio by price sensitivity — so you know exactly where you can increase prices, where you must hold, and where deep discounts are genuinely driving volume.</div>
+        <div class="prod-features">
+          <div class="pf"><div class="pf-icon"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><circle cx="9" cy="9" r="6" stroke="#c9a84c" stroke-width="1.5"/><path d="M21 21l-4.35-4.35" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/></svg></div><div><div class="pf-title">SKU-Level Price Elasticity</div><div class="pf-text">Understand the true sensitivity of every SKU to price changes — separating inelastic opportunities from high-risk price points. Built from your own transactional data.</div></div></div>
+          <div class="pf"><div class="pf-icon"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><rect x="2" y="2" width="9" height="9" rx="1" stroke="#c9a84c" stroke-width="1.5"/><rect x="13" y="2" width="9" height="9" rx="1" stroke="#c9a84c" stroke-width="1.5"/><rect x="2" y="13" width="9" height="9" rx="1" stroke="#c9a84c" stroke-width="1.5"/><rect x="13" y="13" width="9" height="9" rx="1" stroke="#c9a84c" stroke-width="1.5" opacity=".4"/></svg></div><div><div class="pf-title">Store Clustering by Price Sensitivity</div><div class="pf-text">Group stores by competitive context, shopper income profile, and price sensitivity — enabling targeted zone pricing that maximizes margin without uniform exposure.</div></div></div>
+          <div class="pf"><div class="pf-icon"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><polyline points="22,12 18,12 15,21 9,3 6,12 2,12" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="pf-title">Price Simulation Before Execution</div><div class="pf-text">Model the full P&amp;L impact of any pricing scenario before you commit. See projected volume, revenue, and margin effects by store cluster and product family.</div></div></div>
+        </div>
+        <a href="contact.html" class="prod-cta">Book a Strategy Conversation →</a>
+      </div>
+      <div>
+        <div class="db-shell">
+          <div class="db-chrome">
+            <div class="db-dot" style="background:#ef4444"></div>
+            <div class="db-dot" style="background:#f59e0b"></div>
+            <div class="db-dot" style="background:#22c55e"></div>
+            <span class="db-label">Elasticity &amp; Segmentation Dashboard</span>
+            <span style="margin-left:auto;font-size:.6rem;background:rgba(201,168,76,.15);color:var(--gold);border:1px solid rgba(201,168,76,.25);padding:2px 7px;border-radius:2px">LIVE</span>
+          </div>
+          <div class="db-body">
+            <!-- Scatter quadrant -->
+            <div style="font-size:.6rem;color:rgba(255,255,255,.4);margin-bottom:8px;letter-spacing:.06em;text-transform:uppercase">Margin % vs. Price Elasticity — Portfolio View</div>
+            <svg viewBox="0 0 320 180" width="100%" style="max-height:180px">
+              <!-- axes -->
+              <line x1="30" y1="10" x2="30" y2="165" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
+              <line x1="30" y1="165" x2="315" y2="165" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
+              <!-- midlines -->
+              <line x1="172" y1="10" x2="172" y2="165" stroke="rgba(255,255,255,.05)" stroke-width="1" stroke-dasharray="4,3"/>
+              <line x1="30" y1="87" x2="315" y2="87" stroke="rgba(255,255,255,.05)" stroke-width="1" stroke-dasharray="4,3"/>
+              <!-- quadrant labels -->
+              <text x="80" y="25" fill="rgba(201,168,76,.6)" font-size="7" text-anchor="middle" font-weight="700">PRICE UP OPPORTUNITY</text>
+              <text x="250" y="25" fill="rgba(251,191,36,.5)" font-size="7" text-anchor="middle">MONITOR</text>
+              <text x="80" y="155" fill="rgba(76,175,125,.5)" font-size="7" text-anchor="middle">STABLE / DEFEND</text>
+              <text x="250" y="155" fill="rgba(239,68,68,.5)" font-size="7" text-anchor="middle">HIGH RISK</text>
+              <!-- Gold dots — price up opportunity -->
+              <circle cx="60" cy="38" r="8" fill="rgba(201,168,76,.3)" stroke="#c9a84c" stroke-width="1"/>
+              <circle cx="90" cy="48" r="6" fill="rgba(201,168,76,.25)" stroke="#c9a84c" stroke-width="1"/>
+              <circle cx="75" cy="62" r="7" fill="rgba(201,168,76,.2)" stroke="#c9a84c" stroke-width="1"/>
+              <circle cx="120" cy="42" r="5" fill="rgba(201,168,76,.2)" stroke="#c9a84c" stroke-width="1"/>
+              <!-- Green dots — stable -->
+              <circle cx="55" cy="115" r="6" fill="rgba(76,175,125,.3)" stroke="#4caf7d" stroke-width="1"/>
+              <circle cx="100" cy="125" r="7" fill="rgba(76,175,125,.25)" stroke="#4caf7d" stroke-width="1"/>
+              <circle cx="130" cy="108" r="5" fill="rgba(76,175,125,.2)" stroke="#4caf7d" stroke-width="1"/>
+              <!-- Yellow dots — monitor -->
+              <circle cx="200" cy="45" r="6" fill="rgba(251,191,36,.25)" stroke="#fbbf24" stroke-width="1"/>
+              <circle cx="240" cy="35" r="8" fill="rgba(251,191,36,.2)" stroke="#fbbf24" stroke-width="1"/>
+              <circle cx="220" cy="60" r="5" fill="rgba(251,191,36,.2)" stroke="#fbbf24" stroke-width="1"/>
+              <!-- Red dots — high risk -->
+              <circle cx="210" cy="120" r="7" fill="rgba(239,68,68,.25)" stroke="#ef4444" stroke-width="1"/>
+              <circle cx="260" cy="130" r="9" fill="rgba(239,68,68,.2)" stroke="#ef4444" stroke-width="1"/>
+              <circle cx="285" cy="110" r="5" fill="rgba(239,68,68,.2)" stroke="#ef4444" stroke-width="1"/>
+              <!-- axis labels -->
+              <text x="172" y="176" fill="rgba(255,255,255,.25)" font-size="6" text-anchor="middle">Elasticity (low → high)</text>
+              <text x="10" y="90" fill="rgba(255,255,255,.25)" font-size="6" text-anchor="middle" transform="rotate(-90,10,90)">Margin %</text>
+            </svg>
+            <!-- Legend -->
+            <div style="display:flex;gap:16px;margin-top:10px;flex-wrap:wrap">
+              <div style="display:flex;align-items:center;gap:5px"><div style="width:8px;height:8px;border-radius:50%;background:var(--gold)"></div><span style="font-size:.65rem;color:rgba(255,255,255,.45)">Price Up Opportunity</span></div>
+              <div style="display:flex;align-items:center;gap:5px"><div style="width:8px;height:8px;border-radius:50%;background:#4caf7d"></div><span style="font-size:.65rem;color:rgba(255,255,255,.45)">Stable / Defend</span></div>
+              <div style="display:flex;align-items:center;gap:5px"><div style="width:8px;height:8px;border-radius:50%;background:#fbbf24"></div><span style="font-size:.65rem;color:rgba(255,255,255,.45)">Monitor</span></div>
+              <div style="display:flex;align-items:center;gap:5px"><div style="width:8px;height:8px;border-radius:50%;background:#ef4444"></div><span style="font-size:.65rem;color:rgba(255,255,255,.45)">High Risk</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CAPABILITY BUILDING PROGRAMS -->
+    <div class="product-panel" id="tab-capability">
+      <div class="prod-info">
+        <div class="prod-eyebrow">Lever 05 · RGM Training &amp; Certification Programs</div>
+        <div class="prod-title">Capability Building Programs</div>
+        <div class="prod-desc">The most powerful RGM system in the world fails if your team can't use it. We build the internal commercial capability your organization needs to sustain results — through structured training, RGM certification, and embedded process design that outlasts the engagement.</div>
+        <div class="prod-features">
+          <div class="pf"><div class="pf-icon"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="pf-title">RGM Fundamentals Certification</div><div class="pf-text">Structured learning path from pricing theory to advanced promotional analytics — certified across commercial, finance, and category management functions.</div></div></div>
+          <div class="pf"><div class="pf-icon"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><circle cx="12" cy="12" r="9" stroke="#c9a84c" stroke-width="1.5"/><path d="M12 8v4l3 3" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/></svg></div><div><div class="pf-title">Embedded Process Design</div><div class="pf-text">We wire RGM reviews into your commercial calendar — pricing cycles, promo pre/post, S&amp;OP — so the discipline continues long after the engagement ends.</div></div></div>
+          <div class="pf"><div class="pf-icon"><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="#c9a84c" stroke-width="1.5"/><path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/><path d="M16 3.13a4 4 0 0 1 0 7.75" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/></svg></div><div><div class="pf-title">Team &amp; Leadership Workshops</div><div class="pf-text">Hands-on RGM workshops for commercial leaders, category teams, and finance partners — built around your actual categories, data, and strategic priorities.</div></div></div>
+        </div>
+        <a href="contact.html" class="prod-cta">Book a Strategy Conversation →</a>
+      </div>
+      <div>
+        <div class="db-shell">
+          <div class="db-chrome">
+            <div class="db-dot" style="background:#ef4444"></div>
+            <div class="db-dot" style="background:#f59e0b"></div>
+            <div class="db-dot" style="background:#22c55e"></div>
+            <span class="db-label">RGM Capability Roadmap</span>
+          </div>
+          <div class="db-body">
+            <div style="font-size:.6rem;color:rgba(255,255,255,.4);margin-bottom:16px;letter-spacing:.06em;text-transform:uppercase">Maturity progression — your team's RGM journey</div>
+            <!-- 4-phase capability track -->
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:3px;margin-bottom:20px">
+              <div style="padding:14px 12px;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.3);border-top:2px solid var(--gold)">
+                <div style="font-size:.55rem;font-weight:700;letter-spacing:.08em;color:var(--gold);margin-bottom:6px">PHASE 1</div>
+                <div style="font-size:.78rem;font-weight:700;color:white;margin-bottom:5px">Diagnose</div>
+                <div style="font-size:.65rem;line-height:1.5;color:rgba(255,255,255,.45)">Baseline KPIs. Data audit. Opportunity map.</div>
+              </div>
+              <div style="padding:14px 12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)">
+                <div style="font-size:.55rem;font-weight:700;letter-spacing:.08em;color:rgba(201,168,76,.6);margin-bottom:6px">PHASE 2</div>
+                <div style="font-size:.78rem;font-weight:700;color:white;margin-bottom:5px">Design</div>
+                <div style="font-size:.65rem;line-height:1.5;color:rgba(255,255,255,.4)">Curriculum. Process maps. Tool build.</div>
+              </div>
+              <div style="padding:14px 12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)">
+                <div style="font-size:.55rem;font-weight:700;letter-spacing:.08em;color:rgba(201,168,76,.6);margin-bottom:6px">PHASE 3</div>
+                <div style="font-size:.78rem;font-weight:700;color:white;margin-bottom:5px">Deploy</div>
+                <div style="font-size:.65rem;line-height:1.5;color:rgba(255,255,255,.4)">Training delivery. Pilot. Live coaching.</div>
+              </div>
+              <div style="padding:14px 12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)">
+                <div style="font-size:.55rem;font-weight:700;letter-spacing:.08em;color:rgba(201,168,76,.6);margin-bottom:6px">PHASE 4</div>
+                <div style="font-size:.78rem;font-weight:700;color:white;margin-bottom:5px">Develop</div>
+                <div style="font-size:.65rem;line-height:1.5;color:rgba(255,255,255,.4)">Certification. Embed. Self-sustain.</div>
+              </div>
+            </div>
+            <!-- module list -->
+            <div style="font-size:.6rem;color:rgba(255,255,255,.3);letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px">Core curriculum modules</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:5px">
+              <div style="padding:8px 10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);font-size:.7rem;color:rgba(255,255,255,.55)">✦ Pricing strategy &amp; elasticity</div>
+              <div style="padding:8px 10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);font-size:.7rem;color:rgba(255,255,255,.55)">✦ Promotion ROI mechanics</div>
+              <div style="padding:8px 10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);font-size:.7rem;color:rgba(255,255,255,.55)">✦ P&amp;L construction &amp; KPIs</div>
+              <div style="padding:8px 10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);font-size:.7rem;color:rgba(255,255,255,.55)">✦ Trade terms negotiation</div>
+              <div style="padding:8px 10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);font-size:.7rem;color:rgba(255,255,255,.55)">✦ Pack price architecture</div>
+              <div style="padding:8px 10px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.2);font-size:.7rem;color:var(--gold);font-weight:600">✦ RGM certification exam</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -913,16 +1063,44 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
 <!-- ═══ RGM 360 ═══ -->
 <section class="method" id="methodology" style="background:var(--navy);padding:90px 60px">
   <div class="container">
-    <div class="section-label" style="color:var(--gold)">Our Methodology</div>
-    <h2 style="color:var(--white)">RGM 360° — We help companies<br>build and accelerate their<br><em style="color:var(--gold);font-style:normal">Revenue Growth Management capability.</em></h2>
-    <p style="font-size:1rem;line-height:1.75;color:rgba(255,255,255,.52);max-width:600px;margin-top:0;margin-bottom:56px">Most companies do RGM reactively — they price, promote, and negotiate based on habit, not data. We help you move from reactive to transformational by building the four pillars that make RGM stick: Technology, Processes, Talent, and KPIs.</p>
+    <div class="section-label" style="color:var(--gold)">Our Revenue Growth Architecture</div>
+    <h2 style="color:var(--white)">Four phases. One commercial<br>transformation.<br><em style="color:var(--gold);font-style:normal">Built to outlast the engagement.</em></h2>
+    <p style="font-size:1rem;line-height:1.75;color:rgba(255,255,255,.52);max-width:600px;margin-top:0;margin-bottom:40px">Most companies manage revenue reactively — pricing by habit, promoting by tradition, negotiating by gut. Our Revenue Growth Architecture moves you through four structured phases toward a self-sustaining commercial capability.</p>
+
+    <!-- 4 PHASES STRIP -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:3px;margin-bottom:48px">
+      <div style="padding:24px 22px;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.25);border-top:3px solid var(--gold);position:relative">
+        <div style="font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:8px">Phase 01</div>
+        <div style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:white;margin-bottom:8px">Diagnose</div>
+        <div style="font-size:.8rem;line-height:1.65;color:rgba(255,255,255,.5)">Baseline your P&amp;L, audit your data assets, and map your highest-value opportunities — by lever, by category, by maturity gap.</div>
+        <div style="position:absolute;bottom:16px;right:16px;font-size:1.6rem;color:rgba(201,168,76,.15);font-family:'Playfair Display',serif;font-weight:900">01</div>
+      </div>
+      <div style="padding:24px 22px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-top:3px solid rgba(201,168,76,.35);position:relative">
+        <div style="font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,168,76,.6);margin-bottom:8px">Phase 02</div>
+        <div style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:white;margin-bottom:8px">Design</div>
+        <div style="font-size:.8rem;line-height:1.65;color:rgba(255,255,255,.45)">Build the tools, processes, and intervention plan — tailored to your data architecture, commercial calendar, and strategic priorities.</div>
+        <div style="position:absolute;bottom:16px;right:16px;font-size:1.6rem;color:rgba(255,255,255,.06);font-family:'Playfair Display',serif;font-weight:900">02</div>
+      </div>
+      <div style="padding:24px 22px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-top:3px solid rgba(201,168,76,.35);position:relative">
+        <div style="font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,168,76,.6);margin-bottom:8px">Phase 03</div>
+        <div style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:white;margin-bottom:8px">Deploy</div>
+        <div style="font-size:.8rem;line-height:1.65;color:rgba(255,255,255,.45)">Activate the levers. Capture the quick wins. Prove ROI early — with measurable P&amp;L impact within 90 days of engagement start.</div>
+        <div style="position:absolute;bottom:16px;right:16px;font-size:1.6rem;color:rgba(255,255,255,.06);font-family:'Playfair Display',serif;font-weight:900">03</div>
+      </div>
+      <div style="padding:24px 22px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-top:3px solid rgba(201,168,76,.35);position:relative">
+        <div style="font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,168,76,.6);margin-bottom:8px">Phase 04</div>
+        <div style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:white;margin-bottom:8px">Develop Capabilities</div>
+        <div style="font-size:.8rem;line-height:1.65;color:rgba(255,255,255,.45)">Certify your team. Embed the processes. Build the KPI cadence that keeps delivering after the engagement ends — no ongoing dependency.</div>
+        <div style="position:absolute;bottom:16px;right:16px;font-size:1.6rem;color:rgba(255,255,255,.06);font-family:'Playfair Display',serif;font-weight:900">04</div>
+      </div>
+    </div>
 
     <!-- 4 ENABLERS -->
     <div style="font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(201,168,76,.6);margin-bottom:16px">The 4 Enablers</div>
 
     <!-- Desktop -->
     <div class="enablers-desktop" style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-bottom:48px">
-      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.12);padding:28px 24px">
+      <div class="enabler-hover" style="background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.12);padding:28px 24px">
         <div style="width:40px;height:40px;margin-bottom:16px">
           <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="4" y="8" width="32" height="20" rx="2" stroke="#c9a84c" stroke-width="1.5"/>
@@ -937,7 +1115,7 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
         <div style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--white);margin-bottom:8px">Technology</div>
         <div style="font-size:.83rem;line-height:1.65;color:rgba(255,255,255,.45)">Analytics and dashboards tailored to your available data — from foundational reports to AI-powered optimization. No overbuilt software. Built for your business.</div>
       </div>
-      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.12);padding:28px 24px">
+      <div class="enabler-hover" style="background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.12);padding:28px 24px">
         <div style="width:40px;height:40px;margin-bottom:16px">
           <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="20" cy="20" r="4" stroke="#c9a84c" stroke-width="1.5"/>
@@ -955,7 +1133,7 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
         <div style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--white);margin-bottom:8px">Processes</div>
         <div style="font-size:.83rem;line-height:1.65;color:rgba(255,255,255,.45)">We integrate RGM into your commercial calendar — pricing reviews, promo planning, supplier negotiations, and S&OP — so decisions are always data-driven.</div>
       </div>
-      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.12);padding:28px 24px">
+      <div class="enabler-hover" style="background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.12);padding:28px 24px">
         <div style="width:40px;height:40px;margin-bottom:16px">
           <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="20" cy="12" r="5" stroke="#c9a84c" stroke-width="1.5"/>
@@ -966,7 +1144,7 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
         <div style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--white);margin-bottom:8px">Talent</div>
         <div style="font-size:.83rem;line-height:1.65;color:rgba(255,255,255,.45)">We certify your team in RGM — from fundamentals to advanced analytics — across all levels and functions. The goal is capability, not dependency on consultants.</div>
       </div>
-      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.12);padding:28px 24px">
+      <div class="enabler-hover" style="background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.12);padding:28px 24px">
         <div style="width:40px;height:40px;margin-bottom:16px">
           <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="4" y="28" width="6" height="8" rx="1" fill="#c9a84c" opacity=".35"/>
@@ -1023,23 +1201,23 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
 
     <!-- Desktop version -->
     <div class="pillars-desktop" style="display:grid;grid-template-columns:repeat(5,1fr);gap:2px;margin-bottom:56px">
-      <div style="background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.18);padding:24px 20px;border-top:3px solid var(--gold)">
+      <div class="pillar-hover" style="background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.18);padding:24px 20px;border-top:3px solid var(--gold)">
         <div style="font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px">Pricing</div>
         <div style="font-size:.83rem;line-height:1.6;color:rgba(255,255,255,.55)">Capture the full value of your portfolio. Optimize every price action for revenue, margin, or volume — by SKU, channel, and store cluster.</div>
       </div>
-      <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);padding:24px 20px">
+      <div class="pillar-hover" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);padding:24px 20px">
         <div style="font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px">Pack Price Architecture</div>
         <div style="font-size:.83rem;line-height:1.6;color:rgba(255,255,255,.55)">Right format, right pack, right price — for every consumption occasion and shopper segment.</div>
       </div>
-      <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);padding:24px 20px">
+      <div class="pillar-hover" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);padding:24px 20px">
         <div style="font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px">Mix Management</div>
         <div style="font-size:.83rem;line-height:1.6;color:rgba(255,255,255,.55)">Drive the brand, pack, and channel mix that maximizes profitability and sustainable growth across your entire portfolio.</div>
       </div>
-      <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);padding:24px 20px">
+      <div class="pillar-hover" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);padding:24px 20px">
         <div style="font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px">Promo Optimization</div>
         <div style="font-size:.83rem;line-height:1.6;color:rgba(255,255,255,.55)">Optimal frequency, depth, and promo mechanics. Cut unprofitable promotions by 20–30% and increase promotional ROI by up to 35%.</div>
       </div>
-      <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);padding:24px 20px">
+      <div class="pillar-hover" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);padding:24px 20px">
         <div style="font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px">Discounts & Trade Terms</div>
         <div style="font-size:.83rem;line-height:1.6;color:rgba(255,255,255,.55)">Defensible pay-for-performance terms that align supplier investment with the commercial results that actually matter.</div>
       </div>
@@ -1093,8 +1271,8 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
     <div>
       <div style="display:flex;align-items:flex-end;gap:3px;min-height:320px">
 
-        <!-- Step 1: Reactive — shortest, dimmest -->
-        <div style="flex:1;display:flex;flex-direction:column;justify-content:flex-end">
+        <!-- Step 1: Reactive -->
+        <div class="stair-hover" style="flex:1;display:flex;flex-direction:column;justify-content:flex-end">
           <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-bottom:3px solid rgba(255,255,255,.15);padding:20px 18px;height:140px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;transition:all .3s">
             <div style="position:absolute;top:14px;right:14px;font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.2)">Stage 1</div>
             <div style="display:flex;gap:3px;margin-bottom:10px">
@@ -1125,8 +1303,8 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
           <div style="text-align:center;padding:10px 0;font-size:.65rem;font-weight:600;color:rgba(255,255,255,.25);letter-spacing:.06em;text-transform:uppercase">First wins visible</div>
         </div>
 
-        <!-- Step 3: Strategic — even taller, gold border -->
-        <div style="flex:1;display:flex;flex-direction:column;justify-content:flex-end">
+        <!-- Step 3: Strategic -->
+        <div class="stair-hover" style="flex:1;display:flex;flex-direction:column;justify-content:flex-end">
           <div style="background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.2);border-bottom:3px solid rgba(201,168,76,.5);padding:20px 18px;height:250px;display:flex;flex-direction:column;justify-content:flex-end;position:relative">
             <div style="position:absolute;top:14px;right:14px;font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)">Stage 3</div>
             <div style="display:flex;gap:3px;margin-bottom:10px">
@@ -1141,8 +1319,8 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
           <div style="text-align:center;padding:10px 0;font-size:.65rem;font-weight:600;color:var(--gold);letter-spacing:.06em;text-transform:uppercase">Data drives decisions</div>
         </div>
 
-        <!-- Step 4: Transformational — tallest, brightest, glowing -->
-        <div style="flex:1;display:flex;flex-direction:column;justify-content:flex-end">
+        <!-- Step 4: Transformational -->
+        <div class="stair-hover" style="flex:1;display:flex;flex-direction:column;justify-content:flex-end">
           <div style="background:rgba(201,168,76,.11);border:1px solid rgba(201,168,76,.35);border-bottom:3px solid var(--gold);padding:20px 18px;height:310px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;box-shadow:0 0 40px rgba(201,168,76,.08)">
             <div style="position:absolute;top:14px;right:14px;font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)">Stage 4</div>
             <!-- glow star top right -->
@@ -1246,21 +1424,88 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
 <!-- ═══ CASE STUDY ═══ -->
 <section class="casestudy">
   <div class="container">
-    <div class="section-label">Case Study</div>
-    <h2>Real results. Real numbers.</h2>
-    <div class="cs-card">
-      <div>
-        <span class="cs-tag">Grocery Chain · United States</span>
-        <h3>How a regional grocery chain recovered $2.1M in margin leakage — and cut unprofitable promos by 30%.</h3>
-        <p>This retailer had growing revenue but shrinking margins. After deploying Fundare PNL Track and Promo Post Mortem, they discovered 3 categories were responsible for 80% of their margin erosion. The pricing simulation tool identified 17 SKUs with pricing upside of 3–5% with low elasticity risk. Within 6 months: margins up, unprofitable promotions cut, and supplier negotiations renegotiated with full data backing.</p>
+    <div class="section-label">Selected Engagement</div>
+    <h2>Illustrative impact.<br>Grounded in real work.</h2>
+
+    <div class="cs-card" style="display:block;padding:0;overflow:hidden">
+
+      <!-- Header bar -->
+      <div style="background:rgba(201,168,76,.06);border-bottom:1px solid rgba(201,168,76,.12);padding:24px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+        <div>
+          <span class="cs-tag" style="margin-bottom:6px;display:inline-block">Grocery Retailer · United States</span>
+          <div style="font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:var(--white)">Selected Engagement (Illustrative Impact)</div>
+        </div>
+        <div style="font-size:.7rem;color:rgba(255,255,255,.35);border:1px solid rgba(255,255,255,.1);padding:5px 12px;letter-spacing:.06em">Based on real engagement · Details anonymised</div>
       </div>
-      <div class="cs-metrics">
-        <div class="cs-met"><div class="cs-met-num">$2.1M</div><div class="cs-met-lbl">Margin leakage identified and recovered</div></div>
-        <div class="cs-met"><div class="cs-met-num">+1.1pp</div><div class="cs-met-lbl">Overall margin improvement in 6 months</div></div>
-        <div class="cs-met"><div class="cs-met-num">-30%</div><div class="cs-met-lbl">Reduction in unprofitable promotions</div></div>
-        <div class="cs-met"><div class="cs-met-num">3×</div><div class="cs-met-lbl">Stronger supplier negotiation outcomes</div></div>
-      </div>
-    </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0">
+
+        <!-- LEFT: narrative -->
+        <div style="padding:36px 40px;border-right:1px solid rgba(255,255,255,.06)">
+
+          <!-- Context -->
+          <div style="margin-bottom:28px">
+            <div style="font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:flex;align-items:center;gap:8px"><span style="display:block;width:20px;height:1px;background:var(--gold)"></span>Context</div>
+            <p style="font-size:.88rem;line-height:1.75;color:rgba(255,255,255,.55)">A regional grocery chain with strong top-line growth was experiencing systematic margin compression. Revenue was growing; profit was not. The commercial team lacked the tools to explain why — or where to intervene.</p>
+          </div>
+
+          <!-- Diagnosis -->
+          <div style="margin-bottom:28px">
+            <div style="font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:flex;align-items:center;gap:8px"><span style="display:block;width:20px;height:1px;background:var(--gold)"></span>Diagnosis</div>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px">
+              <li style="display:flex;gap:10px;font-size:.85rem;line-height:1.6;color:rgba(255,255,255,.55)"><span style="color:var(--gold);flex-shrink:0;margin-top:2px">▸</span>3 categories accounted for &gt;80% of margin erosion — invisible without SKU-level P&amp;L attribution</li>
+              <li style="display:flex;gap:10px;font-size:.85rem;line-height:1.6;color:rgba(255,255,255,.55)"><span style="color:var(--gold);flex-shrink:0;margin-top:2px">▸</span>40%+ of supplier-funded promotions were generating negative incremental ROI — confirmed via baseline vs. post-event analytics</li>
+              <li style="display:flex;gap:10px;font-size:.85rem;line-height:1.6;color:rgba(255,255,255,.55)"><span style="color:var(--gold);flex-shrink:0;margin-top:2px">▸</span>17 SKUs had identified pricing upside of 3–5% with low elasticity risk — previously untested due to lack of simulation tools</li>
+            </ul>
+          </div>
+
+          <!-- Intervention -->
+          <div style="margin-bottom:28px">
+            <div style="font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:flex;align-items:center;gap:8px"><span style="display:block;width:20px;height:1px;background:var(--gold)"></span>Intervention</div>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px">
+              <li style="display:flex;gap:10px;font-size:.85rem;line-height:1.6;color:rgba(255,255,255,.55)"><span style="color:var(--gold);flex-shrink:0;margin-top:2px">▸</span>Deployed Revenue Analytics &amp; KPI Systems (Fundare PNL Track) — giving full P&amp;L visibility by category, supplier, and SKU within 4 weeks</li>
+              <li style="display:flex;gap:10px;font-size:.85rem;line-height:1.6;color:rgba(255,255,255,.55)"><span style="color:var(--gold);flex-shrink:0;margin-top:2px">▸</span>Activated Promotion &amp; Trade Governance — restructured the promotional calendar, eliminating value-destroying events and negotiating improved supplier co-investment terms</li>
+              <li style="display:flex;gap:10px;font-size:.85rem;line-height:1.6;color:rgba(255,255,255,.55)"><span style="color:var(--gold);flex-shrink:0;margin-top:2px">▸</span>Applied Strategic Price &amp; Pack Architecture — executed targeted price increases on 17 low-elasticity SKUs with full P&amp;L simulation validation prior to rollout</li>
+            </ul>
+          </div>
+
+          <!-- How measured note -->
+          <div style="font-size:.72rem;line-height:1.65;color:rgba(255,255,255,.28);border-top:1px solid rgba(255,255,255,.06);padding-top:14px;font-style:italic">
+            How measured: margin impact calculated as delta between baseline P&amp;L (pre-engagement) and post-event P&amp;L at SKU level, controlled for volume and mix shifts. Promotional ROI measured via incremental volume methodology.
+          </div>
+        </div>
+
+        <!-- RIGHT: Impact + metrics -->
+        <div style="padding:36px 40px">
+          <div style="font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:flex;align-items:center;gap:8px"><span style="display:block;width:20px;height:1px;background:var(--gold)"></span>Impact</div>
+
+          <!-- 3 impact bullets -->
+          <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:32px">
+            <div style="padding:16px 18px;background:rgba(201,168,76,.05);border:1px solid rgba(201,168,76,.15);border-left:3px solid var(--gold)">
+              <div style="font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:5px">Quality of Sales</div>
+              <div style="font-size:.85rem;line-height:1.6;color:rgba(255,255,255,.6)">Promotional mix shifted toward value-additive events — higher incremental volume, lower cannibalization, stronger baseline protection.</div>
+            </div>
+            <div style="padding:16px 18px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-left:3px solid rgba(255,255,255,.2)">
+              <div style="font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:5px">Competitive Positioning</div>
+              <div style="font-size:.85rem;line-height:1.6;color:rgba(255,255,255,.5)">Supplier negotiations restructured around profitability data — stronger terms achieved across 12 strategic accounts without loss of commercial relationships.</div>
+            </div>
+            <div style="padding:16px 18px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-left:3px solid rgba(255,255,255,.2)">
+              <div style="font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:5px">Measurable Profit Uplift</div>
+              <div style="font-size:.85rem;line-height:1.6;color:rgba(255,255,255,.5)">Margin improvement of +1.1pp in 6 months — recovering identified leakage while price actions contributed incremental profitability without material volume loss.</div>
+            </div>
+          </div>
+
+          <!-- Metrics strip — keep original numbers -->
+          <div class="cs-metrics" style="grid-template-columns:repeat(2,1fr);gap:2px">
+            <div class="cs-met"><div class="cs-met-num">$2.1M</div><div class="cs-met-lbl">Margin leakage recovered<br><span style="color:rgba(255,255,255,.3);font-size:.7rem;font-style:italic">Illustrative — see methodology above</span></div></div>
+            <div class="cs-met"><div class="cs-met-num">+1.1pp</div><div class="cs-met-lbl">Margin improvement in 6 months<br><span style="color:rgba(255,255,255,.3);font-size:.7rem;font-style:italic">Baseline vs. post-event delta</span></div></div>
+            <div class="cs-met"><div class="cs-met-num">−30%</div><div class="cs-met-lbl">Unprofitable promotions eliminated<br><span style="color:rgba(255,255,255,.3);font-size:.7rem;font-style:italic">Post-event ROI analysis</span></div></div>
+            <div class="cs-met"><div class="cs-met-num">3×</div><div class="cs-met-lbl">Stronger supplier terms achieved<br><span style="color:rgba(255,255,255,.3);font-size:.7rem;font-style:italic">12 strategic accounts</span></div></div>
+          </div>
+        </div>
+
+      </div><!-- end grid -->
+    </div><!-- end cs-card -->
   </div>
 </section>
 
@@ -1269,17 +1514,17 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
 <!-- ═══ CTA ═══ -->
 <section class="cta-banner" id="cta">
   <div class="section-label" style="justify-content:center;margin-bottom:14px">Get Started</div>
-  <h2>Find out exactly where your revenue growth is hiding.</h2>
-  <p>In 30 minutes, our RGM experts will map your biggest margin and pricing opportunities — for retailers and FMCG brands. No pitch. No obligation. Just insight.</p>
+  <h2>Identify your most material<br>commercial opportunity.</h2>
+  <p>In 30 minutes, our experts will map your highest-value pricing, promotion, and margin levers. No pitch. No long proposal. Just a clear, data-backed perspective on where to start.</p>
   <div class="cta-btns" style="position:relative;z-index:2;gap:20px">
     <div style="text-align:center">
-      <a href="#" onclick="window.location='mail'+'to:hello@fundare.com?subject=Retailer Strategy Session';return false;" class="btn-primary" style="display:block;margin-bottom:10px">I'm a Retailer → Let's Talk</a>
-      <div style="font-size:.7rem;color:rgba(255,255,255,.3);letter-spacing:.05em">PNL Track · Pricing · Promo Analytics</div>
+      <a href="#" onclick="window.location='mail'+'to:hello@fundare.com?subject=Retailer Strategy Session';return false;" class="btn-primary" style="display:block;margin-bottom:10px">Schedule a Revenue Diagnostic →</a>
+      <div style="font-size:.7rem;color:rgba(255,255,255,.3);letter-spacing:.05em">Retailers &amp; Wholesalers · Pricing · Promo Analytics</div>
     </div>
     <div style="display:flex;align-items:center;font-size:.8rem;color:rgba(255,255,255,.2);font-style:italic;padding:0 4px">or</div>
     <div style="text-align:center">
-      <a href="#" onclick="window.location='mail'+'to:hello@fundare.com?subject=CPG Brand Strategy Session';return false;" class="btn-outline" style="display:block;margin-bottom:10px">I'm a CPG Brand → Let's Talk</a>
-      <div style="font-size:.7rem;color:rgba(255,255,255,.3);letter-spacing:.05em">Promo Optimization · Pricing · Trade Terms</div>
+      <a href="#" onclick="window.location='mail'+'to:hello@fundare.com?subject=CPG Brand Strategy Session';return false;" class="btn-outline" style="display:block;margin-bottom:10px">Book a Strategy Conversation →</a>
+      <div style="font-size:.7rem;color:rgba(255,255,255,.3);letter-spacing:.05em">CPG / FMCG Brands · NRM · Trade &amp; Promo ROI</div>
     </div>
   </div>
   <p class="cta-note">30-minute strategy conversation · No commitment</p>
@@ -1289,7 +1534,7 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
 <footer>
   <div>
     <span class="footer-logo">Fundare<span>.</span></span>
-    <p class="footer-tagline">Boutique Revenue Growth Management consulting for US grocery retailers and FMCG brands.</p>
+    <p class="footer-tagline">Strategic Revenue Growth consulting for retailers, wholesalers, and CPG brands across the US.</p>
     <div class="footer-contact">
       <a id="footer-email" href="#" style="color:var(--gold);font-weight:500"></a><script>var e=document.getElementById('footer-email');e.innerHTML=['hello','fundare.com'].join('@');e.href='mail'+'to:'+['hello','fundare.com'].join('@');</script>
       <a href="tel:+17377078682">+1 737 707 8682</a>
