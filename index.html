@@ -339,6 +339,10 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
 
 /* ═══ MOBILE ═══ */
 @media(max-width:640px){
+  #fractional .container > div:first-child { grid-template-columns:1fr !important; gap:32px !important; }
+  #fractional [style*="grid-template-columns:repeat(3"] { grid-template-columns:1fr !important; }
+  #fractional [style*="grid-template-columns:repeat(3,1fr)"][style*="gap:16px"] { grid-template-columns:1fr 1fr !important; }
+
   .cs-card > div[style*="grid-template-columns:1fr 1fr"] { display:block !important; }
   .cs-card > div > div[style*="padding:36px 40px"] { padding:24px 18px !important; border-right:none !important; border-bottom:1px solid rgba(255,255,255,.06); }
   .cs-metrics { grid-template-columns:1fr 1fr !important; }
@@ -446,6 +450,7 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
   <ul class="nav-links">
     <li><a href="products.html">Products</a></li>
     <li><a href="methodology.html">Methodology</a></li>
+    <li><a href="fractional.html" style="color:var(--gold)">Fractional</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
@@ -1421,6 +1426,126 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
   </div>
 </section>
 
+<!-- ═══ FRACTIONAL GROWTH & MARGIN STRATEGIST ═══ -->
+<section style="background:var(--white);padding:90px 60px" id="fractional">
+  <div class="container">
+
+    <!-- Header -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;margin-bottom:64px">
+      <div>
+        <div class="section-label">New Service</div>
+        <h2 style="margin-bottom:20px">Fractional Growth<br>&amp; Margin Strategist</h2>
+        <p style="font-size:1.05rem;line-height:1.8;color:var(--gray);max-width:480px">Senior RGM expertise embedded in your commercial team — without the full-time hire. Available as a monthly retainer or project sprint.</p>
+        <div style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap">
+          <a href="fractional.html" class="btn-primary" style="background:var(--navy);color:var(--white);padding:13px 28px;border-radius:2px;font-size:.83rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:all .2s">Learn More</a>
+          <a href="contact.html" style="display:inline-flex;align-items:center;gap:8px;font-size:.83rem;font-weight:600;color:var(--navy);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:2px">Schedule a Diagnostic →</a>
+        </div>
+      </div>
+      <div style="background:var(--navy);padding:36px;border-left:3px solid var(--gold)">
+        <div style="font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(201,168,76,.7);margin-bottom:20px">The cost comparison</div>
+        <!-- Cost comparison bars -->
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:6px">
+              <span style="font-size:.8rem;color:rgba(255,255,255,.5)">Full-time RGM Director</span>
+              <span style="font-size:.8rem;font-weight:600;color:rgba(255,255,255,.4)">$180–250K / yr</span>
+            </div>
+            <div style="height:8px;background:rgba(255,255,255,.06);border-radius:1px">
+              <div style="height:8px;width:100%;background:rgba(255,255,255,.15);border-radius:1px"></div>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:6px">
+              <span style="font-size:.8rem;color:rgba(255,255,255,.5)">Big 4 consulting engagement</span>
+              <span style="font-size:.8rem;font-weight:600;color:rgba(255,255,255,.4)">$300K+ / project</span>
+            </div>
+            <div style="height:8px;background:rgba(255,255,255,.06);border-radius:1px">
+              <div style="height:8px;width:100%;background:rgba(255,255,255,.1);border-radius:1px"></div>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:6px">
+              <span style="font-size:.8rem;color:rgba(255,255,255,.75);font-weight:600">Fundare Fractional</span>
+              <span style="font-size:.8rem;font-weight:700;color:var(--gold)">A fraction of the cost</span>
+            </div>
+            <div style="height:8px;background:rgba(255,255,255,.06);border-radius:1px">
+              <div style="height:8px;width:28%;background:var(--gold);border-radius:1px"></div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:24px;font-size:.78rem;line-height:1.65;color:rgba(255,255,255,.35);border-top:1px solid rgba(255,255,255,.06);padding-top:16px;font-style:italic">Same caliber as a senior internal hire. Available when you need it — not on a permanent payroll.</div>
+      </div>
+    </div>
+
+    <!-- 3 value props -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-bottom:56px">
+      <div style="padding:32px 28px;border:1px solid #e8e4dd;border-top:3px solid var(--gold)">
+        <div style="width:40px;height:40px;margin-bottom:16px">
+          <svg viewBox="0 0 40 40" fill="none">
+            <circle cx="20" cy="20" r="16" stroke="#c9a84c" stroke-width="1.5"/>
+            <path d="M14 20h12M20 14v12" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:8px">On Your Terms</div>
+        <div style="font-size:.85rem;line-height:1.7;color:var(--gray)">Monthly strategic retainer or project sprint. Engage senior RGM thinking when you need it most — and scale back when you don't. No long-term obligations.</div>
+      </div>
+      <div style="padding:32px 28px;border:1px solid #e8e4dd;border-top:3px solid transparent">
+        <div style="width:40px;height:40px;margin-bottom:16px">
+          <svg viewBox="0 0 40 40" fill="none">
+            <rect x="6" y="10" width="28" height="20" rx="2" stroke="#c9a84c" stroke-width="1.5"/>
+            <line x1="13" y1="18" x2="27" y2="18" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="13" y1="23" x2="21" y2="23" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:8px">No Learning Curve</div>
+        <div style="font-size:.85rem;line-height:1.7;color:var(--gray)">15+ years inside real retailers and CPG companies. We know your P&amp;L, your promo calendar, and your supplier dynamics. We don't need 3 months to understand the business.</div>
+      </div>
+      <div style="padding:32px 28px;border:1px solid #e8e4dd;border-top:3px solid transparent">
+        <div style="width:40px;height:40px;margin-bottom:16px">
+          <svg viewBox="0 0 40 40" fill="none">
+            <polyline points="6,30 14,18 22,24 34,10" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="34" cy="10" r="3" fill="#c9a84c"/>
+          </svg>
+        </div>
+        <div style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:8px">Results in 30 Days</div>
+        <div style="font-size:.85rem;line-height:1.7;color:var(--gray)">We identify the highest-value commercial opportunity in your first session. Pricing upside, promo leakage, margin erosion — you'll have a clear action plan before the month is out.</div>
+      </div>
+    </div>
+
+    <!-- When to call us -->
+    <div style="background:#f7f6f3;padding:40px 44px;border-left:3px solid var(--gold)">
+      <div style="font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:20px">When companies call us</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+        <div style="display:flex;gap:10px;align-items:flex-start">
+          <span style="color:var(--gold);font-size:1rem;flex-shrink:0;margin-top:1px">▸</span>
+          <span style="font-size:.85rem;line-height:1.6;color:var(--text)">Preparing for supplier negotiations and want a sharper strategic framework</span>
+        </div>
+        <div style="display:flex;gap:10px;align-items:flex-start">
+          <span style="color:var(--gold);font-size:1rem;flex-shrink:0;margin-top:1px">▸</span>
+          <span style="font-size:.85rem;line-height:1.6;color:var(--text)">Launching a new pricing cycle and want an expert second opinion</span>
+        </div>
+        <div style="display:flex;gap:10px;align-items:flex-start">
+          <span style="color:var(--gold);font-size:1rem;flex-shrink:0;margin-top:1px">▸</span>
+          <span style="font-size:.85rem;line-height:1.6;color:var(--text)">Promotional calendar reset before the next commercial season</span>
+        </div>
+        <div style="display:flex;gap:10px;align-items:flex-start">
+          <span style="color:var(--gold);font-size:1rem;flex-shrink:0;margin-top:1px">▸</span>
+          <span style="font-size:.85rem;line-height:1.6;color:var(--text)">A category is bleeding margin and you need to know why — fast</span>
+        </div>
+        <div style="display:flex;gap:10px;align-items:flex-start">
+          <span style="color:var(--gold);font-size:1rem;flex-shrink:0;margin-top:1px">▸</span>
+          <span style="font-size:.85rem;line-height:1.6;color:var(--text)">No internal RGM capability yet and you need to build it from scratch</span>
+        </div>
+        <div style="display:flex;gap:10px;align-items:flex-start">
+          <span style="color:var(--gold);font-size:1rem;flex-shrink:0;margin-top:1px">▸</span>
+          <span style="font-size:.85rem;line-height:1.6;color:var(--text)">Board or PE owner asking for a commercial performance review</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <!-- ═══ CASE STUDY ═══ -->
 <section class="casestudy">
   <div class="container">
@@ -1555,6 +1680,7 @@ footer{background:#060e1c;padding:56px 60px;display:grid;grid-template-columns:2
   <div class="footer-col">
     <h4>Solutions</h4>
     <ul>
+      <li><a href="fractional.html">Fractional Strategist</a></li>
       <li><a href="methodology.html#retailers">For Retailers</a></li>
       <li><a href="methodology.html#fmcg">For FMCG Brands</a></li>
       <li><a href="about.html#results">Case Studies</a></li>
