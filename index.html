@@ -1,944 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Fundare · Experienced Revenue Growth Managers</title>
-<meta name="description" content="Fundare brings experienced Revenue Growth Managers into organizations to clarify profitability, uncover commercial opportunities, and improve pricing, promotions, assortment, and trade investment decisions."/>
-<meta name="robots" content="index, follow"/>
-<link rel="canonical" href="https://miguel-fundare.github.io/Fundare-webpage/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:title" content="Fundare · Revenue Growth Management"/>
-<meta property="og:description" content="RGM is a capability, not just tools. Fundare builds it for retailers, consumer goods companies, and distributors."/>
-<meta property="og:image" content="https://miguel-fundare.github.io/Fundare-webpage/og-image.png?v=2"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230a1628'/%3E%3Ctext x='7' y='23' font-family='Georgia,serif' font-size='20' font-weight='700' fill='%23fff'%3EF%3C/text%3E%3Ccircle cx='25' cy='25' r='4' fill='%23c9a84c'/%3E%3C/svg%3E"/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-<style>
-:root{--navy:#0a1628;--navy2:#0d1f38;--gold:#c9a84c;--gold2:#d4b460;--gold-dim:rgba(201,168,76,.15);--white:#fff;--light:#f7f6f3;--text:#1c1c2e;--gray:#5c6472;--border:#e2dfd8;--shadow:0 2px 16px rgba(0,0,0,.06)}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden}
-h1,h2,h3,h4{font-family:'Playfair Display',serif;line-height:1.1}
-h2{font-size:clamp(1.9rem,3vw,2.7rem);font-weight:700}
-h3{font-size:1.1rem;font-weight:700;letter-spacing:-.01em}
-p{line-height:1.78}
-a{text-decoration:none}
-.container{max-width:1160px;margin:0 auto;padding:0 48px;width:100%}
-.section-label{font-size:.64rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:10px;margin-bottom:14px}
-.section-label::before{content:'';width:22px;height:1px;background:var(--gold);flex-shrink:0}
-.btn-gold{display:inline-block;background:var(--gold);color:var(--navy);padding:16px 36px;font-size:.82rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:2px;transition:background .2s,transform .25s,box-shadow .25s}
-.btn-gold:hover{background:var(--gold2);transform:translateY(-1px);box-shadow:0 6px 22px rgba(201,168,76,.26)}
-.btn-outline{display:inline-block;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.68);padding:16px 36px;font-size:.82rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;border-radius:2px;transition:border-color .2s,color .2s}
-.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
-.btn-navy{display:inline-block;background:var(--navy);color:var(--white);padding:13px 28px;font-size:.77rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:2px;transition:background .2s,transform .25s}
-.btn-navy:hover{background:#0f2240;transform:translateY(-1px)}
-
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:62px;background:rgba(10,22,40,.97);backdrop-filter:blur(16px);border-bottom:1px solid rgba(201,168,76,.1)}
-.nav-logo{font-family:'Playfair Display',serif;font-size:1.18rem;font-weight:700;color:var(--white);flex-shrink:0}
-.nav-logo span{color:var(--gold)}
-.nav-links{display:flex;list-style:none;margin:0 16px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-.nav-links::-webkit-scrollbar{display:none}
-.nav-links a{display:block;padding:0 10px;font-size:.71rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.48);transition:color .2s;line-height:62px;white-space:nowrap}
-.nav-links a:hover,.nav-links a.active{color:var(--gold)}
-.nav-cta{flex-shrink:0;background:var(--gold);color:var(--navy);padding:8px 18px;font-size:.71rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;border-radius:2px;transition:background .2s;white-space:nowrap}
-.nav-cta:hover{background:var(--gold2)}
-
-/* HERO */
-.hero{min-height:100vh;background:var(--navy);display:flex;align-items:center;padding:0 48px;position:relative;overflow:hidden}
-.hero-bg-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:72px 72px;pointer-events:none}
-.hero-bg-glow{position:absolute;top:-20%;right:-10%;width:700px;height:700px;background:radial-gradient(circle,rgba(201,168,76,.07) 0%,transparent 65%);pointer-events:none}
-.hero-inner{max-width:1160px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 380px;gap:56px;align-items:center;position:relative;z-index:2;padding:100px 0 72px}
-.hero-eyebrow{font-size:.64rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:10px;margin-bottom:22px}
-.hero-eyebrow::before{content:'';width:22px;height:1px;background:var(--gold)}
-.hero h1{font-size:clamp(2.8rem,4.5vw,4.4rem);font-weight:900;line-height:1.02;color:var(--white);margin-bottom:10px}
-.hero h1 em{color:var(--gold);font-style:italic}
-.hero-dash{width:40px;height:2px;background:var(--gold);margin:16px 0}
-.hero-sub{font-size:.95rem;font-weight:300;line-height:1.78;color:rgba(255,255,255,.52);margin-bottom:14px;max-width:500px}
-.hero-support{font-size:.88rem;color:rgba(255,255,255,.32);line-height:1.7;margin-bottom:38px;max-width:480px}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px}
-.hero-stats{display:flex;gap:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,.07)}
-.stat-num{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:700;color:var(--gold);line-height:1}
-.stat-lbl{font-size:.67rem;color:rgba(255,255,255,.28);letter-spacing:.06em;text-transform:uppercase;margin-top:4px}
-.hero-card{border:1px solid rgba(201,168,76,.16);background:rgba(255,255,255,.03)}
-.hero-card-hdr{padding:16px 22px;border-bottom:1px solid rgba(201,168,76,.1);font-size:.59rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(201,168,76,.6)}
-.hero-card-body{padding:22px}
-.gap-item{padding:16px 18px;border-bottom:1px solid rgba(255,255,255,.045)}
-.gap-item:last-child{border-bottom:none}
-.gap-item-label{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}
-.gap-item-label.red{color:#e05050}.gap-item-label.amber{color:#d4914c}.gap-item-label.green{color:var(--gold)}
-.gap-item-text{font-size:.79rem;line-height:1.6;color:rgba(255,255,255,.42)}
-.gap-verdict{margin-top:7px;font-size:.7rem;font-style:italic;color:rgba(255,255,255,.22)}
-
-/* MARKET GAP */
-.gap-section{background:var(--light);padding:96px 0}
-.gap-intro{max-width:640px;margin-bottom:56px}
-.gap-intro p{font-size:.96rem;line-height:1.82;color:var(--gray);margin-top:12px}
-.gap-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
-.gap-col{padding:38px 34px;transition:transform .3s ease,box-shadow .3s ease}
-.gap-col:hover{transform:translateY(-2px)}
-.gap-col.problem{background:var(--white);border-top:3px solid #d4544a;box-shadow:var(--shadow)}
-.gap-col.problem:hover{box-shadow:0 6px 28px rgba(0,0,0,.09)}
-.gap-col.problem2{background:var(--white);border-top:3px solid #c4843a;box-shadow:var(--shadow)}
-.gap-col.problem2:hover{box-shadow:0 6px 28px rgba(0,0,0,.09)}
-.gap-col.solution{background:var(--navy);border-top:3px solid var(--gold)}
-.gap-col-icon{width:44px;height:44px;margin-bottom:18px}
-.gap-col h3{font-size:1.05rem;margin-bottom:10px}
-.gap-col.solution h3{color:var(--white)}
-.gap-col-body{font-size:.84rem;line-height:1.8;color:var(--gray);margin-bottom:10px}
-.gap-col.solution .gap-col-body{color:rgba(255,255,255,.48)}
-.gap-verdict-tag{display:inline-flex;align-items:center;gap:6px;font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 11px;border-radius:2px;margin-top:18px}
-.gap-verdict-tag.bad{background:#fdf0ef;color:#c0392b}
-.gap-verdict-tag.warn{background:#fdf5ed;color:#b05e1a}
-.gap-verdict-tag.good{background:var(--gold-dim);color:var(--gold)}
-.gap-col.solution .gap-capability-list{list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:9px}
-.gap-col.solution .gap-capability-list li{display:flex;gap:10px;font-size:.83rem;line-height:1.6;color:rgba(255,255,255,.58)}
-.gap-col.solution .gap-capability-list li::before{content:'▸';color:var(--gold);flex-shrink:0;font-size:.72rem;margin-top:2px}
-
-/* FRAMEWORK */
-.framework-section{background:var(--navy);padding:96px 0}
-.framework-intro{max-width:600px;margin-bottom:64px}
-.framework-intro p{font-size:.93rem;line-height:1.82;color:rgba(255,255,255,.42);margin-top:10px}
-.framework-diagram{display:grid;grid-template-columns:1fr;max-width:900px;margin:0 auto}
-.fw-row{display:grid;grid-template-columns:180px 1fr;align-items:stretch}
-.fw-label{background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.14);border-right:none;padding:20px 22px;display:flex;align-items:center}
-.fw-label span{font-size:.63rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
-.fw-content{background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.055);padding:18px 24px;display:flex;align-items:center;flex-wrap:wrap}
-.fw-pill{padding:6px 14px;font-size:.78rem;margin:3px;border-radius:2px}
-.fw-pill.neutral{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.62)}
-.fw-pill.gold{background:rgba(201,168,76,.13);border:1px solid rgba(201,168,76,.28);color:var(--gold)}
-.fw-arrow{display:flex;align-items:center;justify-content:center;padding:7px 0;margin-left:90px}
-.fw-arrow-inner{display:flex;flex-direction:column;align-items:center}
-.fw-arrow-inner .ashaft{width:1px;height:22px;background:linear-gradient(to bottom,rgba(201,168,76,.28),rgba(201,168,76,.68))}
-.fw-arrow-inner .ahead{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:7px solid rgba(201,168,76,.68)}
-.levers-heading{text-align:center;margin-top:72px;margin-bottom:24px}
-.levers-heading-eyebrow{font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:10px}
-.levers-heading-eyebrow span{width:22px;height:1px;background:var(--gold);display:inline-block}
-.levers-heading h3{font-size:1.15rem;color:rgba(255,255,255,.9);margin-bottom:6px}
-.levers-heading p{font-size:.82rem;color:rgba(255,255,255,.36);max-width:480px;margin:0 auto}
-.framework-detail-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;margin-top:0}
-.fw-detail{padding:30px 26px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.055);transition:background .25s,border-color .25s}
-.fw-detail:hover{background:rgba(255,255,255,.04);border-color:rgba(201,168,76,.18)}
-.fw-detail-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:rgba(201,168,76,.18);line-height:1;margin-bottom:14px}
-.fw-detail h3{font-size:.98rem;color:rgba(255,255,255,.88);margin-bottom:8px}
-.fw-detail p{font-size:.81rem;line-height:1.72;color:rgba(255,255,255,.38)}
-
-/* JOURNEY */
-.journey-section{background:var(--white);padding:96px 0}
-.journey-intro{max-width:600px;margin-bottom:64px}
-.journey-intro p{font-size:.93rem;line-height:1.8;color:var(--gray);margin-top:10px}
-.journey-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;position:relative}
-.journey-steps::before{content:'';position:absolute;top:35px;left:8%;right:8%;height:1px;background:linear-gradient(to right,transparent,var(--gold),transparent);z-index:0}
-.journey-step{padding:34px 26px;border:1px solid var(--border);background:var(--white);position:relative;z-index:1;transition:box-shadow .25s,transform .25s}
-.journey-step:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,.07)}
-.journey-step.active-step{border-top:3px solid var(--gold);background:var(--light)}
-.journey-num{width:52px;height:52px;border-radius:50%;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;margin-bottom:18px;font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--gold);background:var(--white)}
-.journey-step h3{font-size:.98rem;color:var(--navy);margin-bottom:8px}
-.journey-step p{font-size:.81rem;line-height:1.72;color:var(--gray)}
-
-/* BIG BANG */
-.bigbang-section{background:var(--navy);padding:96px 0;position:relative;overflow:hidden}
-.bigbang-section::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(201,168,76,.065) 0%,transparent 65%);pointer-events:none}
-.bigbang-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;position:relative;z-index:2}
-.bigbang-badge{display:inline-flex;align-items:center;gap:8px;font-size:.59rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--navy);background:var(--gold);padding:5px 12px;margin-bottom:20px}
-.bigbang-left h2{color:var(--white);margin-bottom:14px}
-.bigbang-tagline{font-size:1rem;color:rgba(255,255,255,.48);line-height:1.75;margin-bottom:12px;font-style:italic}
-.bigbang-desc{font-size:.86rem;line-height:1.82;color:rgba(255,255,255,.38);margin-bottom:28px}
-.bigbang-meta{display:flex;gap:28px;margin-bottom:30px;padding:18px 22px;background:rgba(255,255,255,.025);border:1px solid rgba(201,168,76,.12)}
-.bigbang-meta-label{font-size:.59rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(201,168,76,.58);margin-bottom:4px}
-.bigbang-meta-val{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--white)}
-.bigbang-deliverables{list-style:none;display:flex;flex-direction:column;gap:10px}
-.bigbang-deliverables li{display:flex;gap:12px;font-size:.84rem;line-height:1.65;color:rgba(255,255,255,.52);padding:13px 15px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.055);border-left:2px solid var(--gold)}
-.bigbang-deliverables li .icon{color:var(--gold);flex-shrink:0;font-size:.85rem}
-.bigbang-outcome{margin-top:18px;padding:20px 22px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.18)}
-.bigbang-outcome-title{font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
-.bigbang-outcome p{font-size:.83rem;line-height:1.75;color:rgba(255,255,255,.45)}
-.bigbang-outcome p+p{margin-top:8px}
-
-/* WHO WE WORK WITH */
-.who-section{background:var(--light);padding:96px 0}
-.who-intro{max-width:580px;margin-bottom:52px}
-.who-intro p{font-size:.93rem;line-height:1.8;color:var(--gray);margin-top:10px}
-.who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
-.who-card{padding:38px 34px;background:var(--white);border-top:3px solid transparent;box-shadow:var(--shadow);transition:border-top-color .25s,transform .25s,box-shadow .25s}
-.who-card:hover{border-top-color:var(--gold);transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.09)}
-.who-card-icon{width:48px;height:48px;margin-bottom:18px}
-.who-card h3{font-size:1.05rem;color:var(--navy);margin-bottom:8px}
-.who-card p{font-size:.83rem;line-height:1.75;color:var(--gray)}
-
-/* INSIGHTS */
-.insights-section{background:var(--white);padding:96px 0}
-.insights-top{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:44px}
-.insights-intro{max-width:520px}
-.insights-intro p{font-size:.93rem;line-height:1.8;color:var(--gray);margin-top:10px}
-.insights-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
-.insight-card{padding:30px 26px;border:1px solid var(--border);background:var(--white);box-shadow:var(--shadow);transition:border-color .25s,transform .25s,box-shadow .25s}
-.insight-card:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,.08)}
-.insight-card-tag{font-size:.59rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
-.insight-card h3{font-size:.98rem;color:var(--navy);margin-bottom:8px;line-height:1.35}
-.insight-card p{font-size:.8rem;line-height:1.72;color:var(--gray);margin-bottom:14px}
-.insight-card-link{font-size:.73rem;font-weight:700;color:var(--navy);border-bottom:1px solid var(--gold);padding-bottom:1px;display:inline-block;transition:color .2s}
-.insight-card-link:hover{color:var(--gold)}
-
-/* FINAL CTA */
-.final-cta{background:var(--navy);padding:100px 0;text-align:center;position:relative;overflow:hidden}
-.final-cta::before{content:'';position:absolute;top:-250px;left:50%;transform:translateX(-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(201,168,76,.065) 0%,transparent 65%);pointer-events:none}
-.final-cta h2{color:var(--white);max-width:620px;margin:0 auto 16px;position:relative;z-index:2;font-size:clamp(1.8rem,3vw,2.6rem)}
-.final-cta>p{color:rgba(255,255,255,.42);font-size:.93rem;max-width:480px;margin:0 auto 38px;line-height:1.82;position:relative;z-index:2}
-.final-cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;position:relative;z-index:2}
-.final-cta-note{margin-top:18px;font-size:.72rem;color:rgba(255,255,255,.2);position:relative;z-index:2}
-
-/* FOOTER */
-footer{background:#060e1c;padding:60px 48px 0;border-top:1px solid rgba(201,168,76,.08)}
-.footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:48px;max-width:1160px;margin:0 auto;padding-bottom:48px}
-.footer-logo{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--white);display:block;margin-bottom:10px}
-.footer-logo span{color:var(--gold)}
-.footer-tagline{font-size:.77rem;color:rgba(255,255,255,.26);line-height:1.72;max-width:220px;margin-bottom:18px}
-.footer-contact a{display:block;font-size:.77rem;color:rgba(255,255,255,.28);margin-bottom:5px;transition:color .2s}
-.footer-contact a:hover{color:var(--gold)}
-.footer-col h4{font-size:.61rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
-.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
-.footer-col a{font-size:.77rem;color:rgba(255,255,255,.28);transition:color .2s}
-.footer-col a:hover{color:var(--white)}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.05);padding:16px 48px;display:flex;justify-content:space-between;font-size:.69rem;color:rgba(255,255,255,.17)}
-
-/* SCROLL REVEAL */
-.reveal{opacity:0;transform:translateY(15px);transition:opacity .62s ease-out,transform .62s ease-out}
-.reveal.visible{opacity:1;transform:none}
-.reveal-stagger>*{opacity:0;transform:translateY(13px);transition:opacity .55s ease-out,transform .55s ease-out}
-.reveal-stagger.visible>*:nth-child(1){opacity:1;transform:none;transition-delay:0s}
-.reveal-stagger.visible>*:nth-child(2){opacity:1;transform:none;transition-delay:.1s}
-.reveal-stagger.visible>*:nth-child(3){opacity:1;transform:none;transition-delay:.2s}
-.reveal-stagger.visible>*:nth-child(4){opacity:1;transform:none;transition-delay:.3s}
-.fw-seq{opacity:0;transform:translateY(11px);transition:opacity .52s ease-out,transform .52s ease-out}
-.fw-seq.visible{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){
-  .reveal,.fw-seq,.reveal-stagger>*{opacity:1!important;transform:none!important;transition:none!important}
-}
-
-/* MOBILE */
-@media(max-width:900px){
-  nav{padding:0 16px}
-  .hero{padding:100px 20px 60px}
-  .hero-inner{grid-template-columns:1fr;gap:40px}
-  .hero h1{font-size:2.6rem}
-  .gap-cols{grid-template-columns:1fr}
-  .fw-row{grid-template-columns:110px 1fr}
-  .framework-detail-grid{grid-template-columns:1fr 1fr}
-  .journey-steps{grid-template-columns:1fr 1fr}
-  .journey-steps::before{display:none}
-  .bigbang-inner{grid-template-columns:1fr}
-  .who-grid{grid-template-columns:1fr}
-  .insights-grid{grid-template-columns:1fr}
-  .insights-top{flex-direction:column;align-items:flex-start;gap:18px}
-  .footer-inner{grid-template-columns:1fr 1fr;gap:28px}
-  .footer-bottom{padding:14px 20px;flex-direction:column;gap:6px}
-  .container{padding:0 20px}
-}
-@media(max-width:560px){
-  .framework-detail-grid{grid-template-columns:1fr}
-  .journey-steps{grid-template-columns:1fr}
-  .hero-stats{gap:20px;flex-wrap:wrap}
-  .final-cta-btns{flex-direction:column;align-items:center}
-  .fw-row{grid-template-columns:1fr}
-  .fw-label{border-right:1px solid rgba(201,168,76,.14)}
-}
-
-/* ── HERO ROTATING HEADLINE ── */
-.hero-h1{
-  font-family:'Playfair Display',serif;
-  font-size:clamp(3rem,5vw,5.2rem);
-  font-weight:900;
-  line-height:1.05;
-  margin-bottom:20px;
-  position:relative;
-}
-/* Final line always in flow — color:transparent holds space without showing text */
-#hf{
-  display:block;
-  font-family:'Playfair Display',serif;
-  font-size:inherit;
-  font-weight:900;
-  font-style:italic;
-  white-space:nowrap;
-  color:transparent;
-  transition:color .5s ease;
-}
-#hf.show{ color:var(--gold); }
-/* Animated word floats above */
-#hw{
-  position:absolute;
-  top:0;left:0;
-  display:block;
-  font-family:'Playfair Display',serif;
-  font-size:inherit;
-  font-weight:900;
-  font-style:italic;
-  color:var(--gold);
-  white-space:nowrap;
-  opacity:0;
-  transform:translateY(10px);
-  pointer-events:none;
-}
-@media(prefers-reduced-motion:reduce){
-  #hw,#hf{transition:none!important}
-}
-
-/* ── HERO CHIPS ── */
-.hero-chips{
-  display:flex;
-  flex-wrap:wrap;
-  gap:7px;
-  margin-bottom:20px;
-}
-.hero-chip{
-  display:inline-block;
-  padding:5px 13px;
-  font-size:.68rem;
-  font-weight:600;
-  letter-spacing:.07em;
-  text-transform:uppercase;
-  color:rgba(255,255,255,.55);
-  border:1px solid rgba(255,255,255,.14);
-  border-radius:2px;
-  background:rgba(255,255,255,.04);
-}
-
-
-/* ── HERO DIFFERENTIATOR ── */
-.hero-differentiator{
-  font-size:.95rem;
-  font-weight:600;
-  color:var(--gold);
-  letter-spacing:.01em;
-  margin-bottom:8px;
-  line-height:1.4;
-}
-
-
-
-
-
-/* NEW HOMEPAGE MERGE */
-nav{height:72px;padding:0 28px;background:rgba(11,21,39,.92);border-bottom:1px solid rgba(255,255,255,.06)}
-.nav-logo{font-size:1.2rem}
-.nav-links{margin:0 auto;gap:6px}
-.nav-links a{font-size:.82rem;line-height:72px;color:rgba(255,255,255,.72);padding:0 12px}
-.nav-cta{padding:13px 24px;font-size:.78rem;border-radius:999px}
-.hero{min-height:auto;padding:118px 28px 54px;background:
-  radial-gradient(circle at 20% 24%, rgba(201,168,76,.06), transparent 22%),
-  radial-gradient(circle at 78% 36%, rgba(201,168,76,.05), transparent 30%),
-  var(--navy)}
-.hero-inner{max-width:1320px;grid-template-columns:minmax(0,1.1fr) minmax(360px,520px);gap:56px;padding:12px 0 24px;align-items:start}
-.hero-copy{max-width:780px;padding-top:28px}
-.hero-eyebrow{margin-bottom:28px}
-.hero-h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,5.4vw,5.2rem);font-weight:700;line-height:.98;letter-spacing:-.03em;color:var(--white);margin:0 0 24px;max-width:760px}
-.hero-h1 .accent{color:var(--gold);font-style:italic;font-weight:700}
-.hero-sub{font-size:1.08rem;line-height:1.7;color:rgba(255,255,255,.72);max-width:840px;margin-bottom:26px}
-.hero-chip-row{display:flex;gap:12px;flex-wrap:wrap;margin:0 0 38px}
-.hero-chip{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03);color:rgba(255,255,255,.9);font-size:.9rem;font-weight:500}
-.hero-chip::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--gold);opacity:.9}
-.hero-actions{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:0}
-.btn-gold,.btn-outline{padding:18px 30px;font-size:.92rem;border-radius:999px;letter-spacing:.02em;text-transform:none}
-.btn-outline{color:var(--white);border-color:rgba(255,255,255,.16)}
-.hero-side-card{padding:28px;background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.08);border-radius:28px;box-shadow:0 18px 60px rgba(0,0,0,.18);backdrop-filter:blur(8px)}
-.hero-side-card h3{font-size:1.12rem;color:var(--gold);font-family:'DM Sans',sans-serif;letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px}
-.hero-side-card h2{font-size:clamp(2rem,2.4vw,3rem);line-height:1.02;color:var(--white);margin-bottom:16px}
-.hero-side-card p{font-size:1rem;line-height:1.72;color:rgba(255,255,255,.72);margin-bottom:22px}
-.result-mini{display:grid;gap:14px}
-.result-mini-item{padding:20px;border-radius:22px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.07)}
-.result-mini-item strong{display:block;font-size:1.1rem;color:var(--white);margin-bottom:8px}
-.result-mini-item span{font-size:.98rem;line-height:1.58;color:rgba(255,255,255,.78)}
-.selected-experience{background:var(--navy);padding:28px 0 50px;border-top:1px solid rgba(255,255,255,.06)}
-.selected-experience .container{text-align:center}
-.selected-experience .section-label{justify-content:center;margin-bottom:14px}
-.selected-experience p{font-size:1.02rem;color:rgba(255,255,255,.7);max-width:860px;margin:0 auto 26px;line-height:1.7}
-.logo-marquee{overflow:hidden;position:relative;mask-image:linear-gradient(to right, transparent, black 8%, black 92%, transparent)}
-.logo-track{display:flex;gap:22px;width:max-content;animation:marquee 32s linear infinite}
-.logo-marquee:hover .logo-track{animation-play-state:paused}
-.logo-card{width:212px;height:100px;border-radius:22px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.03);display:flex;align-items:center;justify-content:center;padding:22px 18px;flex:0 0 auto}
-.logo-card img{max-width:100%;max-height:44px;object-fit:contain;opacity:.95;filter:brightness(1.06)}
-@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.gap-section,.framework-section,.journey-section,.bigbang-section,.who-section,.insights-section,.final-cta{scroll-margin-top:92px}
-footer{background:#071123;padding:62px 48px 0;border-top:1px solid rgba(255,255,255,.06)}
-.footer-inner{grid-template-columns:2.2fr 1fr 1fr 1fr;gap:56px}
-.footer-tagline{font-size:.96rem;line-height:1.7;color:rgba(255,255,255,.58);max-width:420px}
-.footer-contact a{font-size:.95rem;margin-bottom:10px;color:rgba(255,255,255,.62)}
-.footer-contact a:first-child{color:var(--gold);font-weight:700}
-.footer-col h4{font-size:.95rem;letter-spacing:.14em}
-.footer-col a{font-size:.92rem;color:rgba(255,255,255,.64)}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding:20px 48px;font-size:.78rem;color:rgba(255,255,255,.32)}
-@media(max-width:1100px){
-  .hero-inner{grid-template-columns:1fr;gap:32px}
-  .hero-copy{max-width:none;padding-top:10px}
-  .hero-side-card{max-width:none}
-}
-@media(max-width:900px){
-  nav{padding:0 16px;height:68px}
-  .nav-links{display:none}
-  .hero{padding:104px 20px 42px}
-  .hero-h1{font-size:clamp(2.55rem,11vw,4rem)}
-  .hero-sub{font-size:1rem}
-  .logo-card{width:180px;height:86px}
-  .logo-card img{max-height:38px}
-  .footer-inner{grid-template-columns:1fr 1fr}
-}
-@media(max-width:560px){
-  .hero-chip{font-size:.82rem;padding:10px 14px}
-  .btn-gold,.btn-outline{width:100%;justify-content:center;text-align:center}
-  .footer-inner{grid-template-columns:1fr}
-}
-
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fundare · Experienced Revenue Growth Managers · V4</title>
+  <meta name="description" content="Fundare brings experienced Revenue Growth Managers into your organization to help develop RGM strategy, generate actionable insights, and improve commercial decisions." />
+  <meta name="theme-color" content="#0b1423" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0b1423;--bg-2:#101d31;--surface:#ffffff;--surface-soft:#f5f7fa;--text:#132033;--text-soft:#596579;--text-inv:#f8fafc;--text-inv-soft:rgba(248,250,252,.72);--gold:#c8a64f;--gold-2:#d8bb72;--line:rgba(19,32,51,.10);--shadow:0 12px 40px rgba(8,15,29,.08);--container:1220px}
+    *{box-sizing:border-box;margin:0;padding:0} html{scroll-behavior:smooth} body{font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--text);background:var(--surface);line-height:1.6;overflow-x:hidden}
+    h1,h2,h3,.serif{font-family:'Playfair Display',Georgia,serif;letter-spacing:-.03em} h1,h2,h3{line-height:1.05} a{text-decoration:none;color:inherit} img{max-width:100%;display:block}
+    .container{max-width:var(--container);margin:0 auto;padding:0 28px}.section{padding:100px 0}.section-head{max-width:760px;margin-bottom:44px}.section-head h2{font-size:clamp(2rem,4vw,3.3rem);margin-top:14px;color:var(--text)}.section-head p{margin-top:16px;font-size:1.03rem;color:var(--text-soft);max-width:660px}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.75rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}.eyebrow::before{content:"";width:24px;height:1px;background:currentColor;opacity:.7}
+    .btn-row{display:flex;gap:14px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 22px;border-radius:999px;font-size:.92rem;font-weight:700;transition:transform .2s ease,background .2s ease,border-color .2s ease,color .2s ease}.btn:hover{transform:translateY(-1px)}.btn-primary{background:var(--gold);color:var(--bg)}.btn-primary:hover{background:var(--gold-2)}.btn-secondary{border:1px solid rgba(255,255,255,.16);color:var(--text-inv);background:rgba(255,255,255,.04)}.btn-secondary:hover{border-color:rgba(255,255,255,.30);background:rgba(255,255,255,.08)}
+    .nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(18px);background:rgba(11,20,35,.88);border-bottom:1px solid rgba(255,255,255,.08)}.nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.logo{font-family:'Playfair Display',Georgia,serif;font-size:1.4rem;color:#fff;font-weight:800}.logo span{color:var(--gold)}.nav-links{display:flex;gap:22px;align-items:center;flex-wrap:wrap}.nav-links a{font-size:.88rem;color:rgba(255,255,255,.74);font-weight:500}.nav-links a:hover{color:#fff}.nav-cta{background:var(--gold);color:var(--bg);padding:11px 18px;border-radius:999px;font-size:.85rem;font-weight:700}
+    .hero{position:relative;background:radial-gradient(circle at 85% 20%, rgba(200,166,79,.12), transparent 32%),radial-gradient(circle at 10% 10%, rgba(255,255,255,.05), transparent 24%),linear-gradient(180deg, #0b1423 0%, #0e182a 100%);color:var(--text-inv);padding:66px 0 68px;overflow:hidden}.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);background-size:72px 72px;mask-image:linear-gradient(to bottom, rgba(0,0,0,.85), rgba(0,0,0,.18));pointer-events:none}.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(340px,.75fr);gap:54px;align-items:start}.hero-copy{padding-top:26px}.hero h1{font-size:clamp(3.2rem,7vw,6rem);margin-top:18px;max-width:840px;color:var(--text-inv)}.hero h1 .accent{color:var(--gold);font-style:italic}.hero-sub{margin-top:22px;max-width:720px;font-size:1.12rem;line-height:1.78;color:var(--text-inv-soft)}.hero-proof{margin-top:28px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;color:rgba(255,255,255,.86);font-size:1rem;font-weight:600}.hero-proof .pill{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10)}.hero-proof .dot{width:7px;height:7px;border-radius:50%;background:var(--gold)}.hero-actions{margin-top:34px}
+    .hero-panel{background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.10);border-radius:28px;padding:28px;box-shadow:0 20px 60px rgba(0,0,0,.24)}.hero-panel-label{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}.hero-panel h3{font-size:1.9rem;color:#fff;margin-top:14px}.hero-panel-intro{margin-top:12px;color:var(--text-inv-soft);font-size:.98rem;line-height:1.7}.hero-panel-grid{display:grid;gap:14px;margin-top:22px}.mini-card{padding:16px 16px 15px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}.mini-card h4{font-size:1rem;color:#fff;font-family:Inter,sans-serif;letter-spacing:-.01em}.mini-card p{margin-top:6px;color:rgba(255,255,255,.68);font-size:.92rem;line-height:1.65}
+    .logos{background:linear-gradient(180deg, #0c1526 0%, #0a1323 100%);color:var(--text-inv);padding:34px 0 60px;border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05);overflow:hidden}.logos-intro{text-align:center;margin-bottom:24px}.logos-intro p{font-size:15px;color:rgba(255,255,255,.72);max-width:760px;margin:10px auto 0}.marquee{position:relative;overflow:hidden;mask-image:linear-gradient(to right, transparent, black 10%, black 90%, transparent);-webkit-mask-image:linear-gradient(to right, transparent, black 10%, black 90%, transparent)}.marquee-track{display:flex;align-items:center;gap:34px;width:max-content;animation:scrollLogos 34s linear infinite}.marquee:hover .marquee-track{animation-play-state:paused}.logo-item{height:86px;min-width:180px;padding:18px 24px;border-radius:18px;border:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.025);display:flex;align-items:center;justify-content:center}.logo-item img{max-height:34px;max-width:150px;width:auto;height:auto;object-fit:contain;opacity:.88;filter:brightness(1.08)}.logo-item.logo-tall img{max-height:42px}.logo-item.logo-wide img{max-width:165px}@keyframes scrollLogos{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 17px))}}
+    .results-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:var(--shadow)}.card .num{font-size:.85rem;font-weight:800;color:var(--gold);letter-spacing:.12em;text-transform:uppercase}.card h3{font-size:1.4rem;margin-top:14px;color:var(--text)}.card p{margin-top:12px;color:var(--text-soft);font-size:.98rem;line-height:1.75}.result-stat{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);color:var(--text);font-size:.92rem;font-weight:700}.result-stat span{color:var(--gold)}
+    .split{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:34px;align-items:start}.panel-dark{background:linear-gradient(180deg,var(--bg) 0%, #101d31 100%);color:var(--text-inv);border-radius:28px;padding:34px;border:1px solid rgba(255,255,255,.08)}.panel-dark h3{font-size:2rem;color:#fff;margin-top:14px}.panel-dark p{margin-top:16px;color:var(--text-inv-soft);font-size:1rem;line-height:1.8}.bullet-list{list-style:none;display:grid;gap:16px;margin-top:26px}.bullet-list li{display:flex;gap:12px;color:rgba(255,255,255,.88)}.bullet-list li::before{content:"•";color:var(--gold);font-size:1.2rem;line-height:1}.value-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.value-card{padding:24px;border:1px solid var(--line);border-radius:24px;background:#fff}.value-card h4{font-size:1.12rem;color:var(--text);font-weight:800;letter-spacing:-.02em}.value-card p{margin-top:10px;color:var(--text-soft);font-size:.96rem;line-height:1.75}
+    .engagement-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.engage-card{background:linear-gradient(180deg,#ffffff 0%, #fbfcfe 100%);border:1px solid var(--line);border-radius:24px;padding:28px}.engage-card .tag{display:inline-flex;padding:7px 12px;border-radius:999px;background:rgba(200,166,79,.12);color:#8b6a18;font-size:.77rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.engage-card h3{font-size:1.36rem;margin-top:18px;color:var(--text)}.engage-card p{margin-top:12px;color:var(--text-soft);font-size:.98rem;line-height:1.72}
+    .industries-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.industry-card{background:var(--surface-soft);border:1px solid rgba(19,32,51,.06);border-radius:24px;padding:28px}.industry-card h3{font-size:1.35rem;color:var(--text)}.industry-card p{margin-top:12px;color:var(--text-soft);font-size:.98rem;line-height:1.72}
+    .cta{padding:104px 0;background:linear-gradient(180deg,#0c1423 0%, #101c30 100%);color:#fff;position:relative;overflow:hidden}.cta::before{content:"";position:absolute;left:50%;top:-220px;transform:translateX(-50%);width:780px;height:780px;border-radius:50%;background:radial-gradient(circle, rgba(200,166,79,.13) 0%, transparent 62%)}.cta-inner{position:relative;z-index:1;max-width:920px}.cta h2{font-size:clamp(2.2rem,5vw,4rem);color:#fff;margin-top:16px}.cta p{margin-top:18px;max-width:760px;color:rgba(255,255,255,.72);font-size:1.06rem;line-height:1.82}.cta .btn-row{margin-top:30px}
+    .footer-rich{background:#08101c;color:rgba(255,255,255,.64);padding:72px 0 42px;border-top:1px solid rgba(255,255,255,.08)}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}.footer-rich h4{color:var(--gold);margin-bottom:14px;font-size:14px;letter-spacing:1px}.footer-rich a{display:block;margin-bottom:8px;opacity:.75;font-size:14px;text-decoration:none;color:white}.footer-rich p{opacity:.75;margin-top:10px;font-size:14px}.footer-contact{color:var(--gold)!important}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease}.reveal.visible{opacity:1;transform:none}
+    @media (max-width:1100px){.hero-inner,.split{grid-template-columns:1fr}.hero-copy{padding-top:8px}.results-grid,.engagement-grid,.industries-grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:900px){.footer-grid{grid-template-columns:1fr 1fr}}
+    @media (max-width:820px){.nav-links{display:none}.hero{padding-top:34px}.hero h1{font-size:clamp(2.65rem,11vw,4.2rem)}.results-grid,.value-grid,.engagement-grid,.industries-grid{grid-template-columns:1fr}.section{padding:78px 0}.hero-panel{padding:22px}}
+    @media (max-width:720px){.logo-item{min-width:150px;height:78px;padding:14px 18px}.logo-item img{max-height:28px;max-width:126px}.marquee-track{gap:20px;animation-duration:28s}}
+    @media (max-width:560px){.container{padding:0 20px}.nav-inner{height:70px}.btn{width:100%}.hero-proof{gap:10px}.card,.engage-card,.industry-card,.value-card{padding:22px}.panel-dark{padding:24px}.footer-grid{grid-template-columns:1fr}}
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.marquee-track{animation:none}.reveal{opacity:1;transform:none;transition:none}.btn{transition:none}}
+  </style>
 </head>
-<body data-page="home">
-
-<!-- NAV -->
-<nav>
-  <a href="index.html" class="nav-logo">Fundare<span>.</span></a>
-  <ul class="nav-links">
-    <li><a href="#results">Results</a></li>
-    <li><a href="#why-fundare">Why Fundare</a></li>
-    <li><a href="#what-we-bring">What We Bring</a></li>
-    <li><a href="#how-we-work">How We Work</a></li>
-    <li><a href="#industries">Industries</a></li>
-  </ul>
-  <a href="contact.html" class="nav-cta">Book a Meeting</a>
-</nav>
-
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-bg-grid"></div>
-  <div class="hero-bg-glow"></div>
-  <div class="hero-inner">
-    <div class="hero-copy">
-      <div class="hero-eyebrow">Experienced Revenue Growth Managers</div>
-      <h1 class="hero-h1">Bring experienced <span class="accent">Revenue Growth Managers</span> into your organization.</h1>
-      <p class="hero-sub">Fundare helps companies clarify RGM strategy, understand where profitability is created or lost, uncover commercial opportunities, and improve decision-making across pricing, promotions, assortment, and trade investment.</p>
-      <div class="hero-chip-row">
-        <span class="hero-chip">20+ years RGM experience</span>
-        <span class="hero-chip">Actionable insights</span>
-        <span class="hero-chip">Profitability clarity</span>
-        <span class="hero-chip">Clearer margin tracking</span>
-      </div>
-      <div class="hero-actions">
-        <a href="contact.html" class="btn-gold">Book a Meeting</a>
-        <a href="#how-we-work" class="btn-outline">Explore How We Work</a>
-      </div>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#" class="logo">Fundare<span>.</span></a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#results">Results</a>
+        <a href="#why">Why Fundare</a>
+        <a href="#what-we-bring">What We Bring</a>
+        <a href="#how-we-work">How We Work</a>
+        <a href="#industries">Industries</a>
+      </nav>
+      <a class="nav-cta" href="#contact">Book a Meeting</a>
     </div>
-    <aside class="hero-side-card" id="results">
-      <h3>What clients gain</h3>
-      <h2>Results first. Then the system behind them.</h2>
-      <p>We help organizations improve revenue and margin decisions by combining experienced RGM leadership with practical commercial insight.</p>
-      <div class="result-mini">
-        <div class="result-mini-item"><strong>Stronger margins</strong><span>Improve pricing architecture and promotion effectiveness.</span></div>
-        <div class="result-mini-item"><strong>More effective promotions</strong><span>Promotions that drive incremental revenue instead of temporary volume.</span></div>
-        <div class="result-mini-item"><strong>Profitability clarity</strong><span>Identify where margin is created, lost, and where the biggest opportunities exist.</span></div>
-        <div class="result-mini-item"><strong>Clearer profitability tracking</strong><span>Better indicators to monitor commercial performance.</span></div>
-      </div>
-    </aside>
-  </div>
-</section>
-
-<section class="selected-experience">
-  <div class="container">
-    <div class="section-label">Selected Experience</div>
-    <p>Our RGM leaders have worked with companies where pricing, promotions, assortment, and profitability decisions matter every day.</p>
-    <div class="logo-marquee">
-      <div class="logo-track">
-        
-          <div class="logo-card"><img src="pepsico_white.png" alt="PepsiCo"></div>
-          <div class="logo-card"><img src="coca_cola_white.png" alt="Coca-Cola"></div>
-          <div class="logo-card"><img src="heineken_white.png" alt="Heineken"></div>
-          <div class="logo-card"><img src="allen_white.png" alt="Allen"></div>
-          <div class="logo-card"><img src="oxxo_white.png" alt="OXXO"></div>
-          <div class="logo-card"><img src="valora_white.png" alt="Valora"></div>
-          <div class="logo-card"><img src="sodimac_white.png" alt="Sodimac"></div>
-          <div class="logo-card"><img src="kimberly_clark_white.png" alt="Kimberly-Clark"></div>
-          <div class="logo-card"><img src="colgate_palmolive_white.png" alt="Colgate-Palmolive"></div>
-          <div class="logo-card"><img src="comercial_trevino_white.png" alt="Comercial Treviño"></div>
-          <div class="logo-card"><img src="gambrinus_white.jpeg" alt="Gambrinus Company"></div>
-
-        
-          <div class="logo-card"><img src="pepsico_white.png" alt="PepsiCo"></div>
-          <div class="logo-card"><img src="coca_cola_white.png" alt="Coca-Cola"></div>
-          <div class="logo-card"><img src="heineken_white.png" alt="Heineken"></div>
-          <div class="logo-card"><img src="allen_white.png" alt="Allen"></div>
-          <div class="logo-card"><img src="oxxo_white.png" alt="OXXO"></div>
-          <div class="logo-card"><img src="valora_white.png" alt="Valora"></div>
-          <div class="logo-card"><img src="sodimac_white.png" alt="Sodimac"></div>
-          <div class="logo-card"><img src="kimberly_clark_white.png" alt="Kimberly-Clark"></div>
-          <div class="logo-card"><img src="colgate_palmolive_white.png" alt="Colgate-Palmolive"></div>
-          <div class="logo-card"><img src="comercial_trevino_white.png" alt="Comercial Treviño"></div>
-          <div class="logo-card"><img src="gambrinus_white.jpeg" alt="Gambrinus Company"></div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- MARKET GAP -->
-<section class="gap-section" id="why-fundare">
-  <div class="container">
-    <div class="gap-intro reveal">
-      <div class="section-label">The Market Gap</div>
-      <h2 style="margin-bottom:16px">Most companies understand<br>the potential of RGM.</h2>
-      <p>Many organizations understand that better pricing decisions, optimized promotions, and disciplined assortment strategies can significantly improve both revenue growth and margins. Yet implementing RGM successfully is often difficult &#8212; most companies face two imperfect alternatives.</p>
-    </div>
-    <div class="gap-cols reveal-stagger">
-
-      <div class="gap-col problem">
-        <div class="gap-col-icon">
-          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="10" y="6" width="28" height="36" rx="2" stroke="#d4544a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            <line x1="17" y1="17" x2="31" y2="17" stroke="#d4544a" stroke-width="1.6" stroke-linecap="round"/>
-            <line x1="17" y1="23" x2="31" y2="23" stroke="#d4544a" stroke-width="1.6" stroke-linecap="round"/>
-            <line x1="17" y1="29" x2="25" y2="29" stroke="#d4544a" stroke-width="1.6" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <h3>Traditional Consultants</h3>
-        <p class="gap-col-body">Consulting firms provide strategic recommendations and analytical frameworks. However, once the project ends, internal teams are often left without the expertise to interpret the analysis and execute the recommendations.</p>
-        <p class="gap-col-body" style="font-style:italic;color:#a8adb8">The strategy exists &#8212; but the execution does not.</p>
-        <div><span class="gap-verdict-tag bad">Strategy without execution</span></div>
-      </div>
-
-      <div class="gap-col problem2">
-        <div class="gap-col-icon">
-          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="6" y="6" width="36" height="28" rx="2" stroke="#c4843a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            <line x1="6" y1="34" x2="42" y2="34" stroke="#c4843a" stroke-width="1.6" stroke-linecap="round"/>
-            <line x1="24" y1="34" x2="24" y2="42" stroke="#c4843a" stroke-width="1.6" stroke-linecap="round"/>
-            <line x1="16" y1="42" x2="32" y2="42" stroke="#c4843a" stroke-width="1.6" stroke-linecap="round"/>
-            <polyline points="14,26 20,18 26,22 34,12" stroke="#c4843a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <h3>Technology Platforms</h3>
-        <p class="gap-col-body">Advanced RGM platforms provide powerful tools for modeling pricing and promotions. But these platforms require experienced teams capable of interpreting data, building models, and translating insights into commercial decisions.</p>
-        <p class="gap-col-body" style="font-style:italic;color:#a8adb8">Without this expertise, the technology often remains underutilized.</p>
-        <div><span class="gap-verdict-tag warn">Tools without expertise</span></div>
-      </div>
-
-      <div class="gap-col solution">
-        <div class="gap-col-icon">
-          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="24" cy="24" r="8" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round"/>
-            <path d="M24 6v4M24 38v4M6 24h4M38 24h4" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round"/>
-            <path d="M11.03 11.03l2.83 2.83M34.14 34.14l2.83 2.83M11.03 36.97l2.83-2.83M34.14 13.86l2.83-2.83" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round"/>
-            <circle cx="24" cy="24" r="3" fill="#c9a84c"/>
-          </svg>
-        </div>
-        <h3 style="color:var(--white)">The Missing Piece: Capability</h3>
-        <p class="gap-col-body">What many organizations truly lack is the operational capability to run Revenue Growth Management effectively. This is what Fundare provides &#8212; not a report, not a platform, but a working system.</p>
-        <ul class="gap-capability-list">
-          <li>Experienced RGM leadership</li>
-          <li>Advanced analytics and AI modeling</li>
-          <li>Technology enablement</li>
-          <li>Structured KPI governance</li>
-        </ul>
-        <div><span class="gap-verdict-tag good">Strategy + Analytics + Execution</span></div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- FRAMEWORK -->
-<section class="framework-section" id="what-we-bring">
-  <div class="container">
-    <div class="framework-intro reveal">
-      <div class="section-label">The Fundare RGM Framework</div>
-      <h2 style="color:var(--white);margin-bottom:12px">Effective RGM requires alignment<br>across three dimensions.</h2>
-      <p>Business strategy defines the objective. Revenue levers deliver it. Capability enablers make it sustainable.</p>
-    </div>
-
-    <div class="framework-diagram" id="fw-diagram">
-      <div class="fw-seq fw-row" style="transition-delay:0s">
-        <div class="fw-label"><span>Business Strategy</span></div>
-        <div class="fw-content">
-          <span class="fw-pill gold">Market Share</span>
-          <span class="fw-pill gold">Margin Expansion</span>
-          <span class="fw-pill gold">Revenue Growth</span>
-        </div>
-      </div>
-      <div class="fw-arrow fw-seq" style="transition-delay:.14s">
-        <div class="fw-arrow-inner"><div class="ashaft"></div><div class="ahead"></div></div>
-      </div>
-      <div class="fw-seq fw-row" style="transition-delay:.28s">
-        <div class="fw-label"><span>RGM Levers</span></div>
-        <div class="fw-content">
-          <span class="fw-pill neutral">Pricing</span>
-          <span class="fw-pill neutral">Promotions</span>
-          <span class="fw-pill neutral">Assortment</span>
-          <span class="fw-pill neutral">Trade Investment</span>
-        </div>
-      </div>
-      <div class="fw-arrow fw-seq" style="transition-delay:.42s">
-        <div class="fw-arrow-inner"><div class="ashaft"></div><div class="ahead"></div></div>
-      </div>
-      <div class="fw-seq fw-row" style="transition-delay:.56s">
-        <div class="fw-label"><span>Capability Enablers</span></div>
-        <div class="fw-content">
-          <span class="fw-pill neutral">Talent &amp; Operating Model</span>
-          <span class="fw-pill neutral">Data &amp; Advanced Models</span>
-          <span class="fw-pill neutral">Technology &amp; Tools</span>
-          <span class="fw-pill neutral">KPI Governance</span>
-        </div>
-      </div>
-      <div class="fw-arrow fw-seq" style="transition-delay:.70s">
-        <div class="fw-arrow-inner"><div class="ashaft"></div><div class="ahead"></div></div>
-      </div>
-      <div class="fw-seq fw-row" style="transition-delay:.84s">
-        <div class="fw-label"><span>Business Impact</span></div>
-        <div class="fw-content">
-          <span class="fw-pill gold">Revenue Growth</span>
-          <span class="fw-pill gold">Margin Expansion</span>
-          <span class="fw-pill gold">Market Share</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="levers-heading reveal">
-      <div class="levers-heading-eyebrow"><span></span>Revenue Growth Levers<span></span></div>
-      <h3>The Four Revenue Growth Levers</h3>
-      <p>The primary commercial mechanisms through which RGM creates measurable business impact.</p>
-    </div>
-    <div class="framework-detail-grid">
-      <div class="fw-detail">
-        <div class="fw-detail-num">01</div>
-        <h3>Pricing</h3>
-        <p>Defining price architecture, guardrails, and optimization models that maximize revenue without sacrificing volume or competitive position.</p>
-      </div>
-      <div class="fw-detail">
-        <div class="fw-detail-num">02</div>
-        <h3>Promotions</h3>
-        <p>Designing promotional strategies that drive truly incremental sales &#8212; not just volume that would have occurred regardless of the investment.</p>
-      </div>
-      <div class="fw-detail">
-        <div class="fw-detail-num">03</div>
-        <h3>Assortment</h3>
-        <p>Optimizing product portfolios to improve mix, availability, and profitability across categories, channels, and customer segments.</p>
-      </div>
-      <div class="fw-detail">
-        <div class="fw-detail-num">04</div>
-        <h3>Trade Investment</h3>
-        <p>Managing trade spending to maximize return on investment and ensure every dollar of trade funds is aligned with commercial strategy.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- JOURNEY -->
-<section class="journey-section" id="how-we-work">
-  <div class="container">
-    <div class="journey-intro reveal">
-      <div class="section-label">How We Engage</div>
-      <h2 style="margin-bottom:12px">A structured journey designed<br>to build RGM capability over time.</h2>
-      <p>Fundare supports organizations through four connected stages &#8212; from establishing the analytical foundation to building a self-sustaining commercial capability.</p>
-    </div>
-    <div class="journey-steps reveal-stagger">
-      <div class="journey-step active-step">
-        <div class="journey-num">01</div>
-        <h3>Foundation</h3>
-        <p>Establish the analytical foundation and identify the most important opportunities across pricing, promotions, and assortment. Delivered through Big Bang Discovery.</p>
-      </div>
-      <div class="journey-step">
-        <div class="journey-num">02</div>
-        <h3>Strategy</h3>
-        <p>Define commercial strategies aligned with business objectives and supported by advanced analytical models and AI simulations.</p>
-      </div>
-      <div class="journey-step">
-        <div class="journey-num">03</div>
-        <h3>Execution</h3>
-        <p>Implement actions, monitor performance through monthly insights meetings, and continuously refine commercial decisions based on results.</p>
-      </div>
-      <div class="journey-step">
-        <div class="journey-num">04</div>
-        <h3>Capability Building</h3>
-        <p>Develop internal teams, governance processes, and analytical frameworks that allow organizations to sustain RGM long term.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- BIG BANG DISCOVERY -->
-<section class="bigbang-section">
-  <div class="container">
-    <div class="bigbang-inner reveal">
-      <div class="bigbang-left">
-        <span class="bigbang-badge">Foundation Program</span>
-        <h2>Big Bang Discovery</h2>
-        <p class="bigbang-tagline">The Foundation Program for Revenue Growth Management.</p>
-        <p class="bigbang-desc">A structured program designed to help companies identify their most important Revenue Growth opportunities and establish the analytical foundation required to act on them. Fundare works alongside your organization to analyze historical performance, build advanced analytical models, and generate actionable commercial recommendations.</p>
-        <div class="bigbang-meta">
-          <div>
-            <div class="bigbang-meta-label">Duration</div>
-            <div class="bigbang-meta-val">4&#8211;5 Months</div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Experienced Revenue Growth Managers</span>
+          <h1>Bring experienced <span class="accent">Revenue Growth Managers</span> into your organization.</h1>
+          <p class="hero-sub">Fundare helps companies clarify RGM strategy, understand where profitability is created or lost, uncover commercial opportunities, and improve decision-making across pricing, promotions, assortment and trade investment.</p>
+          <div class="hero-proof">
+            <span class="pill"><span class="dot"></span>20+ years RGM experience</span>
+            <span class="pill"><span class="dot"></span>Actionable insights</span>
+            <span class="pill"><span class="dot"></span>Profitability clarity</span>
+            <span class="pill"><span class="dot"></span>Clearer margin tracking</span>
           </div>
-          <div style="padding-left:24px;border-left:1px solid rgba(255,255,255,.055)">
-            <div class="bigbang-meta-label">Outcome</div>
-            <div class="bigbang-meta-val">Immediate Actions + RGM Foundation</div>
+          <div class="btn-row hero-actions">
+            <a href="#contact" class="btn btn-primary">Book a Meeting</a>
+            <a href="#how-we-work" class="btn btn-secondary">Explore How We Work</a>
           </div>
         </div>
-        <div style="display:flex;gap:12px;flex-wrap:wrap">
-          <a href="big-bang-discovery.html" class="btn-gold">Learn More</a>
-          <a href="contact.html" class="btn-outline">Book a Meeting</a>
+        <aside class="hero-panel reveal">
+          <div class="hero-panel-label">What clients gain</div>
+          <h3>Results first. Then the system behind them.</h3>
+          <p class="hero-panel-intro">We help organizations improve revenue and margin decisions by combining experienced RGM leadership with practical commercial insight.</p>
+          <div class="hero-panel-grid">
+            <div class="mini-card"><h4>Stronger margins</h4><p>Improve pricing architecture and promotion effectiveness.</p></div>
+            <div class="mini-card"><h4>More effective promotions</h4><p>Promotions that drive incremental revenue instead of temporary volume.</p></div>
+            <div class="mini-card"><h4>Profitability clarity</h4><p>Identify where margin is created, lost, and where the biggest opportunities exist.</p></div>
+            <div class="mini-card"><h4>Clearer profitability tracking</h4><p>Better indicators to monitor commercial performance.</p></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+    <section class="logos">
+      <div class="container logos-intro">
+        <div class="eyebrow">Selected experience</div>
+        <p>Our RGM leaders have worked with companies where pricing, promotions, assortment, and profitability decisions matter every day.</p>
+      </div>
+      <div class="marquee">
+        <div class="marquee-track">
+          <div class="logo-item logo-wide"><img src="pepsico_white.png" alt="PepsiCo"></div>
+          <div class="logo-item logo-wide"><img src="coca_cola_white.png" alt="Coca-Cola"></div>
+          <div class="logo-item"><img src="heineken_white.png" alt="Heineken"></div>
+          <div class="logo-item logo-tall"><img src="allen_white.png" alt="Allen"></div>
+          <div class="logo-item"><img src="oxxo_white.png" alt="OXXO"></div>
+          <div class="logo-item"><img src="valora_white.png" alt="Valora"></div>
+          <div class="logo-item"><img src="sodimac_white.png" alt="Sodimac"></div>
+          <div class="logo-item logo-wide"><img src="kimberly_clark_white.png" alt="Kimberly-Clark"></div>
+          <div class="logo-item logo-wide"><img src="colgate_palmolive_white.png" alt="Colgate-Palmolive"></div>
+          <div class="logo-item"><img src="comercial_trevino_white.png" alt="Comercial Treviño"></div>
+          <div class="logo-item"><img src="gambrinus_white.jpeg" alt="Gambrinus Company"></div>
+          <div class="logo-item logo-wide"><img src="pepsico_white.png" alt="PepsiCo"></div>
+          <div class="logo-item logo-wide"><img src="coca_cola_white.png" alt="Coca-Cola"></div>
+          <div class="logo-item"><img src="heineken_white.png" alt="Heineken"></div>
+          <div class="logo-item logo-tall"><img src="allen_white.png" alt="Allen"></div>
+          <div class="logo-item"><img src="oxxo_white.png" alt="OXXO"></div>
+          <div class="logo-item"><img src="valora_white.png" alt="Valora"></div>
+          <div class="logo-item"><img src="sodimac_white.png" alt="Sodimac"></div>
+          <div class="logo-item logo-wide"><img src="kimberly_clark_white.png" alt="Kimberly-Clark"></div>
+          <div class="logo-item logo-wide"><img src="colgate_palmolive_white.png" alt="Colgate-Palmolive"></div>
+          <div class="logo-item"><img src="comercial_trevino_white.png" alt="Comercial Treviño"></div>
+          <div class="logo-item"><img src="gambrinus_white.jpeg" alt="Gambrinus Company"></div>
         </div>
       </div>
-      <div>
-        <div style="font-size:.59rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(201,168,76,.58);margin-bottom:14px">What the program delivers</div>
-        <ul class="bigbang-deliverables">
-          <li><span class="icon">&#9658;</span>Opportunity blueprint across pricing, promotions, and assortment</li>
-          <li><span class="icon">&#9658;</span>Development of advanced analytical models and AI simulations</li>
-          <li><span class="icon">&#9658;</span>Suggested pricing architecture and price recommendations</li>
-          <li><span class="icon">&#9658;</span>Promotional strategies designed to improve incremental performance</li>
-          <li><span class="icon">&#9658;</span>Alignment of commercial actions with business objectives and KPIs</li>
-          <li><span class="icon">&#9658;</span>Initial performance tracking framework and commercial governance</li>
-        </ul>
-        <div class="bigbang-outcome">
-          <div class="bigbang-outcome-title">What You Get</div>
-          <p>Immediate commercial actions: implementable pricing and promotional recommendations designed to impact revenue and margin now.</p>
-          <p>A durable analytical foundation: your data is integrated into Fundare&#8217;s modeling engine to continuously refresh insights and actions over time.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHO WE WORK WITH -->
-<section class="who-section" id="industries">
-  <div class="container">
-    <div class="who-intro reveal">
-      <div class="section-label">Who We Work With</div>
-      <h2 style="margin-bottom:12px">Three sectors where commercial<br>decisions drive results.</h2>
-      <p>Fundare works with organizations across multiple sectors where pricing, promotions, and assortment decisions have a direct and measurable impact on revenue and margin performance.</p>
-    </div>
-    <div class="who-grid reveal-stagger">
-
-      <div class="who-card">
-        <div class="who-card-icon">
-          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 20l4-12h28l4 12" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            <rect x="6" y="20" width="36" height="22" rx="1" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            <line x1="6" y1="28" x2="42" y2="28" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round"/>
-            <line x1="6" y1="35" x2="42" y2="35" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round"/>
-            <rect x="19" y="35" width="10" height="7" rx="1" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <h3>Retailers</h3>
-        <p>Retail organizations improve pricing discipline, optimize promotions, and make better assortment decisions that drive both sales and profitability across categories.</p>
-      </div>
-
-      <div class="who-card">
-        <div class="who-card-icon">
-          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M24 6l18 9v18L24 42 6 33V15L24 6z" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M24 6v36" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round"/>
-            <path d="M6 15l18 9 18-9" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <h3>Consumer Goods Companies</h3>
-        <p>CPG companies leverage RGM to optimize trade investment, promotion funding, and pricing architecture across retail channels &#8212; protecting and growing margin.</p>
-      </div>
-
-      <div class="who-card">
-        <div class="who-card-icon">
-          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="8" cy="24" r="4" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round"/>
-            <circle cx="40" cy="14" r="4" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round"/>
-            <circle cx="40" cy="34" r="4" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round"/>
-            <path d="M12 24h10c2 0 4-2 4-4v-2c0-2 2-4 4-4h6" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M12 24h10c2 0 4 2 4 4v2c0 2 2 4 4 4h6" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <h3>Distributors</h3>
-        <p>Distribution businesses improve portfolio mix, pricing discipline, and commercial decision-making across complex product portfolios and diverse customer bases.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- INSIGHTS -->
-<section class="insights-section">
-  <div class="container">
-    <div class="insights-top reveal">
-      <div class="insights-intro">
-        <div class="section-label">Insights</div>
-        <h2>Research and resources<br>on Revenue Growth Management.</h2>
-        <p>Fundare publishes practical guides, frameworks, and analysis on pricing, promotions, assortment, and commercial capability building.</p>
-      </div>
-      <a href="insights.html" class="btn-navy">Explore Insights</a>
-    </div>
-    <div class="insights-grid reveal-stagger">
-      <div class="insight-card">
-        <div class="insight-card-tag">Fundamentals</div>
-        <h3>What is Revenue Growth Management &#8212; and why does it matter?</h3>
-        <p>A practical guide to RGM fundamentals, the four commercial levers, and why most organizations struggle to implement it effectively.</p>
-        <a href="insights-rgm-guide.html" class="insight-card-link">Read the guide &#8594;</a>
-      </div>
-      <div class="insight-card">
-        <div class="insight-card-tag">AI &amp; Analytics</div>
-        <h3>AI in Revenue Growth Management: real use cases and limitations.</h3>
-        <p>How AI and advanced modeling are changing pricing and promotional decisions &#8212; and what&#8217;s required to make it work in practice.</p>
-        <a href="insights-ai-rgm.html" class="insight-card-link">Read the guide &#8594;</a>
-      </div>
-      <div class="insight-card">
-        <div class="insight-card-tag">Pricing</div>
-        <h3>Building a pricing architecture that drives both margin and volume.</h3>
-        <p>The frameworks and analytical tools organizations use to set prices strategically &#8212; across SKUs, channels, and competitive contexts.</p>
-        <a href="insights-pricing.html" class="insight-card-link">Read the guide &#8594;</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FINAL CTA -->
-<section class="final-cta reveal">
-  <div class="section-label" style="justify-content:center;margin-bottom:16px">Get Started</div>
-  <h2>Revenue Growth Management can transform<br>how your organization makes commercial decisions.</h2>
-  <p>Fundare helps companies build the capability required to make those decisions consistently &#8212; through fractional expertise, advanced analytics, and structured governance.</p>
-  <div class="final-cta-btns">
-    <a href="contact.html" class="btn-gold">Book a Meeting</a>
-    <a href="big-bang-discovery.html" class="btn-outline">Start with Big Bang Discovery</a>
-  </div>
-  <p class="final-cta-note">No commitment required &#183; 30-minute conversation &#183; Clear next steps</p>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-inner">
-    <div>
-      <span class="footer-logo">Fundare<span>.</span></span>
-      <p class="footer-tagline">Strategic Revenue Growth consulting for retailers, wholesalers and CPG brands across the US.</p>
-      <div class="footer-contact">
-        <a href="mailto:hello@fundare.com">hello@fundare.com</a>
-        <a href="tel:+17377078682">+1 737 707 8682</a>
-        <a href="#">7600 Chevy Chase Dr, Suite 118,<br/>Austin TX 78752</a>
-      </div>
-    </div>
-    <div class="footer-col">
-      <h4>Products</h4>
-      <ul>
-        <li><a href="products.html">Fundare PNL Track</a></li>
-        <li><a href="products.html">Promo Post Mortem</a></li>
-        <li><a href="products.html">Pricing Strategy</a></li>
-        <li><a href="products.html">Store Clustering</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Solutions</h4>
-      <ul>
-        <li><a href="fractional.html">Fractional Strategist</a></li>
-        <li><a href="industries.html">For Retailers</a></li>
-        <li><a href="industries.html">For FMCG Brands</a></li>
-        <li><a href="about.html">Case Studies</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Company</h4>
-      <ul>
-        <li><a href="about.html">About Fundare</a></li>
-        <li><a href="about.html">Our Team</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <div>&#169; 2026 Fundare. All rights reserved.</div>
-    <div>Austin, Texas &#183; Revenue Growth Management for retail, wholesale, and CPG</div>
-  </div>
-</footer>
-
-<script>
-(function(){
-  /* Active nav */
-  var page = document.body.getAttribute('data-page') || document.documentElement.getAttribute('data-page');
-  document.querySelectorAll('[data-nav]').forEach(function(a){
-    if(a.getAttribute('data-nav') === page) a.classList.add('active');
-  });
-
-  /* Reduced motion check */
-  if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-    document.querySelectorAll('.reveal,.fw-seq').forEach(function(el){ el.style.opacity='1'; el.style.transform='none'; });
-    document.querySelectorAll('.reveal-stagger').forEach(function(g){ g.querySelectorAll(':scope>*').forEach(function(c){ c.style.opacity='1'; c.style.transform='none'; }); });
-    return;
-  }
-
-  /* General reveal */
-  var obs = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); } });
-  },{threshold:0.1});
-  document.querySelectorAll('.reveal,.reveal-stagger').forEach(function(el){ obs.observe(el); });
-
-  /* Framework sequential */
-  var fwDiagram = document.getElementById('fw-diagram');
-  if(fwDiagram){
-    var fwItems = Array.from(fwDiagram.querySelectorAll('.fw-seq'));
-    var fwObs = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if(e.isIntersecting){
-          fwItems.forEach(function(item,i){ setTimeout(function(){ item.classList.add('visible'); }, i*135); });
-          fwObs.unobserve(fwDiagram);
-        }
-      });
-    },{threshold:0.12});
-    fwObs.observe(fwDiagram);
-  }
-
-  /* Lever cards stagger */
-  var detailGrid = document.querySelector('.framework-detail-grid');
-  if(detailGrid){
-    var cards = Array.from(detailGrid.querySelectorAll('.fw-detail'));
-    cards.forEach(function(c){ c.style.opacity='0'; c.style.transform='translateY(12px)'; c.style.transition='opacity .52s ease-out,transform .52s ease-out'; });
-    var dgObs = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if(e.isIntersecting){
-          cards.forEach(function(c,i){ setTimeout(function(){ c.style.opacity='1'; c.style.transform='none'; }, i*110); });
-          dgObs.unobserve(detailGrid);
-        }
-      });
-    },{threshold:0.1});
-    dgObs.observe(detailGrid);
-  }
-
-  /* ── HERO ROTATING HEADLINE ANIMATION ── */
-  (function(){
-    var hw = document.getElementById('hw');
-    var hf = document.getElementById('hf');
-    if(!hw || !hf) return;
-
-    if(window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches){
-      hf.classList.add('show');
-      return;
-    }
-
-    var PHRASES = ['Grow Revenue','Expand Margin','Win Share'];
-    var HOLD = 1400, TRANS = 420;
-    hw.style.transition = 'opacity '+TRANS/1000+'s ease, transform '+TRANS/1000+'s ease';
-
-    function showWord(i){
-      hw.style.opacity = '0';
-      hw.style.transform = 'translateY(10px)';
-      hw.textContent = PHRASES[i];
-      requestAnimationFrame(function(){
-        requestAnimationFrame(function(){
-          hw.style.opacity = '1';
-          hw.style.transform = 'translateY(0)';
-          setTimeout(function(){
-            hw.style.opacity = '0';
-            hw.style.transform = 'translateY(-10px)';
-            setTimeout(function(){
-              if(i < PHRASES.length - 1){ showWord(i + 1); }
-              else{ hw.style.display = 'none'; hf.classList.add('show'); }
-            }, TRANS);
-          }, HOLD);
-        });
-      });
-    }
-
-    setTimeout(function(){ showWord(0); }, 600);
-  })();
-})();
-</script>
+    </section>
+    <section class="section" id="results"><div class="container"><div class="section-head reveal"><span class="eyebrow">Results</span><h2>The outcomes clients care about most.</h2><p>Revenue Growth Management should lead to measurable commercial results, not just more analysis. Fundare focuses on the improvements leadership teams actually want to see.</p></div><div class="results-grid"><article class="card reveal"><div class="num">01</div><h3>Stronger Margins</h3><p>Improve profitability through better pricing architecture, promotion effectiveness, and more disciplined commercial choices.</p><div class="result-stat"><span>Typical opportunity:</span> 3–5% margin improvement potential</div></article><article class="card reveal"><div class="num">02</div><h3>Grow Share Without Losing Margin</h3><p>Capture growth opportunities with smarter pricing and promotion strategies that protect the bottom line.</p><div class="result-stat"><span>Focus:</span> balanced growth, not volume at any cost</div></article><article class="card reveal"><div class="num">03</div><h3>More Effective Promotions</h3><p>Build promotional plans designed to generate incremental sales and improve return on trade and commercial investment.</p><div class="result-stat"><span>Goal:</span> more productive spend and better promo outcomes</div></article><article class="card reveal"><div class="num">04</div><h3>Better Commercial Decisions</h3><p>Turn data into clear priorities and actionable recommendations across pricing, promotions, assortment, and trade investment.</p><div class="result-stat"><span>Impact:</span> faster, clearer, more confident decisions</div></article></div></div></section>
+    <section class="section" id="why" style="background:var(--surface-soft)"><div class="container split"><div class="panel-dark reveal"><span class="eyebrow">Why Fundare</span><h3>Why Revenue Growth Management is hard to build internally.</h3><p>Many companies understand the value of RGM, but building it internally requires senior experience, analytical capability, commercial discipline, and time. Even when data and tools exist, organizations often still lack the leadership needed to turn that information into action.</p><ul class="bullet-list"><li>Experienced RGM talent is expensive and difficult to build in-house.</li><li>Teams often have data, but not clear priorities or actionable decisions.</li><li>Commercial opportunities remain hidden without the right indicators and strategic lens.</li></ul></div><div class="value-grid" id="what-we-bring"><article class="value-card reveal"><h4>Experienced RGM Leadership</h4><p>Bring senior Revenue Growth Management experience into your organization without the cost of hiring a full-time internal RGM team.</p></article><article class="value-card reveal"><h4>Actionable Insights</h4><p>Translate commercial data into practical recommendations that teams can use across pricing, promotions, assortment, and trade investment.</p></article><article class="value-card reveal"><h4>Clearer Strategy</h4><p>Define how RGM supports revenue growth, margin expansion, and market share objectives with more clarity and discipline.</p></article><article class="value-card reveal"><h4>Capability Building</h4><p>Help internal teams strengthen their RGM knowledge, indicators, and routines over time while benefiting from external expertise now.</p></article></div></div></section>
+    <section class="section" id="how-we-work"><div class="container"><div class="section-head reveal"><span class="eyebrow">How We Work</span><h2>A flexible model built around what clients need most.</h2><p>Some organizations need a starting point. Others need senior ongoing support. Others need help building internal capability. Fundare supports all three.</p></div><div class="engagement-grid"><article class="engage-card reveal"><span class="tag">Foundation</span><h3>Big Bang Discovery</h3><p>A structured starting point to identify RGM opportunities, clarify the commercial agenda, and build the analytical foundation for action.</p></article><article class="engage-card reveal"><span class="tag">Fractional Leadership</span><h3>Experienced RGM Support</h3><p>Bring experienced Revenue Growth Managers into your business to support strategy, insights, and decision-making without building a full internal team.</p></article><article class="engage-card reveal"><span class="tag">Capability Building</span><h3>Team Development</h3><p>Strengthen internal understanding of RGM, improve indicators and routines, and help teams adopt a more disciplined commercial approach over time.</p></article></div></div></section>
+    <section class="section" id="industries" style="background:var(--surface-soft)"><div class="container"><div class="section-head reveal"><span class="eyebrow">Industries</span><h2>Where our experience creates value.</h2><p>Fundare works with organizations where pricing, promotions, assortment, and trade investment decisions directly shape commercial performance.</p></div><div class="industries-grid"><article class="industry-card reveal"><h3>Retailers</h3><p>Improve category pricing, promotional performance, and assortment decisions that drive both revenue and profitability.</p></article><article class="industry-card reveal"><h3>Consumer Goods Companies</h3><p>Optimize trade investment, pricing architecture, and commercial strategies across modern trade, traditional trade, and key accounts.</p></article><article class="industry-card reveal"><h3>Distributors</h3><p>Improve portfolio mix, pricing discipline, and commercial decision-making across complex products, channels, and customers.</p></article></div></div></section>
+    <section class="cta" id="contact"><div class="container cta-inner reveal"><span class="eyebrow">Get Started</span><h2>Bring experienced Revenue Growth Managers into your organization.</h2><p>If your company is looking to improve margins, create more effective promotions, and make better commercial decisions, Fundare can help you move faster with the right experience behind your team.</p><div class="btn-row"><a href="mailto:hello@fundare.com" class="btn btn-primary">Book a Meeting</a><a href="#how-we-work" class="btn btn-secondary">See How We Work</a></div></div></section>
+  </main>
+  <footer class="footer-rich"><div class="container footer-grid"><div><div class="logo">Fundare<span>.</span></div><p>Strategic Revenue Growth consulting for retailers, wholesalers and CPG brands across the US.</p><p class="footer-contact" style="margin-top:20px;">hello@fundare.com</p><p>+1 737 707 8682</p><p>7600 Chevy Chase Dr, Suite 118<br>Austin TX 78752</p></div><div><h4>PRODUCTS</h4><a href="#">Fundare PNL Track</a><a href="#">Promo Post Mortem</a><a href="#">Pricing Strategy</a><a href="#">Store Clustering</a></div><div><h4>SOLUTIONS</h4><a href="#">Fractional Strategist</a><a href="#">For Retailers</a><a href="#">For FMCG Brands</a><a href="#">Case Studies</a></div><div><h4>COMPANY</h4><a href="#">About Fundare</a><a href="#">Our Team</a><a href="#">Contact</a></div></div></footer>
+  <script>(function(){var els=document.querySelectorAll('.reveal');if(!('IntersectionObserver'in window)||(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)){els.forEach(function(el){el.classList.add('visible')});return}var obs=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('visible');obs.unobserve(entry.target)}})},{threshold:0.12});els.forEach(function(el){obs.observe(el)})})();</script>
 </body>
 </html>
