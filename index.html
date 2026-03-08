@@ -26,9 +26,9 @@ a{text-decoration:none}
 .container{max-width:1160px;margin:0 auto;padding:0 48px;width:100%}
 .section-label{font-size:.64rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:10px;margin-bottom:14px}
 .section-label::before{content:'';width:22px;height:1px;background:var(--gold);flex-shrink:0}
-.btn-gold{display:inline-block;background:var(--gold);color:var(--navy);padding:13px 28px;font-size:.77rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:2px;transition:background .2s,transform .25s,box-shadow .25s}
+.btn-gold{display:inline-block;background:var(--gold);color:var(--navy);padding:16px 36px;font-size:.82rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:2px;transition:background .2s,transform .25s,box-shadow .25s}
 .btn-gold:hover{background:var(--gold2);transform:translateY(-1px);box-shadow:0 6px 22px rgba(201,168,76,.26)}
-.btn-outline{display:inline-block;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.68);padding:13px 28px;font-size:.77rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;border-radius:2px;transition:border-color .2s,color .2s}
+.btn-outline{display:inline-block;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.68);padding:16px 36px;font-size:.82rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;border-radius:2px;transition:border-color .2s,color .2s}
 .btn-outline:hover{border-color:var(--gold);color:var(--gold)}
 .btn-navy{display:inline-block;background:var(--navy);color:var(--white);padding:13px 28px;font-size:.77rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:2px;transition:background .2s,transform .25s}
 .btn-navy:hover{background:#0f2240;transform:translateY(-1px)}
@@ -45,19 +45,19 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .nav-cta:hover{background:var(--gold2)}
 
 /* HERO */
-.hero{min-height:100vh;background:var(--navy);display:flex;align-items:center;padding:120px 48px 80px;position:relative;overflow:hidden}
+.hero{min-height:100vh;background:var(--navy);display:flex;align-items:center;padding:0 48px;position:relative;overflow:hidden}
 .hero-bg-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:72px 72px;pointer-events:none}
 .hero-bg-glow{position:absolute;top:-20%;right:-10%;width:700px;height:700px;background:radial-gradient(circle,rgba(201,168,76,.07) 0%,transparent 65%);pointer-events:none}
-.hero-inner{max-width:1160px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 400px;gap:72px;align-items:center;position:relative;z-index:2}
+.hero-inner{max-width:1160px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 380px;gap:56px;align-items:center;position:relative;z-index:2;padding:100px 0 72px}
 .hero-eyebrow{font-size:.64rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:10px;margin-bottom:22px}
 .hero-eyebrow::before{content:'';width:22px;height:1px;background:var(--gold)}
 .hero h1{font-size:clamp(2.8rem,4.5vw,4.4rem);font-weight:900;line-height:1.02;color:var(--white);margin-bottom:10px}
 .hero h1 em{color:var(--gold);font-style:italic}
-.hero-dash{width:44px;height:2px;background:var(--gold);margin:22px 0}
-.hero-sub{font-size:1.02rem;font-weight:300;line-height:1.82;color:rgba(255,255,255,.52);margin-bottom:10px;max-width:540px}
+.hero-dash{width:40px;height:2px;background:var(--gold);margin:16px 0}
+.hero-sub{font-size:.95rem;font-weight:300;line-height:1.78;color:rgba(255,255,255,.52);margin-bottom:14px;max-width:500px}
 .hero-support{font-size:.88rem;color:rgba(255,255,255,.32);line-height:1.7;margin-bottom:38px;max-width:480px}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:50px}
-.hero-stats{display:flex;gap:36px;padding-top:26px;border-top:1px solid rgba(255,255,255,.07)}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px}
+.hero-stats{display:flex;gap:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,.07)}
 .stat-num{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:700;color:var(--gold);line-height:1}
 .stat-lbl{font-size:.67rem;color:rgba(255,255,255,.28);letter-spacing:.06em;text-transform:uppercase;margin-top:4px}
 .hero-card{border:1px solid rgba(201,168,76,.16);background:rgba(255,255,255,.03)}
@@ -245,72 +245,51 @@ footer{background:#060e1c;padding:60px 48px 0;border-top:1px solid rgba(201,168,
 }
 
 /* ── HERO ROTATING HEADLINE ── */
-.hero-rotating-headline{
-  font-size:clamp(5rem,8.5vw,9rem);
+.hero-h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(3rem,5vw,5.2rem);
   font-weight:900;
-  line-height:1.0;
-  color:var(--white);
-  margin-bottom:10px;
-  min-height:1.1em;
+  line-height:1.05;
+  margin-bottom:20px;
   position:relative;
 }
-.hero-word{
+/* Final line always in flow — color:transparent holds space without showing text */
+#hf{
   display:block;
-  font-size:inherit;
-  color:var(--gold);
-  font-style:italic;
   font-family:'Playfair Display',serif;
+  font-size:inherit;
   font-weight:900;
-  opacity:1;
-  transform:translateY(0);
-  transition:opacity .5s ease, transform .5s ease;
+  font-style:italic;
+  white-space:nowrap;
+  color:transparent;
+  transition:color .5s ease;
+}
+#hf.show{ color:var(--gold); }
+/* Animated word floats above */
+#hw{
   position:absolute;
   top:0;left:0;
+  display:block;
+  font-family:'Playfair Display',serif;
+  font-size:inherit;
+  font-weight:900;
+  font-style:italic;
+  color:var(--gold);
   white-space:nowrap;
-}
-.hero-word.hidden{
   opacity:0;
-  transform:translateY(-8px);
+  transform:translateY(10px);
   pointer-events:none;
 }
-.hero-word.entering{
-  opacity:0;
-  transform:translateY(8px);
-}
-.hero-final{
-  display:block;
-  opacity:0;
-  transform:translateY(8px);
-  transition:opacity .6s ease, transform .6s ease;
-  color:var(--white);
-  font-style:normal;
-  font-size:clamp(5rem,8.5vw,9rem);
-  visibility:hidden;
-}
-.hero-final.visible{
-  opacity:1;
-  transform:translateY(0);
-  visibility:visible;
-}
-/* During animation, final is invisible but occupies space */
-.hero-rotating-headline.animating .hero-final{
-  visibility:hidden;
-  opacity:0;
-}
-.hero-rotating-headline.done .hero-word{
-  display:none;
-}
-.hero-rotating-headline.done .hero-final{
-  position:relative;
-  visibility:visible;
+@media(prefers-reduced-motion:reduce){
+  #hw,#hf{transition:none!important}
 }
 
 /* ── HERO CHIPS ── */
 .hero-chips{
   display:flex;
   flex-wrap:wrap;
-  gap:8px;
-  margin-bottom:38px;
+  gap:7px;
+  margin-bottom:20px;
 }
 .hero-chip{
   display:inline-block;
@@ -328,28 +307,15 @@ footer{background:#060e1c;padding:60px 48px 0;border-top:1px solid rgba(201,168,
 
 /* ── HERO DIFFERENTIATOR ── */
 .hero-differentiator{
-  font-size:1.05rem;
+  font-size:.95rem;
   font-weight:600;
   color:var(--gold);
   letter-spacing:.01em;
-  margin-bottom:10px;
+  margin-bottom:8px;
   line-height:1.4;
 }
 
 
-/* ── HERO FINAL LOGO ── */
-.hero-final-logo{
-  font-family:'Playfair Display',serif;
-  font-size:clamp(5rem,8.5vw,9rem);
-  font-weight:900;
-  color:var(--white);
-  font-style:normal;
-  letter-spacing:-.02em;
-  line-height:1.0;
-}
-.hero-final-dot{
-  color:var(--gold);
-}
 
 </style>
 </head>
@@ -377,9 +343,9 @@ footer{background:#060e1c;padding:60px 48px 0;border-top:1px solid rgba(201,168,
   <div class="hero-bg-glow"></div>
   <div class="hero-inner">
     <div>
-      <h1 class="hero-rotating-headline" aria-label="Grow Revenue · Expand Margin · Win Share · Fundare.">
-        <span class="hero-word" aria-hidden="true">Grow Revenue</span>
-        <span class="hero-final" aria-hidden="false"><span class="hero-final-logo">Fundare<span class="hero-final-dot">.</span></span></span>
+      <h1 class="hero-h1" aria-label="Grow Revenue · Expand Margin · Win Share">
+        <span id="hw"></span>
+        <span id="hf">Grow Revenue &middot; Expand Margin &middot; Win Share</span>
       </h1>
       <div class="hero-dash"></div>
       <p class="hero-differentiator">We are not consultants. We are experienced Revenue Growth Managers.</p>
@@ -855,115 +821,42 @@ footer{background:#060e1c;padding:60px 48px 0;border-top:1px solid rgba(201,168,
     dgObs.observe(detailGrid);
   }
 
-  /* ── HERO ROTATING HEADLINE — IntersectionObserver, repeatable ── */
+  /* ── HERO ROTATING HEADLINE ANIMATION ── */
   (function(){
-    var heroSection = document.querySelector('.hero');
-    var headline    = document.querySelector('.hero-rotating-headline');
-    var wordEl      = document.querySelector('.hero-word');
-    var finalEl     = document.querySelector('.hero-final');
-    if(!heroSection || !headline || !wordEl || !finalEl) return;
+    var hw = document.getElementById('hw');
+    var hf = document.getElementById('hf');
+    if(!hw || !hf) return;
 
-    var PHRASES  = ['Grow Revenue', 'Expand Margin', 'Win Share'];
-    var HOLD     = 1400;   // ms each phrase stays visible
-    var FADE     = 500;    // ms fade transition
-    var DELAY    = 400;    // ms delay before starting after hero enters viewport
-    var running  = false;
-    var timer    = null;
-
-    /* Reduced motion: show final immediately, never animate */
-    if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-      wordEl.style.display = 'none';
-      finalEl.style.cssText += ';opacity:1;transform:none;visibility:visible;';
-      headline.classList.add('done');
+    if(window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches){
+      hf.classList.add('show');
       return;
     }
 
-    /* ── Reset to initial state ── */
-    function resetState(){
-      clearTimeout(timer);
-      running = false;
-      headline.classList.remove('done');
-      headline.classList.add('animating');
-      wordEl.style.display   = '';
-      wordEl.style.opacity   = '0';
-      wordEl.style.transform = 'translateY(8px)';
-      wordEl.classList.remove('hidden','entering');
-      finalEl.classList.remove('visible');
-      finalEl.style.visibility = 'hidden';
-      finalEl.style.opacity    = '0';
-    }
+    var PHRASES = ['Grow Revenue','Expand Margin','Win Share'];
+    var HOLD = 1400, TRANS = 420;
+    hw.style.transition = 'opacity '+TRANS/1000+'s ease, transform '+TRANS/1000+'s ease';
 
-    /* ── Show one phrase, then schedule next ── */
-    function showPhrase(index){
-      if(!running) return;
-
-      /* Fade out */
-      wordEl.style.opacity   = '0';
-      wordEl.style.transform = 'translateY(-8px)';
-
-      timer = setTimeout(function(){
-        if(!running) return;
-        wordEl.textContent     = PHRASES[index];
-        wordEl.style.transform = 'translateY(8px)';
-        /* force reflow */
-        void wordEl.offsetWidth;
-        /* Fade in */
-        wordEl.style.opacity   = '1';
-        wordEl.style.transform = 'translateY(0)';
-
-        if(index < PHRASES.length - 1){
-          timer = setTimeout(function(){ showPhrase(index + 1); }, HOLD);
-        } else {
-          timer = setTimeout(function(){ resolveFinal(); }, HOLD);
-        }
-      }, FADE);
-    }
-
-    /* ── Resolve to final combined headline ── */
-    function resolveFinal(){
-      if(!running) return;
-      wordEl.style.opacity   = '0';
-      wordEl.style.transform = 'translateY(-8px)';
-
-      timer = setTimeout(function(){
-        if(!running) return;
-        wordEl.style.display = 'none';
-        headline.classList.remove('animating');
-        headline.classList.add('done');
-        finalEl.style.visibility = 'visible';
-        /* force reflow before transitioning */
-        void finalEl.offsetWidth;
-        finalEl.classList.add('visible');
-        running = false;
-      }, FADE);
-    }
-
-    /* ── Start animation sequence ── */
-    function startAnimation(){
-      resetState();
-      running = true;
-      timer = setTimeout(function(){ showPhrase(0); }, DELAY);
-    }
-
-    /* ── IntersectionObserver: re-run every time hero enters viewport ── */
-    var heroObs = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if(e.isIntersecting){
-          /* Only restart if not already running or in final state */
-          if(!running){
-            startAnimation();
-          }
-        } else {
-          /* Hero left viewport — stop and reset so it replays on return */
-          clearTimeout(timer);
-          running = false;
-          /* Briefly reset state so next entry triggers fresh animation */
-          resetState();
-        }
+    function showWord(i){
+      hw.style.opacity = '0';
+      hw.style.transform = 'translateY(10px)';
+      hw.textContent = PHRASES[i];
+      requestAnimationFrame(function(){
+        requestAnimationFrame(function(){
+          hw.style.opacity = '1';
+          hw.style.transform = 'translateY(0)';
+          setTimeout(function(){
+            hw.style.opacity = '0';
+            hw.style.transform = 'translateY(-10px)';
+            setTimeout(function(){
+              if(i < PHRASES.length - 1){ showWord(i + 1); }
+              else{ hw.style.display = 'none'; hf.classList.add('show'); }
+            }, TRANS);
+          }, HOLD);
+        });
       });
-    }, { threshold: 0.3 });
+    }
 
-    heroObs.observe(heroSection);
+    setTimeout(function(){ showWord(0); }, 600);
   })();
 })();
 </script>
