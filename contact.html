@@ -6,6 +6,8 @@
 <title>Contact · Fundare</title>
 <meta name="description" content="Let's talk about your next growth move. Contact Fundare for pricing, promotions, and revenue growth management support.">
 <meta property="og:image" content="https://www.fundare.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:site_name" content="Fundare">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
@@ -55,7 +57,7 @@
       </div>
 
       <!-- Contact Cards -->
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;" class="reveal">
+      <div class="contact-cards reveal">
         <div style="padding:36px;border-radius:var(--radius);background:var(--surface);border:1px solid var(--line);text-align:center;">
           <div style="width:48px;height:48px;border-radius:14px;background:var(--gold-subtle);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
@@ -117,6 +119,20 @@
     <div class="footer__bottom"><span>© 2026 Fundare. All rights reserved.</span><span>Built in Austin, TX — Helping companies across the Americas unlock profitable growth.</span></div>
   </div>
 </footer>
+
+<!-- Mobile Nav Overlay -->
+<div class="nav-overlay" id="navOverlay">
+  <button class="nav-overlay__close" id="navOverlayClose" aria-label="Close menu">&times;</button>
+  <a href="index.html">Home</a>
+  <a href="retailers-wholesalers.html">Retailers</a>
+  <a href="growing-brands.html">Growing Brands</a>
+  <a href="emerging-brands.html">Emerging Brands</a>
+  <a href="our-approach.html">Approach</a>
+  <a href="revenue-growth-management-guide.html">Insights</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="#" data-calendly-trigger style="color:var(--gold);margin-top:16px;">Book a Call</a>
+</div>
 
 <div class="calendly-modal-overlay" id="calendlyModal" aria-hidden="true"><div class="calendly-modal" role="dialog" aria-modal="true" aria-labelledby="calendlyModalTitle"><div class="calendly-modal-header"><div class="calendly-modal-title" id="calendlyModalTitle">Fundare Intro Meeting</div><button class="calendly-modal-close" type="button" aria-label="Close" data-close-calendly>&times;</button></div><div class="calendly-frame-wrap"><div class="calendly-inline-widget" data-url="https://calendly.com/miguelgdelarosa/fundare-intro-meeting"></div></div></div></div>
 <script src="https://assets.calendly.com/assets/external/widget.js" async></script>

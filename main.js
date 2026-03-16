@@ -22,18 +22,43 @@
 // ── Mobile Navigation Toggle ────────────────────────────
 (function() {
   var toggle = document.getElementById('navToggle');
-  var links = document.getElementById('navLinks');
-  if (!toggle || !links) return;
-  toggle.addEventListener('click', function() {
-    links.classList.toggle('open');
-    toggle.classList.toggle('active');
+  var overlay = document.getElementById('navOverlay');
+  var closeBtn = document.getElementById('navOverlayClose');
+  if (!toggle || !overlay) return;
+
+  function openNav() {
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeNav() {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  toggle.addEventListener('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    openNav();
   });
-  // Close mobile nav on link click
-  links.querySelectorAll('a').forEach(function(a) {
-    a.addEventListener('click', function() {
-      links.classList.remove('open');
-      toggle.classList.remove('active');
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      closeNav();
     });
+  }
+
+  // Close on any link click inside overlay
+  var overlayLinks = overlay.querySelectorAll('a');
+  for (var i = 0; i < overlayLinks.length; i++) {
+    overlayLinks[i].addEventListener('click', function() {
+      closeNav();
+    });
+  }
+
+  // Close on escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeNav();
   });
 })();
 
