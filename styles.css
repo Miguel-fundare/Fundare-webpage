@@ -303,38 +303,44 @@ ul, ol { list-style: none; }
 @media (max-width: 900px) {
   .nav__inner { position: relative; }
   .nav__toggle {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     justify-content: center;
-    z-index: 60;
+    z-index: 200;
+    position: relative;
   }
   .nav__toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
   .nav__toggle.active span:nth-child(2) { opacity: 0; }
   .nav__toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
   .nav__links {
+    display: flex !important;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(11,20,35,.97);
+    background: rgba(11,20,35,.98);
+    -webkit-backdrop-filter: blur(24px);
     backdrop-filter: blur(24px);
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 0;
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
-    transition: opacity 0.4s cubic-bezier(0.16,1,0.3,1);
-    z-index: 55;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
+    z-index: 150;
+    padding: 80px 20px 40px;
   }
   .nav__links.open {
     opacity: 1;
+    visibility: visible;
     pointer-events: all;
   }
   .nav__links a {
-    font-size: 1.2rem;
-    padding: 18px 0;
+    font-size: 1.15rem;
+    padding: 16px 0;
     color: rgba(255,255,255,.7);
     border-bottom: 1px solid rgba(255,255,255,.06);
     width: 80%;
@@ -344,6 +350,9 @@ ul, ol { list-style: none; }
   .nav__links a:hover, .nav__links a.active { color: #fff; }
   .nav__links a:last-child { border-bottom: none; }
   .nav__cta--desktop { display: none; }
+
+  /* Not Software section stacks on tablet/mobile */
+  .split-hero-section { grid-template-columns: 1fr !important; gap: 32px !important; }
 }
 
 /* Mobile */
@@ -353,6 +362,7 @@ ul, ol { list-style: none; }
   .section--sm { padding: 56px 0; }
   .hero__inner { padding: 60px 0 72px; }
   .hero h1 { font-size: clamp(2.2rem, 9vw, 3.2rem); }
+  .hero--inner h1 { font-size: clamp(2rem, 7vw, 2.6rem); }
   .hero__sub { font-size: 1rem; }
   .feature-grid, .feature-grid--2, .feature-grid--4 { grid-template-columns: 1fr; }
   .stat-bar { grid-template-columns: 1fr; }
@@ -362,6 +372,8 @@ ul, ol { list-style: none; }
   .logo-item { min-width: 180px; height: 78px; }
   .section-header h2 { font-size: clamp(1.8rem, 5vw, 2.4rem); }
   .footer__bottom { flex-direction: column; gap: 8px; text-align: center; }
+  /* Hide stats on mobile for growing brands */
+  .mobile-hide { display: none !important; }
 }
 
 /* Small mobile */
