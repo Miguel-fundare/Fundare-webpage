@@ -383,3 +383,22 @@ ul, ol { list-style: none; }
   .card h3 { font-size: 1.25rem; }
   .step-grid { grid-template-columns: 1fr; }
 }
+
+/* Nav with 9 links — keep on one line between mobile and wide desktop */
+.nav__links a { white-space: nowrap; }
+@media (max-width: 1240px) {
+  .nav__inner { gap: 16px; }
+  .nav__links { gap: 16px; }
+  .nav__links a { font-size: .78rem; }
+}
+@media (max-width: 1080px) {
+  .nav__logo { font-size: 1.9rem; }
+  .nav__links { gap: 11px; }
+  .nav__links a { font-size: .72rem; }
+  .nav__cta { padding: 11px 16px; font-size: .78rem; }
+}
+@media (max-width: 960px) {
+  .nav__inner { gap: 10px; }
+  .nav__links { gap: 8px; }
+  .nav__links a { font-size: .7rem; }
+}
